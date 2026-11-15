@@ -13,8 +13,8 @@ Status: **Planning / content stage. No code yet.**
 ### Education
 | Level | Institution | Year | Score |
 |---|---|---|---|
-| Class XII | Suchitra Academy, Kompally, Hyderabad, Telangana | 2025 | 90% |
-| Class X | Shikara International, Bachupally, Hyderabad, Telangana | 2023 | 88% |
+| Class XII | Suchitra Academy, Kompally, Hyderabad, Telangana | 2025 | 90.4% |
+| Class X | Shikara International, Bachupally, Hyderabad, Telangana | 2023 | 88.7% |
 
 ## 2. Professional profile (About Me) — must highlight
 - Current academic journey
@@ -41,7 +41,8 @@ House won the Best House Award that year. Do not exaggerate.
 - **English Olympiad:** Silver Medal, Class VII
 - **Best House Award:** Blue House, leadership year
 - **BITS Pilani Entrepreneurship Programme:** participant / student attendee only
-- Certificates to come — take exact names, dates and organisers from them; never guess
+- **No certificates:** none will be uploaded or shown (no gallery, no scans). Use only the achievement
+  details Tanvee has given; never guess missing names or dates (e.g. MUN conference name stays unnamed)
 
 ## 6. Skills
 - **Current:** Public speaking, Communication, Leadership, Problem-solving, Event organisation, Social media management, Canva
@@ -127,3 +128,5 @@ magazine-style headings, collage photos, scrapbook stickers.
 - Intro = SEASONED-style video; portfolio = LILLY-style
 - Footage direction = Option C, The World of Business
 - Interests section titled **Things That Fascinate Me**
+- Exact percentages everywhere: Class XII 90.4% (2025), Class X 88.7% (2023)
+- No certificate uploads, gallery or scans on website or resume
