@@ -22,7 +22,7 @@ Status: **Planning / content stage. No code yet.**
 - Strengths in communication and leadership
 - School activities and taking responsibility
 - Willingness to learn and grow
-- Introduce her as a person first; interests go in their own section
+- Introduce Tanvee as a person first; interests go in their own section
 
 ## 3. Career Direction (own section)
 Aspiration (NOT existing experience) to understand:
