@@ -1,33 +1,37 @@
-# Resume Content Draft — v1 (for Tanvee's review)
+# Website Content Draft — v2 (for Tanvee's review)
 
-Everything here comes from Tanvee's own information. Wording marked ✏️ is a phrasing
-choice by Claude that Tanvee should check. Items marked ❓ need an answer.
+Website only. No printable resume, no PDF download.
+✏️ = phrasing by Claude for Tanvee to check · ❓ = needs Tanvee's answer
 
 ---
 
-# PART A — WEBSITE CONTENT
+## Page settings (not visible on the page)
+- Search engines asked **not to index** the site (`noindex`)
+- Browser tab title: **Tanvee · Portfolio** (no full name, no SEO description)
 
 ## Intro title card (SEASONED-style)
-- Big title: **TANVEE REDDY POTHIREDDY**
-- Script line: ✏️ *the business of* **LUXURY** *& curiosity*
+- Big title: ❓ **TANVEE** *or* **TANVEE REDDY POTHIREDDY**
+- Script line: ✏️ *the business of* **luxury** *& curiosity*
 - Camera details: `● REC` · `CH. 01` · `IIM BANGALORE · DBE`
 - Scrolling strip: ✏️ DIGITAL BUSINESS · ENTREPRENEURSHIP · LUXURY RETAIL · HERITAGE & CRAFT · CONSUMER BEHAVIOUR ·
 
 ## Greeting (LILLY-style typewriter line)
 > Hi, I'm Tanvee~
 
+---
+
 ## (01) About me
-I'm **Tanvee Reddy Pothireddy**, a student of **Digital Business and Entrepreneurship (DBE)** at
-**IIM Bangalore**, Batch 3. I'm at the start of my business journey, and I'm building my
-understanding of how businesses work, grow and create value.
+I'm **Tanvee Reddy Pothireddy**, a student of **Digital Business and Entrepreneurship** at
+**IIM Bangalore**, Batch 3.
 
-At school, I learned what it means to take responsibility. As **Blue House Leader** in Class X,
-I led and coordinated students, organised events and competitions, and supported our teachers.
-That year, our house won the **Best House Award**. ✏️ Taking part in **Model United Nations**
-conferences strengthened my **public speaking and communication**.
+My foundations are in **leadership and communication**. As **Blue House Leader**, I led my house
+through the year it won the **Best House Award**. At **Model United Nations**, I was named
+**Best Delegate**.
 
-✏️ I'm someone who enjoys working with people, speaking up and taking initiative, and I'm always
-**eager to learn and grow**.
+✏️ Now I'm building the business knowledge to match: learning with intent, speaking with clarity,
+and taking responsibility seriously.
+
+---
 
 ## (02) Education  *(approved scrapbook design)*
 Handwritten aside: ✏️ *"currently pursuing!"*
@@ -42,118 +46,89 @@ Handwritten aside: ✏️ *"currently pursuing!"*
 
 Text stamp: `IIM BANGALORE · DBE · BATCH 3 · 2026`
 
-## (03) Career Direction — *Where I'm headed*
-Pull quote: ✏️ *"I want to understand what makes a luxury brand endure."*
+---
 
-I aspire to build a career in **luxury management and luxury retail**. I'm at the beginning of
-this path, and these are the things I want to learn:
+## (03) Career Direction
+> *"I want to understand what makes a luxury brand endure."*
 
-- **Luxury brand management**: how luxury brands are built, positioned and managed
-- **Premium retail experiences**: what makes shopping with a premium brand feel special
-- **Business strategy**: the decisions behind how established luxury brands grow
-- **Identity, craft & the customer**: how brand identity, craftsmanship and consumer
-  behaviour connect
+Luxury management and luxury retail are where I hope to build my career.
 
-## (04) Leadership
-**Blue House Leader** · School · Class X
-- Led students and represented Blue House
-- Organised school events and managed inter-house competitions ✏️ *("inter-house" ok?)*
-- Coordinated with fellow students to plan and run activities
-- Assisted teachers with school activities and event responsibilities
-- **Result:** Blue House received the **Best House Award** that year
+**The house behind the name.**
+✏️ How a luxury brand guards its identity while it grows, and the strategy that keeps a name
+desirable for generations.
 
-## (05) Achievements
-Big-number highlights (pick 2–3 later): **90.4%** · **88.7%** · **Best Delegate** · **❓ MUN count**
+**The room where it happens.**
+✏️ Premium retail as an experience: the space, the service, the moment a purchase becomes a memory.
 
-- **Best Delegate**, Model United Nations conference · ❓ 2023 or 2024
-- **❓ 3 / 4 / "Multiple"** Model United Nations conferences: participant
-- **Silver Medal**, English Olympiad · Class VII
-- **Best House Award**, Blue House · Class X (as House Leader)
-- **Participant**, BITS Pilani Entrepreneurship Programme ❓ year (optional)
-
-## (06) Things That Fascinate Me  *(signature editorial feature)*
-Intro: ✏️ *A few ideas I keep coming back to, and want to explore much further.*
-
-**No. 1: The Business Behind Luxury**
-How do luxury businesses operate, grow and create value, and why do people value
-them so deeply?
-
-**No. 2: Heritage & Craftsmanship**
-Indian and Western heritage, traditional craftsmanship, and the artistry that goes into
-premium products.
-
-**No. 3: Consumer Behaviour & Business Psychology**
-Why people prefer what they prefer: purchasing decisions and the psychology behind
-how people interact with brands.
-
-**No. 4: Entrepreneurship**
-How businesses begin, how they work, and how they create value. It's the reason I chose DBE.
-✏️ *(check this last line)*
-
-## (07) Skills
-**Skills I have**
-Public speaking · Communication · Leadership · Problem-solving · Event organisation ·
-Social media management · Canva
-
-**Currently Learning**
-Data Analytics & Business Intelligence · No-Code Product Prototyping (UI/UX)
-
-**Languages**
-| Language | Level |
-|---|---|
-| English | Comfortable speaking & writing |
-| Hindi | Comfortable speaking & writing |
-| Telugu | Comfortable speaking & writing |
-| French | Basic speaking |
-| Malayalam | Basic speaking |
-
-## (08) Beyond the Classroom
-Dancing · Craft activities · Badminton
-
-## (09) Contact — *Let's talk*
-✏️ I'd love to connect about business, luxury retail or anything in between.
-**Email:** [Gmail address — to be provided]
-
-Button: **Download my resume (PDF)**
+**Where craft meets the customer.**
+✏️ How heritage and craftsmanship shape what people value, and why they choose to pay for it.
 
 ---
 
-# PART B — PRINTABLE RESUME (one A4 page, minimal)
+## (04) Leadership
+**Blue House Leader** · School
 
-**TANVEE REDDY POTHIREDDY**
-[Gmail address]
+- Led and represented Blue House, coordinating students across events and activities.
+- Organised school events and ran house competitions alongside our teachers.
 
-**PROFILE**
-✏️ Digital Business and Entrepreneurship student at IIM Bangalore with school leadership
-experience as House Leader and a Best Delegate award in Model United Nations. Strong in
-communication, public speaking and event organisation. Aspiring to build a career in luxury
-management and luxury retail, and eager to learn and grow.
+Big-number callout: **Best House Award**: ✏️ *our house's result that year*
 
-**EDUCATION**
-- Indian Institute of Management Bangalore (IIM Bangalore) — Digital Business and
-  Entrepreneurship (DBE) · Batch 3 · Joined 2026 · Currently pursuing
-- Suchitra Academy, Kompally, Hyderabad — Class XII · 2025 · 90.4%
-- Shikara International, Bachupally, Hyderabad — Class X · 2023 · 88.7%
+---
 
-**LEADERSHIP**
-Blue House Leader, School · Class X
-- Led students, represented the house, and organised school events and competitions
-- Coordinated with students and assisted teachers with event responsibilities
-- House received the Best House Award
+## (05) Achievements
+| | |
+|---|---|
+| **2024** | **Best Delegate**: Model United Nations conference |
+| ✦ | **Silver Medal**: SOF English Olympiad |
+| **2025** | **Participant**: BITS Pilani Entrepreneurship Programme |
 
-**ACHIEVEMENTS**
-- Best Delegate, Model United Nations conference (❓ year); participated in ❓ MUN conferences
-- Silver Medal, English Olympiad (Class VII)
-- Participant, BITS Pilani Entrepreneurship Programme
+---
 
-**SKILLS**
-Public speaking · Communication · Leadership · Problem-solving · Event organisation ·
-Social media management · Canva
-Currently learning: Data Analytics & Business Intelligence; No-Code Product Prototyping (UI/UX)
+## (06) Things That Fascinate Me  *(signature editorial feature)*
+✏️ *Questions I keep returning to, and intend to explore much further.*
 
-**LANGUAGES**
-English, Hindi, Telugu (comfortable speaking & writing) · French, Malayalam (basic speaking)
+**No. 1: The Business Behind Luxury**
+*Why does a luxury house stay desirable as it grows?*
+How luxury businesses operate, grow and create value.
 
-**INTERESTS**
-Luxury business · Heritage & craftsmanship · Consumer behaviour · Entrepreneurship ·
-Dancing · Crafts · Badminton
+**No. 2: Heritage & Craftsmanship**
+*What is an hour of handwork worth?*
+Indian and Western heritage, traditional crafts, and the artistry behind premium products.
+❓ Optional personal touch: ✏️ *"Making things by hand myself, I notice the hours behind every
+finished piece."*
+
+**No. 3: Consumer Behaviour & Business Psychology**
+*Why do we choose what we choose?*
+Preferences, purchase decisions, and the quiet psychology of how people relate to brands.
+
+**No. 4: Entrepreneurship**
+*How does an idea become a business?*
+How businesses begin, work and create value. ✏️ It's the question at the heart of my DBE programme.
+
+---
+
+## (07) My Toolkit
+**Strengths**
+Public speaking · Communication · Leadership · Problem-solving
+
+**Creative & practical tools**
+Canva · Social media management · Event organisation
+
+**Currently exploring** *(in progress, marked as learning)*
+Data Analytics & Business Intelligence · No-Code Product Prototyping (UI/UX)
+
+**Languages**
+English, Hindi & Telugu: comfortable speaking and writing
+French & Malayalam: basic speaking
+
+---
+
+## (08) Contact: *Let's talk*
+✏️ For conversations about business, luxury, or anything in between.
+**Email:** [Gmail address, to be provided]
+
+---
+
+### Removed in v2
+Printable resume (Part B) · Download PDF button · Beyond the Classroom section ·
+Languages table · Class VII mention · MUN conference count · duplicate Best House entry in Achievements

@@ -42,10 +42,10 @@ coordinated with students; assisted teachers with activities and events.
 House won the Best House Award that year. Do not exaggerate.
 
 ## 5. Achievements & participation
-- **MUN:** Best Delegate, approx. 2023/2024 (conference name not yet confirmed); took part in ~3–4 MUN conferences
-- **English Olympiad:** Silver Medal, Class VII
+- **MUN:** Best Delegate, Model United Nations conference, **2024** (conference name unknown; no count shown)
+- **SOF English Olympiad:** Silver Medal (do not mention class)
 - **Best House Award:** Blue House, leadership year
-- **BITS Pilani Entrepreneurship Programme:** participant / student attendee only
+- **BITS Pilani Entrepreneurship Programme:** Participant, **2025** (student participant only)
 - **No certificates:** none will be uploaded or shown (no gallery, no scans). Use only the achievement
   details Tanvee has given; never guess missing names or dates (e.g. MUN conference name stays unnamed)
 
@@ -105,10 +105,9 @@ magazine-style headings, collage photos, scrapbook stickers.
 | Others | Possibly | Waiting |
 | Whole site | Friend's site (borrow F2, F4, F5 only, adapted) | Approved |
 
-## 16. Two outputs
-- **Website:** creative, editorial, scrapbook, expressive, sophisticated
-- **Printable resume (resume.pdf):** one A4 page, minimal, clean, structured, no decorations
-- Same accurate information in both
+## 16. Output
+- **Website only:** creative, editorial, scrapbook, expressive, sophisticated, poised
+- Printable resume feature **removed**
 
 ---
 
@@ -117,7 +116,8 @@ magazine-style headings, collage photos, scrapbook stickers.
 - Exactly two code files: `index.html` and `style.css` (external stylesheet only, no inline or `<style>` CSS)
 - Beginner-friendly CSS comments; responsive; GitHub Pages ready
 - Always deliver both complete files, separately, after every change
-- Printable resume section on the site + working "Download my resume (PDF)" link to `resume.pdf`
+- **NO printable resume, NO resume.pdf, NO download button** (removed by Tanvee)
+- `<meta name="robots" content="noindex, nofollow">`; no full name in metadata/SEO; tab title "Tanvee · Portfolio"
 - Accessible: readable contrast, keyboard focus states, image alt text
 
 ## 20. Stages
@@ -138,6 +138,8 @@ magazine-style headings, collage photos, scrapbook stickers.
 - No certificate uploads, gallery or scans on website or resume
 - **Numbered editorial headings (01), (02)…** (script swash capital + bold word + blush highlight + pin dots) used consistently on all main sections; each section keeps its own distinctive layout
 - **No personal photographs anywhere.** No polaroid or photo placeholder of Tanvee; use licensed stock and editorial imagery, product photography and design elements instead
+- Sections (v2): About me, Education, Career Direction, Leadership, Achievements, Things That Fascinate Me, My Toolkit (incl. Languages), Contact. No Beyond the Classroom section
+- LILLY video = primary, definitive visual reference for all non-intro sections; no more references needed
 - No school or university logos (we don't have permission); use original text-based stamps instead
 - Borrow from friend's reference, adapted to SEASONED intro + LILLY scrapbook (do NOT copy the site):
   - F2 Numbered chapter headings (e.g. "01 · PROFILE" + large serif title) — ties into retro-camera chapters
