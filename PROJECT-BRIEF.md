@@ -1,6 +1,7 @@
 # Portfolio Project Brief — Tanvee Reddy Pothireddy
 
 Reference document for the IIM Bangalore DBE Web Development assignment.
+**Deadline: 17 November 2026, 10:30 PM IST**
 Status: **Planning / content stage. No code yet.**
 
 ---
@@ -98,6 +99,7 @@ magazine-style headings, collage photos, scrapbook stickers.
 |---|---|---|
 | Education | To be shared | Waiting. Do not design yet; no assumed timeline |
 | Others | Possibly | Waiting |
+| Whole site | Friend's site (borrow F2, F4, F5 only, adapted) | Approved |
 
 ## 16. Two outputs
 - **Website:** creative, editorial, scrapbook, expressive, sophisticated
@@ -130,3 +132,7 @@ magazine-style headings, collage photos, scrapbook stickers.
 - Interests section titled **Things That Fascinate Me**
 - Exact percentages everywhere: Class XII 90.4% (2025), Class X 88.7% (2023)
 - No certificate uploads, gallery or scans on website or resume
+- Borrow from friend's reference, adapted to SEASONED intro + LILLY scrapbook (do NOT copy the site):
+  - F2 Numbered chapter headings (e.g. "01 · PROFILE" + large serif title) — ties into retro-camera chapters
+  - F4 Highlighted keywords in paragraphs (soft pink underline)
+  - F5 Big-number highlight callout (using only Tanvee's real figures)
