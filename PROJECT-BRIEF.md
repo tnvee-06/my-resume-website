@@ -69,9 +69,9 @@ No internships, case competitions, ventures, freelance, client projects or profe
 Leave out any section without genuine content.
 
 ## 11. Contact
-- Gmail address (to be provided)
-- No LinkedIn — do not show one
-- Phone number: undecided
+- Gmail address: **display it** (address to be provided)
+- Phone number: **do NOT display**
+- No LinkedIn — do not show one or link to one
 
 ---
 
@@ -97,7 +97,7 @@ magazine-style headings, collage photos, scrapbook stickers.
 ## 15. Section-specific references
 | Section | Reference | Status |
 |---|---|---|
-| Education | To be shared | Waiting. Do not design yet; no assumed timeline |
+| Education | Scrapbook "(02) Education" image (script swash capital + bold sans heading, pink highlight, tilted paper card on dotted notebook sheet, numbered entries, round stamp sticker, handwritten aside) | Analysed. Awaiting Tanvee's confirmation |
 | Others | Possibly | Waiting |
 | Whole site | Friend's site (borrow F2, F4, F5 only, adapted) | Approved |
 
@@ -132,6 +132,8 @@ magazine-style headings, collage photos, scrapbook stickers.
 - Interests section titled **Things That Fascinate Me**
 - Exact percentages everywhere: Class XII 90.4% (2025), Class X 88.7% (2023)
 - No certificate uploads, gallery or scans on website or resume
+- **No personal photographs anywhere.** No polaroid or photo placeholder of Tanvee; use licensed stock and editorial imagery, product photography and design elements instead
+- No school or university logos (we don't have permission); use original text-based stamps instead
 - Borrow from friend's reference, adapted to SEASONED intro + LILLY scrapbook (do NOT copy the site):
   - F2 Numbered chapter headings (e.g. "01 · PROFILE" + large serif title) — ties into retro-camera chapters
   - F4 Highlighted keywords in paragraphs (soft pink underline)
