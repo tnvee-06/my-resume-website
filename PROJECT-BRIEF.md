@@ -9,7 +9,11 @@ Status: **Planning / content stage. No code yet.**
 ## 1. Profile
 
 - **Name:** Tanvee Reddy Pothireddy
-- **Programme:** Digital Business and Entrepreneurship (DBE), IIM Bangalore — Batch 3, joined 2026
+- **Programme (exact wording to use):**
+  Indian Institute of Management Bangalore (IIM Bangalore)
+  Digital Business and Entrepreneurship (DBE)
+  Batch 3 · Joined 2026 · Currently pursuing
+  (No degree title or graduation year until Tanvee confirms the official name)
 
 ### Education
 | Level | Institution | Year | Score |
@@ -97,7 +101,7 @@ magazine-style headings, collage photos, scrapbook stickers.
 ## 15. Section-specific references
 | Section | Reference | Status |
 |---|---|---|
-| Education | Scrapbook "(02) Education" image (script swash capital + bold sans heading, pink highlight, tilted paper card on dotted notebook sheet, numbered entries, round stamp sticker, handwritten aside) | Analysed. Awaiting Tanvee's confirmation |
+| Education | Scrapbook "(02) Education" image (script swash capital + bold sans heading, pink highlight, tilted paper card on dotted notebook sheet, numbered entries, round stamp sticker, handwritten aside) | **Approved.** Adapt to IIMB / Class XII / Class X; text-only stamp instead of logo |
 | Others | Possibly | Waiting |
 | Whole site | Friend's site (borrow F2, F4, F5 only, adapted) | Approved |
 
@@ -132,6 +136,7 @@ magazine-style headings, collage photos, scrapbook stickers.
 - Interests section titled **Things That Fascinate Me**
 - Exact percentages everywhere: Class XII 90.4% (2025), Class X 88.7% (2023)
 - No certificate uploads, gallery or scans on website or resume
+- **Numbered editorial headings (01), (02)…** (script swash capital + bold word + blush highlight + pin dots) used consistently on all main sections; each section keeps its own distinctive layout
 - **No personal photographs anywhere.** No polaroid or photo placeholder of Tanvee; use licensed stock and editorial imagery, product photography and design elements instead
 - No school or university logos (we don't have permission); use original text-based stamps instead
 - Borrow from friend's reference, adapted to SEASONED intro + LILLY scrapbook (do NOT copy the site):
