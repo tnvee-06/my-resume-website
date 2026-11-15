@@ -2,7 +2,7 @@
 
 Reference document for the IIM Bangalore DBE Web Development assignment.
 **Deadline: 17 November 2026, 10:30 PM IST**
-Status: **Planning / content stage. No code yet.**
+Status: **HTML foundation built (index.html). CSS not started. Awaiting Tanvee's HTML review.**
 
 ---
 
@@ -42,10 +42,10 @@ coordinated with students; assisted teachers with activities and events.
 House won the Best House Award that year. Do not exaggerate.
 
 ## 5. Achievements & participation
-- **MUN:** Best Delegate, Model United Nations conference, **2024** (conference name unknown; no count shown)
+- **MUN:** Best Delegate, **2024**; participated in **four** MUN conferences; represented assigned countries, researched topics, committee discussions (no conference names, committees, countries or topics)
 - **SOF English Olympiad:** Silver Medal (do not mention class)
 - **Best House Award:** Blue House, leadership year
-- **BITS Pilani Entrepreneurship Programme:** Participant, **2025** (student participant only)
+- **BITS Pilani Entrepreneurship Programme:** Participant, **2025**; took part in activities, workshops and team exercises (participant only)
 - **No certificates:** none will be uploaded or shown (no gallery, no scans). Use only the achievement
   details Tanvee has given; never guess missing names or dates (e.g. MUN conference name stays unnamed)
 
@@ -145,3 +145,15 @@ magazine-style headings, collage photos, scrapbook stickers.
   - F2 Numbered chapter headings (e.g. "01 · PROFILE" + large serif title) — ties into retro-camera chapters
   - F4 Highlighted keywords in paragraphs (soft pink underline)
   - F5 Big-number highlight callout (using only Tanvee's real figures)
+
+## HTML stage decisions (v4 structure, now in index.html)
+- Public name **TANVEE** only; full legal name appears nowhere on the site
+- Sections: Intro reel → Hero → (01) About → (02) Education → (03) Leadership & Initiative →
+  (04) Ideas, Debate & Entrepreneurship → (05) Recognition → (06) My Toolkit →
+  (07) The Details Behind Desire (signature feature, 3 stories) → (08) Where I'm Headed → (09) Let's talk
+- Toolkit groups: Communication & People / Leadership & Execution / Creative & Digital / Currently Exploring; plus Languages line
+- Best House Award worded as the **house's** award during Tanvee's leadership year
+- Hobbies only as a small "Off camera" line in the closing
+- Meta description uses first name only; noindex kept
+- index.html is now the source of truth for website copy (RESUME-CONTENT-DRAFT.md = earlier draft)
+- Assets still needed: licensed intro video + poster, 4 licensed editorial images, Gmail address

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<!--
+  =====================================================================
+  TANVEE · PORTFOLIO — index.html
+  IIM Bangalore · Digital Business and Entrepreneurship (DBE)
+
+  HOW THIS FILE IS ORGANISED
+  This page reads like a short film followed by a scrapbook magazine:
+
+    0. Cinematic intro reel  (inspired by SEASONED: full-screen, retro camera)
+    1. Opening / hero        (inspired by LILLY: typewriter greeting)
+    (01) A little about me   (LILLY-style open notebook)
+    (02) Education           (approved scrapbook "paper card" design)
+    (03) Leadership & initiative
+    (04) Ideas, debate & entrepreneurship
+    (05) Recognition
+    (06) My toolkit
+    (07) The details behind desire  (signature editorial feature)
+    (08) Where I'm headed
+    (09) Closing / contact
+
+  RULES FOR THIS PROJECT
+  - HTML + CSS only. No JavaScript anywhere.
+  - All styling lives in the separate file style.css (nothing styled here).
+  - Class names describe WHAT something is (e.g. "sticker", "paper-card"),
+    so style.css can make it look like the LILLY reference later.
+  - aria-hidden="true" marks purely decorative things (stickers, doodles,
+    stamps) so screen readers skip them.
+  =====================================================================
+-->
+<html lang="en-IN">
+
+<head>
+  <!-- Tells the browser which text characters to use (supports ₹, é, etc.) -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page fit phone and tablet screens properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- The text shown on the browser tab -->
+  <title>Tanvee · Portfolio</title>
+
+  <!-- A short summary of the page (first name only, by choice) -->
+  <meta name="description" content="Portfolio of Tanvee, a Digital Business and Entrepreneurship student at IIM Bangalore.">
+
+  <!--
+    PRIVACY: asks search engines (like Google) NOT to list this page in
+    search results. The website is still public — anyone with the link
+    can open it. This is a request to search engines, not a lock.
+  -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Connects this page to its separate stylesheet (written in the next stage) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--
+    SKIP LINK: hidden until a keyboard user presses Tab.
+    It lets them jump straight past the intro and menu to the content.
+  -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+
+  <!-- =================================================================
+       0. CINEMATIC INTRO REEL  (inspired by SEASONED)
+       A full-screen "camera" title card that plays when the page opens.
+       In the CSS stage it will fade away on its own after a few
+       seconds (no button, no tap, no JavaScript) to reveal the portfolio.
+       It repeats information shown again below, so it is hidden from
+       screen readers to avoid them hearing everything twice.
+       ================================================================= -->
+  <div class="intro-reel" id="intro" aria-hidden="true">
+
+    <!-- VIDEO AREA -->
+    <div class="intro-reel__video-area">
+      <!--
+        ┌───────────────────────────────────────────────────────────┐
+        │  WHERE THE CINEMATIC VIDEO GOES (not added yet)           │
+        │                                                           │
+        │  1. Choose LICENSED footage (e.g. from Pexels, free       │
+        │     licence): luxury storefronts, architecture, premium   │
+        │     retail interiors, craftsmanship close-ups.            │
+        │  2. Keep it short (8–12 seconds) and small (under 10 MB). │
+        │  3. Create a folder called "media" next to this file and  │
+        │     save it as media/intro-reel.mp4                       │
+        │  4. Save one still frame as media/intro-poster.jpg        │
+        │     (shown if a phone blocks autoplay).                   │
+        │  5. Delete the placeholder <div> below, then remove the   │
+        │     comment marks around the <video> code.                │
+        │                                                           │
+        │  "muted" + "autoplay" + "playsinline" are all needed:     │
+        │  browsers only autoplay videos that have no sound.        │
+        └───────────────────────────────────────────────────────────┘
+
+        <video class="intro-reel__video" autoplay muted loop playsinline
+               poster="media/intro-poster.jpg">
+          <source src="media/intro-reel.mp4" type="video/mp4">
+        </video>
+      -->
+
+      <!-- TEMPORARY PLACEHOLDER — remove once the real video is added -->
+      <div class="intro-reel__placeholder">
+        <p>Video placeholder: licensed cinematic footage of luxury storefronts, architecture and craftsmanship will play here.</p>
+      </div>
+    </div>
+
+    <!-- Camera viewfinder details layered over the video -->
+    <div class="intro-reel__viewfinder">
+      <p class="viewfinder__rec"><span class="rec-dot"></span> REC</p>
+      <p class="viewfinder__channel">◂ CH. 01 ▸</p>
+      <p class="viewfinder__timestamp">2026 · BLR · 00:00:01</p>
+      <p class="viewfinder__battery">▮▮▮▯</p>
+      <span class="viewfinder__corner viewfinder__corner--top-left"></span>
+      <span class="viewfinder__corner viewfinder__corner--top-right"></span>
+      <span class="viewfinder__corner viewfinder__corner--bottom-left"></span>
+      <span class="viewfinder__corner viewfinder__corner--bottom-right"></span>
+    </div>
+
+    <!-- Cinematic title: bold name + flowing script tagline -->
+    <div class="intro-reel__title">
+      <p class="intro-reel__name">TANVEE</p>
+      <p class="intro-reel__tagline">The business of luxury &amp; curiosity.</p>
+    </div>
+
+    <!-- Moving text strip along the bottom (written twice so the loop looks seamless) -->
+    <div class="ticker">
+      <p class="ticker__track">
+        <span>Digital Business</span> <span>✦</span>
+        <span>Entrepreneurship</span> <span>✦</span>
+        <span>Luxury Retail</span> <span>✦</span>
+        <span>Heritage &amp; Craft</span> <span>✦</span>
+        <span>Consumer Behaviour</span> <span>✦</span>
+        <span>Digital Business</span> <span>✦</span>
+        <span>Entrepreneurship</span> <span>✦</span>
+        <span>Luxury Retail</span> <span>✦</span>
+        <span>Heritage &amp; Craft</span> <span>✦</span>
+        <span>Consumer Behaviour</span> <span>✦</span>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- =================================================================
+       SITE HEADER + NAVIGATION  (LILLY-style: small logo left, links right)
+       ================================================================= -->
+  <header class="site-header">
+    <!-- Handwritten-style logo; links back to the top -->
+    <a class="site-logo" href="#home" aria-label="Tanvee, back to top">tanvee</a>
+
+    <nav class="site-nav" aria-label="Main menu">
+      <ul class="site-nav__list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#ideas">Ideas</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#desire">Desire</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Everything inside <main> is the actual portfolio content -->
+  <main id="main">
+
+    <!-- ===============================================================
+         1. OPENING / HERO  (LILLY-style greeting)
+         The first thing visible once the intro reel fades away.
+         =============================================================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+
+      <!-- Small camera label: carries the intro's film identity into the site -->
+      <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> REC · REEL 00</p>
+
+      <!-- Main page heading. The "~" is a decorative typewriter cursor. -->
+      <h1 class="hero__greeting" id="hero-title">
+        Hi, I'm <span class="hero__name">Tanvee</span><span class="typing-cursor" aria-hidden="true">~</span>
+      </h1>
+
+      <p class="hero__intro">
+        A student of <mark class="highlight">Digital Business and Entrepreneurship</mark>
+        at <mark class="highlight">IIM Bangalore</mark>, Batch 3.
+      </p>
+
+      <p class="hero__line">
+        I'm curious about how brands create value, and why some of them become impossible to forget.
+      </p>
+
+      <p class="hero__tagline handwritten">the business of luxury &amp; curiosity</p>
+
+      <!-- Decorative stickers scattered around the hero (placed by CSS) -->
+      <span class="sticker sticker--star sticker--hero-1" aria-hidden="true">★</span>
+      <span class="sticker sticker--flower sticker--hero-2" aria-hidden="true">✿</span>
+      <span class="doodle doodle--arrow" aria-hidden="true">↘</span>
+    </section>
+
+
+    <!-- Decorative torn-paper strip between sections (LILLY detail) -->
+    <div class="torn-divider" aria-hidden="true"></div>
+
+
+    <!-- ===============================================================
+         (01) A LITTLE ABOUT ME  — LILLY-style open notebook
+         Left page: editorial image in a polaroid frame (NOT a personal
+         photo). Right page: the introduction, on lined paper.
+         =============================================================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+
+      <!--
+        SECTION HEADING PATTERN (used for every main section):
+        small number "(01)" + one swirly script capital letter + bold word,
+        with a blush highlight behind it. aria-label gives screen readers
+        the plain words, since the letters are split into separate pieces.
+      -->
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 01 · 00:01:24</p>
+        <h2 class="section-title" id="about-title" aria-label="A little about me">
+          <span class="section-title__number">(01)</span>
+          <span class="section-title__script">A</span><span class="section-title__bold"> little about me</span>
+        </h2>
+      </header>
+
+      <div class="notebook">
+        <!-- LEFT PAGE -->
+        <div class="notebook__page notebook__page--left">
+          <figure class="polaroid tilt-left">
+            <!--
+              IMAGE PLACEHOLDER. When a licensed photo is ready, replace the
+              <div class="image-placeholder"> with, for example:
+              <img src="media/storefront.jpg" alt="A softly lit luxury storefront window at dusk">
+            -->
+            <div class="image-placeholder" role="img" aria-label="Placeholder for a licensed editorial photograph of a luxury storefront window at dusk">
+              <span class="image-placeholder__label">Image to come: luxury storefront at dusk</span>
+            </div>
+            <figcaption class="polaroid__caption handwritten">fig. 00: the window display</figcaption>
+          </figure>
+          <span class="tape tape--top" aria-hidden="true"></span>
+          <span class="sticker sticker--star sticker--about-1" aria-hidden="true">★</span>
+          <span class="sticker sticker--heart sticker--about-2" aria-hidden="true">♡</span>
+        </div>
+
+        <!-- The spiral binding down the middle (drawn by CSS) -->
+        <div class="notebook__spiral" aria-hidden="true"></div>
+
+        <!-- RIGHT PAGE -->
+        <div class="notebook__page notebook__page--right lined-paper">
+          <p class="notebook__hello handwritten" aria-hidden="true">hi!</p>
+          <p>
+            I'm Tanvee, and I'm studying <mark class="highlight">Digital Business and Entrepreneurship</mark>
+            at IIM Bangalore as part of Batch 3.
+          </p>
+          <p>
+            I'm drawn to the <em>why</em> behind a business: why one idea turns into an opportunity
+            while another quietly fades, and why some brands come to mean something to the people
+            who choose them. DBE is where I've started looking for real answers.
+          </p>
+          <p>
+            I enjoy <mark class="highlight">communicating</mark>, taking the first step on something
+            new, and working with people to turn a plan into something that actually happens.
+            Give me a new idea to explore, and I'll want to understand how it works.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===============================================================
+         (02) EDUCATION — approved scrapbook design
+         A tilted white paper card on a dotted notebook sheet, numbered
+         entries, a handwritten aside and an original text-only stamp.
+         (No real IIM Bangalore logo is used.)
+         =============================================================== -->
+    <section class="section education" id="education" aria-labelledby="education-title">
+
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 02 · 00:02:10</p>
+        <h2 class="section-title" id="education-title" aria-label="Education">
+          <span class="section-title__number">(02)</span>
+          <span class="section-title__script">E</span><span class="section-title__bold">ducation</span>
+        </h2>
+        <p class="handwritten-aside" aria-hidden="true">currently pursuing!</p>
+      </header>
+
+      <div class="scrapbook-sheet dotted-paper">
+        <div class="paper-card tilt-left">
+          <!-- An ordered list, because the entries are numbered (1), (2), (3) -->
+          <ol class="edu-list">
+
+            <li class="edu-entry">
+              <h3 class="edu-entry__school">Indian Institute of Management Bangalore (IIM Bangalore)</h3>
+              <p class="edu-entry__programme">Digital Business and Entrepreneurship (DBE)</p>
+              <p class="edu-entry__meta">Batch 3 · Joined <time datetime="2026">2026</time> · Currently pursuing</p>
+            </li>
+
+            <li class="edu-entry">
+              <h3 class="edu-entry__school">Suchitra Academy</h3>
+              <p class="edu-entry__place">Kompally, Hyderabad</p>
+              <p class="edu-entry__meta">Class XII · <time datetime="2025">2025</time></p>
+              <!-- Big-number highlight (F5) -->
+              <p class="big-number">
+                <span class="big-number__value">90.4%</span>
+                <span class="big-number__label">Class XII</span>
+              </p>
+            </li>
+
+            <li class="edu-entry">
+              <h3 class="edu-entry__school">Shikara International</h3>
+              <p class="edu-entry__place">Bachupally, Hyderabad</p>
+              <p class="edu-entry__meta">Class X · <time datetime="2023">2023</time></p>
+              <p class="big-number">
+                <span class="big-number__value">88.7%</span>
+                <span class="big-number__label">Class X</span>
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Original circular stamp, text only (decorative) -->
+        <div class="stamp" aria-hidden="true">
+          <span class="stamp__text">IIM BANGALORE · DBE · BATCH 3 · 2026</span>
+        </div>
+
+        <span class="sticker sticker--flower sticker--edu-1" aria-hidden="true">✿</span>
+        <span class="pin-dot pin-dot--1" aria-hidden="true"></span>
+        <span class="pin-dot pin-dot--2" aria-hidden="true"></span>
+      </div>
+    </section>
+
+
+    <!-- Decorative film-strip divider (retro-camera identity, used sparingly) -->
+    <div class="film-strip" aria-hidden="true"></div>
+
+
+    <!-- ===============================================================
+         (03) LEADERSHIP & INITIATIVE
+         One role, told through what it actually involved.
+         =============================================================== -->
+    <section class="section leadership" id="leadership" aria-labelledby="leadership-title">
+
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 03 · 00:03:05</p>
+        <h2 class="section-title" id="leadership-title" aria-label="Leadership and initiative">
+          <span class="section-title__number">(03)</span>
+          <span class="section-title__script">L</span><span class="section-title__bold">eadership &amp; initiative</span>
+        </h2>
+      </header>
+
+      <article class="feature-card leadership__card tilt-right">
+        <p class="label-tag">School · Class X</p>
+        <h3 class="feature-card__title">Blue House Leader</h3>
+
+        <p class="feature-card__lead">
+          In Class X, I led Blue House. It meant being responsible for more than my own work.
+        </p>
+
+        <ul class="feature-card__list">
+          <li>Represented Blue House and took responsibility for <mark class="highlight">student coordination</mark>.</li>
+          <li>Coordinated between students and teachers so that house activities ran smoothly.</li>
+          <li>Helped organise school events and manage competitions.</li>
+        </ul>
+
+        <!-- Big-number style callout. Worded so it is clear this was the HOUSE's award. -->
+        <aside class="callout" aria-label="House result">
+          <p class="callout__value">Best House Award</p>
+          <p class="callout__text">Received by Blue House during my year as House Leader, a result the whole house earned together.</p>
+        </aside>
+
+        <span class="tape tape--corner" aria-hidden="true"></span>
+      </article>
+    </section>
+
+
+    <div class="torn-divider" aria-hidden="true"></div>
+
+
+    <!-- ===============================================================
+         (04) IDEAS, DEBATE & ENTREPRENEURSHIP
+         Two experiences side by side, laid out like LILLY's project cards.
+         =============================================================== -->
+    <section class="section ideas" id="ideas" aria-labelledby="ideas-title">
+
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 04 · 00:04:18</p>
+        <h2 class="section-title" id="ideas-title" aria-label="Ideas, debate and entrepreneurship">
+          <span class="section-title__number">(04)</span>
+          <span class="section-title__script">I</span><span class="section-title__bold">deas, debate &amp; entrepreneurship</span>
+        </h2>
+        <p class="section-intro">Two rooms where I learned to think on my feet: the committee room and the workshop.</p>
+      </header>
+
+      <div class="card-grid">
+
+        <!-- Card 1: Model United Nations -->
+        <article class="project-card">
+          <span class="project-card__icon sticker sticker--globe" aria-hidden="true">◍</span>
+          <h3 class="project-card__title">Model United Nations</h3>
+
+          <p class="big-number">
+            <span class="big-number__value">4</span>
+            <span class="big-number__label">MUN conferences</span>
+          </p>
+
+          <p class="project-card__text">
+            Across four conferences, I represented the countries I was assigned, researched each agenda
+            before arriving, and argued those positions in committee discussions. MUN taught me to
+            prepare thoroughly, speak with structure, and argue for perspectives that weren't my own.
+          </p>
+
+          <ul class="tag-list" aria-label="What MUN involved">
+            <li class="tag">Research</li>
+            <li class="tag">Structured discussion</li>
+            <li class="tag">Public speaking</li>
+            <li class="tag">Different perspectives</li>
+          </ul>
+
+          <p class="badge">Best Delegate · <time datetime="2024">2024</time></p>
+        </article>
+
+        <!-- Card 2: BITS Pilani Entrepreneurship Programme (participant) -->
+        <article class="project-card">
+          <span class="project-card__icon sticker sticker--bulb" aria-hidden="true">✺</span>
+          <h3 class="project-card__title">BITS Pilani Entrepreneurship Programme</h3>
+          <p class="label-tag">Student participant · <time datetime="2025">2025</time></p>
+
+          <p class="project-card__text">
+            I took part in the programme's activities, workshops and team exercises alongside other
+            students. It gave me an early, hands-on introduction to entrepreneurship.
+          </p>
+
+          <ul class="tag-list" aria-label="What the programme involved">
+            <li class="tag">Workshops</li>
+            <li class="tag">Team exercises</li>
+            <li class="tag">Entrepreneurship</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- ===============================================================
+         (05) RECOGNITION — compact, like two pinned ribbons
+         No certificates are displayed (by choice).
+         =============================================================== -->
+    <section class="section recognition" id="recognition" aria-labelledby="recognition-title">
+
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 05 · 00:05:02</p>
+        <h2 class="section-title" id="recognition-title" aria-label="Recognition">
+          <span class="section-title__number">(05)</span>
+          <span class="section-title__script">R</span><span class="section-title__bold">ecognition</span>
+        </h2>
+      </header>
+
+      <ul class="ribbon-list">
+        <li class="ribbon tilt-left">
+          <p class="ribbon__title">Best Delegate</p>
+          <p class="ribbon__detail">Model United Nations · <time datetime="2024">2024</time></p>
+        </li>
+        <li class="ribbon tilt-right">
+          <p class="ribbon__title">Silver Medal</p>
+          <p class="ribbon__detail">SOF English Olympiad</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <div class="film-strip" aria-hidden="true"></div>
+
+
+    <!-- ===============================================================
+         (06) MY TOOLKIT
+         Skills grouped into labelled "kits". The last group is clearly
+         marked as still being learned.
+         =============================================================== -->
+    <section class="section toolkit" id="toolkit" aria-labelledby="toolkit-title">
+
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 06 · 00:06:40</p>
+        <h2 class="section-title" id="toolkit-title" aria-label="My toolkit">
+          <span class="section-title__number">(06)</span>
+          <span class="section-title__script">M</span><span class="section-title__bold">y toolkit</span>
+        </h2>
+      </header>
+
+      <div class="toolkit-grid">
+
+        <div class="kit">
+          <h3 class="kit__title">Communication &amp; People</h3>
+          <ul class="tag-list">
+            <li class="tag">Public speaking</li>
+            <li class="tag">Communication</li>
+            <li class="tag">Student coordination</li>
+          </ul>
+        </div>
+
+        <div class="kit">
+          <h3 class="kit__title">Leadership &amp; Execution</h3>
+          <ul class="tag-list">
+            <li class="tag">Leadership</li>
+            <li class="tag">Event organisation</li>
+            <li class="tag">Problem-solving</li>
+          </ul>
+        </div>
+
+        <div class="kit">
+          <h3 class="kit__title">Creative &amp; Digital</h3>
+          <ul class="tag-list">
+            <li class="tag">Canva</li>
+            <li class="tag">Social media management</li>
+          </ul>
+        </div>
+
+        <!-- "kit--learning" lets CSS style this group differently (e.g. dashed outline) -->
+        <div class="kit kit--learning">
+          <h3 class="kit__title">Currently Exploring</h3>
+          <p class="kit__note">In progress, still learning</p>
+          <ul class="tag-list">
+            <li class="tag tag--learning">Data Analytics &amp; Business Intelligence</li>
+            <li class="tag tag--learning">No-Code Product Prototyping (UI/UX)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Languages as one compact editorial line -->
+      <p class="languages">
+        <span class="languages__label">Languages</span>
+        English, Hindi &amp; Telugu: comfortable speaking and writing
+        <span class="languages__divider" aria-hidden="true">/</span>
+        French &amp; Malayalam: basic speaking
+      </p>
+    </section>
+
+
+    <div class="torn-divider" aria-hidden="true"></div>
+
+
+    <!-- ===============================================================
+         (07) THE DETAILS BEHIND DESIRE — signature editorial feature
+         Laid out like a magazine spread: each "story" has a number,
+         a title, a question, a short essay and an editorial image.
+         These are interests and curiosities, not projects or research.
+         =============================================================== -->
+    <section class="section desire" id="desire" aria-labelledby="desire-title">
+
+      <header class="section-heading desire__masthead">
+        <p class="reel-label" aria-hidden="true">REEL 07 · FEATURE</p>
+        <h2 class="section-title" id="desire-title" aria-label="The details behind desire">
+          <span class="section-title__number">(07)</span>
+          <span class="section-title__script">T</span><span class="section-title__bold">he details behind desire</span>
+        </h2>
+        <p class="desire__dek">
+          A personal edit of the things I notice, and want to understand: why some names, stores
+          and objects feel worth so much more than what they're made of.
+        </p>
+        <p class="desire__disclaimer handwritten">curiosities, not credentials</p>
+      </header>
+
+      <!-- STORY 01 -->
+      <article class="story story--image-left">
+        <figure class="story__image collage">
+          <div class="image-placeholder" role="img" aria-label="Placeholder for a licensed editorial photograph of a historic fashion-house street facade">
+            <span class="image-placeholder__label">Image to come: historic fashion-house facade</span>
+          </div>
+          <figcaption class="story__caption">Fig. 01: Where heritage meets the street.</figcaption>
+        </figure>
+        <div class="story__text">
+          <p class="story__number">01</p>
+          <h3 class="story__title">The House Behind the Name</h3>
+          <p class="story__question">What makes a name worth remembering for a hundred years?</p>
+          <p>
+            Some brands carry generations of history with them. I'm fascinated by how a house builds
+            and protects its identity, through its <mark class="highlight">heritage, its codes and the
+            stories it tells</mark> about itself, while staying relevant enough to be wanted today.
+          </p>
+        </div>
+      </article>
+
+      <!-- STORY 02 -->
+      <article class="story story--image-right">
+        <figure class="story__image collage">
+          <div class="image-placeholder" role="img" aria-label="Placeholder for a licensed editorial photograph of a softly lit premium store interior">
+            <span class="image-placeholder__label">Image to come: premium store interior</span>
+          </div>
+          <figcaption class="story__caption">Fig. 02: The store as a stage.</figcaption>
+        </figure>
+        <div class="story__text">
+          <p class="story__number">02</p>
+          <h3 class="story__title">The Experience of Premium Retail</h3>
+          <p class="story__question">How does a room tell you what a brand is worth?</p>
+          <p>
+            A luxury store is rarely just a shop. The light, the pace, the presentation, the way you're
+            greeted: <mark class="highlight">space, service and storytelling</mark> shape how you feel
+            about a brand before you've touched a single thing. I want to understand how those choices
+            are made.
+          </p>
+        </div>
+      </article>
+
+      <!-- STORY 03 -->
+      <article class="story story--image-left">
+        <figure class="story__image collage">
+          <div class="image-placeholder" role="img" aria-label="Placeholder for a licensed editorial close-up photograph of an artisan's hands at work">
+            <span class="image-placeholder__label">Image to come: artisan's hands at work</span>
+          </div>
+          <figcaption class="story__caption">Fig. 03: Hours you can't see, value you can feel.</figcaption>
+        </figure>
+        <div class="story__text">
+          <p class="story__number">03</p>
+          <h3 class="story__title">Where Craft Meets the Customer</h3>
+          <p class="story__question">Why do we pay for what we can't see?</p>
+          <p>
+            Indian and Western craft traditions hold skills passed down over generations. Craft is
+            real, but its value also lives in the customer's mind. I'm curious about where the two
+            meet: how <mark class="highlight">craftsmanship and consumer psychology</mark> together
+            shape perceived value.
+          </p>
+        </div>
+      </article>
+    </section>
+
+
+    <div class="film-strip" aria-hidden="true"></div>
+
+
+    <!-- ===============================================================
+         (08) WHERE I'M HEADED
+         Future direction, written as what I want to LEARN (an
+         aspiration, not a claim of experience). Kept short so it
+         doesn't repeat section (07).
+         =============================================================== -->
+    <section class="section direction" id="direction" aria-labelledby="direction-title">
+
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 08 · NEXT SCENE</p>
+        <h2 class="section-title" id="direction-title" aria-label="Where I'm headed">
+          <span class="section-title__number">(08)</span>
+          <span class="section-title__script">W</span><span class="section-title__bold">here I'm headed</span>
+        </h2>
+      </header>
+
+      <blockquote class="pull-quote">
+        <p>I want to understand what makes a luxury brand endure.</p>
+      </blockquote>
+
+      <p class="direction__intro">
+        I hope to build a career in <mark class="highlight">luxury management and luxury retail</mark>.
+        I'm at the very beginning of that path, so for now my direction is a list of things I intend
+        to learn properly:
+      </p>
+
+      <!-- Three "frames", styled like a short film strip of next scenes -->
+      <ol class="frame-list">
+        <li class="frame">
+          <h3 class="frame__title">The House Behind the Name</h3>
+          <p>Understanding brand identity, heritage and desirability.</p>
+        </li>
+        <li class="frame">
+          <h3 class="frame__title">The Experience of Premium Retail</h3>
+          <p>Exploring spaces, service, storytelling and customer experience.</p>
+        </li>
+        <li class="frame">
+          <h3 class="frame__title">Where Craft Meets the Customer</h3>
+          <p>Understanding craftsmanship, consumer psychology and perceived value.</p>
+        </li>
+      </ol>
+    </section>
+
+
+    <div class="torn-divider" aria-hidden="true"></div>
+
+
+    <!-- ===============================================================
+         (09) CLOSING / CONTACT
+         A closing line that returns to the film idea, plus email only.
+         (No phone number, no LinkedIn.)
+         =============================================================== -->
+    <section class="section closing" id="contact" aria-labelledby="contact-title">
+
+      <header class="section-heading">
+        <p class="reel-label" aria-hidden="true">REEL 09 · TO BE CONTINUED</p>
+        <h2 class="section-title" id="contact-title" aria-label="Let's talk">
+          <span class="section-title__number">(09)</span>
+          <span class="section-title__script">L</span><span class="section-title__bold">et's talk</span>
+        </h2>
+      </header>
+
+      <p class="closing__statement">Consider this the opening reel.</p>
+
+      <p class="closing__text">
+        I'm at the beginning of my story in business, and I intend to keep asking good questions.
+        If you'd like to talk about brands, retail or an idea worth exploring, I'd love to hear from you.
+      </p>
+
+      <!--
+        EMAIL PLACEHOLDER — replace BOTH parts below with your real Gmail
+        address before publishing:
+          1. after "mailto:" inside href="..."
+          2. the visible text between > and <
+        Example: <a class="email-link" href="mailto:name@gmail.com">name@gmail.com</a>
+      -->
+      <p class="closing__email">
+        <a class="email-link" href="mailto:YOUR-GMAIL-ADDRESS-HERE">Email Tanvee: [your Gmail address here]</a>
+      </p>
+
+      <!-- A small, personal closing detail (fits the camera theme) -->
+      <p class="off-camera">
+        <span class="off-camera__label">Off camera:</span> dance · badminton · creative crafts
+      </p>
+
+      <span class="sticker sticker--star sticker--closing-1" aria-hidden="true">★</span>
+    </section>
+  </main>
+
+
+  <!-- =================================================================
+       FOOTER
+       ================================================================= -->
+  <footer class="site-footer">
+    <p class="site-footer__stop" aria-hidden="true">■ STOP · END OF REEL</p>
+    <p>© <time datetime="2026">2026</time> Tanvee · Built with HTML &amp; CSS for the IIM Bangalore DBE programme</p>
+    <p><a href="#home">Back to top ↑</a></p>
+  </footer>
+
+</body>
+</html>
