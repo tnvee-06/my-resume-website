@@ -2,7 +2,7 @@
 
 Reference document for the IIM Bangalore DBE Web Development assignment.
 **Deadline: 17 November 2026, 10:30 PM IST**
-Status: **HTML foundation built (index.html). CSS not started. Awaiting Tanvee's HTML review.**
+Status: **Complete website built: index.html + style.css (tested). Awaiting Tanvee's photo, Gmail address and review.**
 
 ---
 
@@ -157,3 +157,11 @@ magazine-style headings, collage photos, scrapbook stickers.
 - Meta description uses first name only; noindex kept
 - index.html is now the source of truth for website copy (RESUME-CONTENT-DRAFT.md = earlier draft)
 - Assets still needed: licensed intro video + poster, 4 licensed editorial images, Gmail address
+
+## 16 Nov update
+- Tanvee now WANTS her own photograph in the hero (overrides earlier "no personal photos"). Path: media/tanvee.jpg.
+  Never substitute stock or generated faces. Photo not yet received; hero shows a labelled photo frame.
+- Structural reference: Ansh Goel recording (functional ideas only: sticky nav, hero CTAs, quick facts,
+  numbered headings, education + milestones timeline, grouped skills, contact). Not his content/colours.
+- style.css written: LILLY scrapbook language; dark cocoa magazine spread for (07); CSS-only intro reel
+  (light-leak film backdrop, fades after 6s); CSS colour plates instead of stock photos for (07).
