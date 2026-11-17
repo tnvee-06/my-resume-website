@@ -165,3 +165,18 @@ magazine-style headings, collage photos, scrapbook stickers.
   numbered headings, education + milestones timeline, grouped skills, contact). Not his content/colours.
 - style.css written: LILLY scrapbook language; dark cocoa magazine spread for (07); CSS-only intro reel
   (light-leak film backdrop, fades after 6s); CSS colour plates instead of stock photos for (07).
+
+## 17 Nov — Master creative direction (implemented)
+- Palette: raspberry / hot pink / coral / warm red / orange accents, blush paper, deep plum text (replaces cream-cocoa)
+- Type (substitutes; exact fonts not supplied): Gloock (AZORE), Pinyon Script (OUR BELOVED SUMMER / THE END), DM Sans body, Caveat hand
+- Opening: montage A→D→C→E (Pexels, 7.8 s, media/intro-montage.mp4) + "Hi, I'm Tanvee." glow → ID card rises on scroll → card lands in About notebook
+- ID card fields: NAME Tanvee · DEPARTMENT Digital Business & Entrepreneurship · INSTITUTION IIM Bangalore · BATCH 03 · SIGNATURE Tanvee. Header reads "IDENTITY CARD" (not "EMPLOYEE") to avoid implying employment — awaiting approval
+- Philosophy (exact): A life of intention. / A mind of curiosity. / And a heart full of ambition.
+- Quote: “I never dreamed about success. I worked for it.” — Estée Lauder
+- MUN: 4 conferences; Best Delegate 2025; Best Reporter 2026. YEB (BITS Pilani, Hyderabad campus, 2025): observed/learned only, no personal pitch
+- School name: Shikara International everywhere
+- Section titles (final): Beyond the First Look · The Classroom Chapters · A Seat at the Table · Committee Rooms & Business Blueprints · The Milestone Edit · Skills in My Corner · The Details Behind Desire · The Long View · An Open Invitation
+- Closing line (last element): We all have tomorrows for a reason.
+- Schiaparelli feature: original SVG illustration + Pexels stills only; disclaimer "not affiliated"
+- Email: tanveereddy06@gmail.com. No phone, no LinkedIn, no certificates
+- Reference images kept private (not in repo)
