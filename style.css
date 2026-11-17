@@ -945,3 +945,28 @@ h3 { margin: 0; font-weight: 400; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+/* The REC dots blink with opacity (not visibility): same look, and it lets
+   the browser autoplay the muted films properly. */
+.rec-dot { animation: rec-blink 1.4s steps(1, end) infinite; }
+@keyframes rec-blink { 50% { opacity: 0; } }
+
+/* "The …" titles: the whole word "The" in script, so it always reads clearly */
+.ref-heading__script--word { font-size: clamp(2.6rem, 8vw, 4.6rem); line-height: 0.8; margin-right: 0.05em; }
+
+/* Classroom bookmark: tucked into the top-right corner, clear of the title */
+.bookmark { right: 1.2rem; height: 90px; }
+@keyframes ribbon-drop { from { height: 0; } to { height: 90px; } }
+@media (min-width: 960px) {
+  .contents-page .stamp { right: 4.5rem; }
+}
+@media (max-width: 959px) {
+  .bookmark { height: 56px; }
+  @keyframes ribbon-drop { from { height: 0; } to { height: 56px; } }
+}
+
+/* Chapter fireworks live in the wide side margins only, never over text */
+.chapter > .fireworks { overflow: visible; }
+.chapter > .fireworks .fw--1, .chapter > .fireworks .fw--3, .chapter > .fireworks .fw--5 { left: -6%; }
+.chapter > .fireworks .fw--2, .chapter > .fireworks .fw--4, .chapter > .fireworks .fw--6 { left: 106%; }
+@media (max-width: 1340px) { .chapter > .fireworks { display: none; } }
