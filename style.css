@@ -295,24 +295,28 @@ svg use { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: rou
    #EA003A crimson · #820065 fuchsia · #600061 plum · #41002A mardi gras · #2F002F violet
    ===================================================================== */
 
-/* One continuous sunset-to-twilight sky behind the whole page.
-   Soft overlapping blooms (never stripes): bright crimson and fuchsia
-   near the top, plum through the middle, mardi gras and violet at the end. */
+/* ONE CONTINUOUS SUNSET behind the whole page, top to bottom:
+   Electric Crimson (the sun going down) → Fuchsia Purple → Deep Plum
+   → Mardi Gras → Dark Violet (night). Soft overlapping blooms of all five
+   colours keep it organic, like tie-dye, never flat stripes. */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6.5rem;      /* keeps headings clear of the sticky menu */
   background-color: var(--violet);
   background-image:
-    radial-gradient(40% 6% at 85% 3%,   rgba(234, 0, 58, 0.75), transparent 70%),
-    radial-gradient(50% 6% at 8% 11%,   rgba(234, 0, 58, 0.55), transparent 70%),
-    radial-gradient(55% 7% at 80% 19%,  rgba(130, 0, 101, 0.9), transparent 70%),
-    radial-gradient(45% 6% at 15% 29%,  rgba(234, 0, 58, 0.35), transparent 70%),
-    radial-gradient(60% 8% at 70% 40%,  rgba(96, 0, 97, 0.95), transparent 70%),
-    radial-gradient(50% 6% at 10% 52%,  rgba(130, 0, 101, 0.6), transparent 70%),
-    radial-gradient(55% 7% at 85% 63%,  rgba(234, 0, 58, 0.22), transparent 70%),
-    radial-gradient(60% 8% at 25% 75%,  rgba(65, 0, 42, 0.95), transparent 70%),
-    radial-gradient(50% 7% at 80% 88%,  rgba(96, 0, 97, 0.6), transparent 70%),
-    linear-gradient(180deg, #820065 0%, #820065 8%, #600061 30%, #41002a 62%, #2f002f 85%, #2f002f 100%);
+    radial-gradient(55% 5% at 80% 2%,   rgba(234, 0, 58, 0.95), transparent 72%),
+    radial-gradient(60% 6% at 15% 8%,   rgba(234, 0, 58, 0.85), transparent 72%),
+    radial-gradient(55% 6% at 85% 15%,  rgba(130, 0, 101, 0.9), transparent 72%),
+    radial-gradient(60% 6% at 10% 22%,  rgba(234, 0, 58, 0.7), transparent 72%),
+    radial-gradient(50% 6% at 75% 30%,  rgba(234, 0, 58, 0.5), transparent 72%),
+    radial-gradient(60% 7% at 25% 38%,  rgba(130, 0, 101, 0.95), transparent 72%),
+    radial-gradient(55% 6% at 85% 46%,  rgba(234, 0, 58, 0.38), transparent 72%),
+    radial-gradient(60% 7% at 15% 54%,  rgba(96, 0, 97, 0.95), transparent 72%),
+    radial-gradient(50% 6% at 80% 62%,  rgba(130, 0, 101, 0.6), transparent 72%),
+    radial-gradient(60% 7% at 30% 70%,  rgba(234, 0, 58, 0.18), transparent 72%),
+    radial-gradient(60% 7% at 75% 80%,  rgba(65, 0, 42, 0.95), transparent 72%),
+    radial-gradient(55% 6% at 20% 90%,  rgba(96, 0, 97, 0.5), transparent 72%),
+    linear-gradient(180deg, #ea003a 0%, color-mix(in srgb, #ea003a 60%, #820065) 9%, #820065 26%, #600061 46%, #41002a 68%, #2f002f 86%, #2f002f 100%);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -664,6 +668,20 @@ h3 { margin: 0; font-weight: 400; }
 .ms-sp { width: 22px; height: 22px; right: 1rem; top: 2rem; }
 .ms-fw { width: 56px; height: 56px; right: 0; top: 1rem; }
 
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* each milestone turns in like a page; its outlined numeral "fills" with colour; the clipping swings in on its pin */
+    .ms-list li { transform-origin: left center; animation: page-in linear both; animation-timeline: view(); animation-range: entry 5% cover 30%; }
+    .ms-list li:nth-child(2) { animation-range: entry 15% cover 38%; }
+    .ms-list li:nth-child(3) { animation-range: entry 25% cover 46%; }
+    .ms-num { animation: num-fill linear both; animation-timeline: view(); animation-range: entry 20% cover 50%; }
+    .clipping { transform-origin: 50% 0.9rem; animation: swing-in linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+    .ritual { animation: slide-up-tilt linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+  }
+}
+@keyframes num-fill { from { color: transparent; } 60% { color: transparent; } to { color: rgba(234, 0, 58, 0.35); } }
+@keyframes swing-in { 0% { opacity: 0; transform: rotate(-24deg); } 60% { opacity: 1; transform: rotate(8deg); } 80% { transform: rotate(-3deg); } 100% { opacity: 1; transform: rotate(0); } }
+@keyframes slide-up-tilt { from { opacity: 0; translate: 0 50px; rotate: -6deg; } to { opacity: 1; translate: 0 0; rotate: 2deg; } }
 .ms-side { display: grid; gap: 2.5rem; justify-items: center; }
 .clipping { position: relative; max-width: 340px; padding: 2.2rem 1.6rem 1.5rem; margin: 0; color: var(--violet); rotate: -3deg;
   background-color: var(--paper); background-image: repeating-linear-gradient(to bottom, transparent 0 23px, rgba(65, 0, 42, 0.06) 23px 24px);
@@ -761,14 +779,25 @@ h3 { margin: 0; font-weight: 400; }
 .marquee__track i { font-style: normal; color: var(--crimson); }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
-/* ARCHES: the clips framed like arched boutique windows */
-.arches { display: grid; gap: 2.5rem; justify-items: center; margin-top: clamp(4rem, 9vw, 6rem); }
-.arch { margin: 0; width: min(100%, 300px); text-align: center; }
-.arch video { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4.2; object-fit: cover; border-radius: 999px 999px 6px 6px;
-  outline: 1.5px solid rgba(248, 239, 234, 0.55); outline-offset: 8px; box-shadow: 0 30px 50px -22px rgba(0, 0, 0, 0.85); transition: outline-offset 0.4s ease; }
-.arch:hover video { outline-offset: 14px; }
-.arch figcaption { margin-top: 1.3rem; font-family: var(--display); font-size: 1.1rem; }
-.arch figcaption span { font-family: var(--script); font-size: 1.5em; color: var(--crimson-light); margin-right: 0.3rem; }
+/* THE THREE FILMS: portrait editorial frames, softly squared corners,
+   a fine double border, title directly beneath. All three identical in size. */
+.films { display: grid; gap: 3rem 2rem; justify-items: center; margin-top: clamp(4rem, 9vw, 6rem); counter-reset: none; }
+.film-card { margin: 0; width: min(100%, 300px); }
+.film-card__frame { padding: 10px; border-radius: 14px; background: linear-gradient(160deg, rgba(248, 239, 234, 0.16), rgba(248, 239, 234, 0.04));
+  border: 1px solid rgba(248, 239, 234, 0.45); box-shadow: 0 30px 50px -22px rgba(0, 0, 0, 0.85), inset 0 0 0 4px rgba(47, 0, 47, 0.4);
+  transition: transform 0.4s ease, border-color 0.4s ease; }
+.film-card:hover .film-card__frame { transform: translateY(-6px); border-color: var(--crimson-pale); }
+.film-card video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 8px; background: var(--violet); }
+.film-card figcaption { display: flex; align-items: baseline; gap: 0.7rem; margin-top: 1.1rem; font-family: var(--display); font-size: 1.25rem; line-height: 1.25; }
+.film-card__no { font-family: var(--script); font-size: 1.7rem; color: var(--crimson-light); }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .film-card { animation: rise-film linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+    .film-card:nth-child(2) { animation-range: entry 10% cover 38%; }
+    .film-card:nth-child(3) { animation-range: entry 20% cover 46%; }
+  }
+}
+@keyframes rise-film { from { opacity: 0; translate: 0 60px; scale: 0.94; } to { opacity: 1; translate: 0 0; scale: 1; } }
 
 .desire__disclaimer { font-style: italic; }
 .desire__disclaimer { margin-top: 3rem; text-align: center; font-size: 0.82rem; opacity: 0.75; }
@@ -782,9 +811,31 @@ h3 { margin: 0; font-weight: 400; }
 .long-view__text p + p { margin-top: 1.1rem; }
 .long-view__text p:first-child::first-line { font-weight: 700; }
 .horizon { position: relative; padding-top: 7rem; }
-.horizon__sun { position: absolute; top: 1.2rem; left: 50%; translate: -50% 0; width: 180px; height: 90px; border-radius: 180px 180px 0 0;
-                background: radial-gradient(circle at 50% 100%, var(--paper) 0%, var(--crimson) 45%, var(--fuchsia) 100%); opacity: 0.9;
-                box-shadow: 0 0 60px rgba(234, 0, 58, 0.55); }
+.horizon__sky { position: absolute; top: 0; left: 0; right: 0; height: 7.6rem; overflow: hidden; }
+.horizon__sun { position: absolute; bottom: -90px; left: 50%; translate: -50% 0; width: 180px; height: 180px; border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, var(--paper) 0%, var(--crimson) 40%, var(--fuchsia) 100%); box-shadow: 0 0 70px rgba(234, 0, 58, 0.6); }
+.horizon__glow { position: absolute; left: 50%; bottom: -60px; translate: -50% 0; width: 520px; height: 160px; border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(234, 0, 58, 0.45), transparent 70%); animation: glow-breathe 4s ease-in-out infinite alternate; }
+@keyframes glow-breathe { to { opacity: 0.55; scale: 1.08; } }
+.horizon__line path { stroke-dasharray: 1100; stroke-dashoffset: 0; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .horizon__sun { animation: sun-set linear both; animation-timeline: view(); animation-range: entry 10% exit 60%; }
+    .horizon__line path { animation: draw-line linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+    .horizon__stops li { animation: stop-in linear both; animation-timeline: view(); animation-range: entry 10% cover 35%; }
+    .horizon__stops li:nth-child(2) { animation-range: entry 20% cover 45%; }
+    .horizon__stops li:nth-child(3) { animation-range: entry 30% cover 55%; }
+    .long-view__line { animation: line-in linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; }
+    .long-view__text p { animation: rise-in linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+  }
+}
+@keyframes sun-set { from { translate: -50% -60px; } to { translate: -50% 60px; } }
+@keyframes draw-line { from { stroke-dashoffset: 1100; } to { stroke-dashoffset: 0; } }
+@keyframes rise-in { from { opacity: 0; translate: 0 40px; } to { opacity: 1; translate: 0 0; } }
+@keyframes stop-in { from { opacity: 0; translate: 0 30px; } to { opacity: 1; translate: 0 0; } }
+@keyframes line-in { from { opacity: 0; letter-spacing: 0.08em; filter: blur(6px); } to { opacity: 1; letter-spacing: normal; filter: blur(0); } }
+.horizon__stops li { position: relative; padding-top: 1rem; }
+.horizon__stops li::before { content: ""; position: absolute; top: -0.65rem; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--crimson); box-shadow: 0 0 0 5px rgba(234, 0, 58, 0.25); }
 .horizon__line { position: relative; display: block; width: 100%; height: 22px; }
 .horizon__line path { fill: none; stroke: var(--paper); stroke-width: 2.5; stroke-linecap: round; }
 .horizon__stops { display: grid; gap: 1.6rem; margin-top: 1.6rem; }
@@ -833,7 +884,7 @@ h3 { margin: 0; font-weight: 400; }
   .houses__intro em { font-family: var(--script); font-style: normal; font-size: 1.2em; color: var(--crimson-pale); }
 .houses__intro { max-width: 30ch; margin: 0 auto 2.5rem; text-align: center; font-family: var(--display); font-size: clamp(1.5rem, 3.8vw, 2.2rem); line-height: 1.25; }
 .houses__cols { grid-template-columns: 1fr 1fr; gap: 3rem; }
-  .arches { grid-template-columns: repeat(3, 1fr); align-items: end; }
+  .films { grid-template-columns: repeat(3, 1fr); }
   .questions { grid-template-columns: 1fr 1fr; column-gap: 3rem; }
   .horizon__stops { grid-template-columns: repeat(3, 1fr); }
   .newsprint__cols { grid-template-columns: 1.3fr 1fr; gap: 2.5rem; }
@@ -862,6 +913,10 @@ h3 { margin: 0; font-weight: 400; }
   .mindmap__lines { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
   .mindmap__lines path { fill: none; stroke: var(--crimson); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; }
   .mindmap__lines .dashed { stroke: var(--fuchsia); stroke-dasharray: 6 6; }
+  .mindmap--two { grid-template-rows: auto; row-gap: 0; }
+  .mindmap--two .branch--2 { grid-column: 3; grid-row: 1; align-self: end; }
+  .mindmap--two .branch--1 { align-self: start; }
+  .mindmap--two .mindmap__centre { grid-row: 1; }
   .mindmap__centre { grid-column: 2; grid-row: 1 / span 2; position: relative; z-index: 1; background: var(--paper); }
   .branch { background: var(--paper); padding: 0.4rem; z-index: 1; }
   .branch--1 { grid-column: 1; grid-row: 1; }

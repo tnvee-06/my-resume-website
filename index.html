@@ -461,28 +461,18 @@
     </div>
 
     <div class="mindmap-page">
-      <div class="mindmap">
-        <!-- connector lines (wide screens only) -->
-        <svg class="mindmap__lines" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <path d="M500 260 C 420 230, 320 170, 230 110"></path>
-          <path d="M500 260 C 600 220, 700 160, 780 110"></path>
-          <path d="M500 260 C 420 300, 320 370, 230 420"></path>
-          <path class="dashed" d="M500 260 C 600 300, 700 370, 780 420"></path>
+      <div class="mindmap mindmap--two">
+        <svg class="mindmap__lines" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M500 200 C 420 170, 330 120, 250 110"></path>
+          <path class="dashed" d="M500 200 C 590 230, 680 280, 760 290"></path>
         </svg>
         <p class="mindmap__centre" aria-hidden="true">my<br>corner</p>
+        <!-- Group 1: Tanvee's own heading/wording to be supplied (screenshot not received yet) -->
         <div class="branch branch--1">
-          <h3 class="branch__title">Voice &amp; Presence</h3>
-          <ul class="branch__list"><li>Public Speaking</li><li>Persuasive Communication</li><li>Presentation</li></ul>
+          <h3 class="branch__title">In My Corner</h3>
+          <ul class="branch__list"><li>Public Speaking</li><li>Persuasive Communication</li><li>Presentation</li><li>Leadership</li><li>Student Coordination</li><li>Event Planning &amp; Execution</li><li>Structured Problem-Solving</li><li>Visual Design · Canva</li><li>Social Media Management</li></ul>
         </div>
-        <div class="branch branch--2">
-          <h3 class="branch__title">Leadership &amp; Orchestration</h3>
-          <ul class="branch__list"><li>Leadership</li><li>Student Coordination</li><li>Event Planning &amp; Execution</li><li>Structured Problem-Solving</li></ul>
-        </div>
-        <div class="branch branch--3">
-          <h3 class="branch__title">Creative Direction</h3>
-          <ul class="branch__list"><li>Visual Design · Canva</li><li>Social Media Management</li></ul>
-        </div>
-        <div class="branch branch--4 branch--learning">
+        <div class="branch branch--2 branch--learning">
           <h3 class="branch__title">Currently Exploring</h3>
           <p class="hand hand--learning" aria-hidden="true">in pencil, still learning</p>
           <ul class="branch__list"><li>Data Analytics &amp; Business Intelligence</li><li>No-Code Product Prototyping</li><li>UI/UX Design</li></ul>
@@ -568,24 +558,34 @@
       </div>
     </div>
 
-    <!-- Three short silent clips, framed as arched boutique windows.
-         They loop while on screen (licensed Pexels footage). -->
-    <div class="arches">
-      <figure class="arch">
-        <video autoplay muted loop playsinline preload="metadata" poster="media/clip-street.jpg" aria-label="Looping clip: festive lights over a London shopping street at night"><source src="media/clip-street.mp4" type="video/mp4"></video>
-        <figcaption><span>I.</span> The street as a promise</figcaption>
+    <!-- THREE FILMS by Tanvee (unchanged except format: HEVC .mov -> H.264 .mp4).
+         Silent, looping while on screen. Each title sits directly beneath. -->
+    <div class="films">
+      <figure class="film-card">
+        <div class="film-card__frame">
+          <video autoplay muted loop playsinline preload="metadata" poster="media/art-becomes-adornment.jpg" aria-label="Film: Where Art Becomes Adornment">
+            <source src="media/art-becomes-adornment.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption><span class="film-card__no" aria-hidden="true">01</span>Where Art Becomes Adornment</figcaption>
       </figure>
-      <figure class="arch arch--tall">
-        <video autoplay muted loop playsinline preload="metadata" poster="media/clip-window.jpg" aria-label="Looping clip: a softly lit jewellery boutique window with crystal chandeliers"><source src="media/clip-window.mp4" type="video/mp4"></video>
-        <figcaption><span>II.</span> The window as a stage</figcaption>
+      <figure class="film-card">
+        <div class="film-card__frame">
+          <video autoplay muted loop playsinline preload="metadata" poster="media/eye-for-the-extraordinary.jpg" aria-label="Film: An Eye for the Extraordinary">
+            <source src="media/eye-for-the-extraordinary.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption><span class="film-card__no" aria-hidden="true">02</span>An Eye for the Extraordinary</figcaption>
       </figure>
-      <figure class="arch">
-        <video autoplay muted loop playsinline preload="metadata" poster="media/clip-craft.jpg" aria-label="Looping clip: an artisan's hands carving a delicate shell piece"><source src="media/clip-craft.mp4" type="video/mp4"></video>
-        <figcaption><span>III.</span> The hands behind the object</figcaption>
+      <figure class="film-card">
+        <div class="film-card__frame">
+          <video autoplay muted loop playsinline preload="metadata" poster="media/beyond-the-sketch.jpg" aria-label="Film: Beyond the Sketch">
+            <source src="media/beyond-the-sketch.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption><span class="film-card__no" aria-hidden="true">03</span>Beyond the Sketch</figcaption>
       </figure>
     </div>
-
-    <p class="desire__disclaimer">Notes from the outside, looking in: an admirer's observations, not an insider's. No brand affiliation implied.</p>
   </section>
 
 
@@ -612,7 +612,7 @@
     </div>
 
     <div class="horizon">
-      <div class="horizon__sun" aria-hidden="true"></div>
+      <div class="horizon__sky" aria-hidden="true"><div class="horizon__sun"></div><span class="horizon__glow"></span></div>
       <svg class="horizon__line" viewBox="0 0 1000 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 16 C 120 8, 260 22, 400 14 C 560 6, 700 22, 840 12 C 920 8, 970 16, 1000 14"></path></svg>
       <ol class="horizon__stops">
         <li><p class="hand" aria-hidden="true">first</p><h3>Why a house grows</h3></li>
