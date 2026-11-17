@@ -180,3 +180,13 @@ magazine-style headings, collage photos, scrapbook stickers.
 - Schiaparelli feature: original SVG illustration + Pexels stills only; disclaimer "not affiliated"
 - Email: tanveereddy06@gmail.com. No phone, no LinkedIn, no certificates
 - Reference images kept private (not in repo)
+
+## 17 Nov — Final art direction (implemented)
+- Opening: LOCKED (Begin → "Hi, I'm Tanvee." typed over Tanvee's final film, film as feathered background)
+- Palette: exact five colours + cream paper; light pinks are mixes of crimson + paper only
+- Doodle language: sparkle, firework, loose star (favourites), plus arrows, circles, underlines, margin notes; draw-in on scroll
+- Sections: About = reference layout on torn paper + Identity Card in badge sleeve; Philosophy standalone;
+  Classroom = contents page; Seat at the Table = newsprint; Committee = delegate placard + notes / blueprint;
+  Milestone Edit = outlined numerals + Estée Lauder clipping + Ritual of Becoming; Skills = mind map;
+  Desire = magazine cover story; Long View = setting sun on horizon; Invitation = letter with wax seal; final frame
+- Removed: old Pexels montage (replaced by Tanvee's final film)

@@ -5,783 +5,653 @@
   IIM Bangalore · Digital Business and Entrepreneurship (DBE) · Batch 03
 
   THE STORY (top to bottom)
-    Opening      Cinematic montage + "Hi, I'm Tanvee."  → the ID card rises in as you scroll
-    (01)         Beyond the First Look        (notebook About; the ID card lands here)
-    Philosophy   A life of intention…          (+ Estée Lauder quote)
-    (02)         The Classroom Chapters        (education)
-    (03)         A Seat at the Table           (leadership)
-    (04)         Committee Rooms & Business Blueprints (MUN + YEB)
-    (05)         The Milestone Edit            (recognition + Ritual of Becoming)
+    Opening      "Begin" → "Hi, I'm Tanvee." typed over the film   (LOCKED)
+    (01)         Beyond the First Look  (+ the Identity Card)
+    Philosophy   A life of intention. A mind of curiosity. And a heart full of ambition.
+    (02)         The Classroom Chapters
+    (03)         A Seat at the Table
+    (04)         Committee Rooms & Business Blueprints
+    (05)         The Milestone Edit     (+ the Estée Lauder clipping, Ritual of Becoming)
     (06)         Skills in My Corner
-    (07)         The Details Behind Desire     (signature editorial feature)
+    (07)         The Details Behind Desire
     (08)         The Long View
-    (09)         An Open Invitation            (contact)
-    Final frame  "We all have tomorrows for a reason."
+    (09)         An Open Invitation
+    Final frame  We all have tomorrows for a reason.
 
-  RULES
-  - HTML + CSS only. No JavaScript anywhere.
-  - All design lives in style.css. Nothing is styled inside this file.
-  - aria-hidden="true" = decorative only (stickers, doodles), so screen
-    readers skip it.
-  - Comments marked "DRAFT COPY" = wording still waiting for Tanvee's approval.
+  RULES: HTML + CSS only (no JavaScript). All design is in style.css.
+  aria-hidden="true" = decorative only (doodles, stickers), skipped by
+  screen readers. "DRAFT COPY" comments = wording awaiting approval.
   =====================================================================
 -->
 <html lang="en-IN">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tanvee · Portfolio</title>
   <meta name="description" content="Portfolio of Tanvee, a Digital Business and Entrepreneurship student at IIM Bangalore.">
-
-  <!--
-    PRIVACY: asks search engines not to list this page. The site is still
-    public: anyone with the link can open it. (robots.txt does the same job.)
-  -->
+  <!-- PRIVACY: asks search engines not to list this page. The site is still public to anyone with the link. -->
   <meta name="robots" content="noindex, nofollow">
-
-  <!-- Browser colour on phones (the top bar matches the opening) -->
-  <meta name="theme-color" content="#2a0e1a">
-
-  <!--
-    FONTS (free, from Google Fonts). Four families, one job each:
-    Gloock        = bold retro display serif  (closest free match to AZORE)
-    Pinyon Script = glowing / romantic script (closest free match to
-                    OUR BELOVED SUMMER and THE END)
-    DM Sans       = easy-to-read body text
-    Caveat        = handwritten notes
-  -->
+  <meta name="theme-color" content="#2f002f">
+  <!-- Fonts (free, Google Fonts): Gloock = display serif · Pinyon Script = script ·
+       DM Sans = body + heavy headings · Caveat = handwriting -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=Gloock&amp;family=Pinyon+Script&amp;display=swap">
-
-  <!-- The separate stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&amp;family=Gloock&amp;family=Pinyon+Script&amp;display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <a class="skip-link" href="#about">Skip the introduction</a>
+<a class="skip-link" href="#about">Skip the introduction</a>
 
-  <!-- Thin progress line along the top that fills as you scroll -->
-  <div class="scroll-progress" aria-hidden="true"></div>
+<!-- HAND-DRAWN DOODLE LIBRARY: each mark is drawn once here and reused
+     around the page with <use href="#d-…">. -->
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="d-star" viewBox="0 0 100 100"><path d="M50 7 C53 20 57 30 61 39 C72 39 84 38 95 40 C86 47 77 53 68 59 C71 70 75 81 78 93 C69 86 59 79 50 72 C41 79 31 86 22 93 C25 81 29 70 33 59 C23 53 14 47 5 41 C16 39 28 39 39 38 C43 28 47 18 50 7 Z"/></symbol>
+    <symbol id="d-sparkle" viewBox="0 0 100 100"><path d="M50 4 C52 38 60 47 96 50 C60 53 52 62 50 96 C48 62 40 53 4 50 C40 47 48 38 50 4Z"/></symbol>
+    <symbol id="d-burst" viewBox="0 0 100 100"><path d="M50 38 L50 6 M58 42 L82 18 M62 50 L95 51 M58 58 L81 83 M50 62 L49 95 M42 58 L17 82 M38 50 L5 48 M42 42 L18 16"/></symbol>
+    <symbol id="d-arrow" viewBox="0 0 120 70"><path d="M6 58 C 30 10, 70 0, 92 30 C 100 42, 92 52, 84 44 C 76 36, 96 22, 112 30"/><path d="M100 18 L113 30 L97 38"/></symbol>
+    <symbol id="d-arrow2" viewBox="0 0 120 50"><path d="M4 30 C 30 40, 70 44, 108 18"/><path d="M94 12 L109 17 L101 31"/></symbol>
+    <symbol id="d-circle" viewBox="0 0 200 70"><path d="M20 40 C 10 12, 120 2, 182 20 C 200 30, 190 58, 120 64 C 60 70, 8 58, 14 34 C 18 22, 50 12, 90 10"/></symbol>
+    <symbol id="d-under" viewBox="0 0 200 26"><path d="M4 10 C 60 2, 130 16, 196 6"/><path d="M18 20 C 70 14, 140 24, 186 16"/></symbol>
+  </defs>
+</svg>
 
 
-  <!-- =================================================================
-       OPENING: a tall section whose inner "stage" stays pinned to the
-       screen while you scroll. Scene 1: montage + greeting.
-       Scene 2: the ID card rises in. Scene 3: the card drifts down
-       towards the notebook in the About section.
-       (Browsers without scroll animations simply show the montage,
-       then the About section with the card. Nothing breaks.)
-       ================================================================= -->
-  <header class="opening" id="top">
-    <div class="opening__stage">
+<!-- =================================================================
+     THE OPENING (approved and LOCKED)
+     "Begin" is a label for a hidden checkbox. Ticking it switches on
+     the CSS rule "#begin:checked ~ …", which starts the timed scenes:
+     the film (unchanged, H.264 copy of Tanvee's final clip) and the
+     letter-by-letter "Hi, I'm Tanvee." play together. No JavaScript.
+     ================================================================= -->
+<header class="intro" id="play">
+  <input class="begin-toggle" type="checkbox" id="begin">
 
-      <!--
-        The montage: 7.8 seconds, 4 clips (Pexels, free licence), muted so
-        browsers allow autoplay. The poster image shows if a phone blocks
-        autoplay (e.g. battery saver).
-      -->
-      <video class="opening__video" autoplay muted loop playsinline preload="auto"
-             poster="media/intro-poster.jpg" aria-hidden="true">
-        <source src="media/intro-montage.mp4" type="video/mp4">
+  <!-- YOUR FINAL FILM (unchanged except format: HEVC .mov -> H.264 .mp4).
+       It is hidden until "Begin", so the browser waits to start it:
+       film and typing then begin together. No "loop": it plays once.
+       The frame shows only the footage band (the file's own black bars
+       are cropped by the frame, never stretched). -->
+  <div class="film-frame" aria-hidden="true">
+    <div class="film-band">
+      <video class="film" autoplay muted playsinline preload="auto"
+             poster="media/opening-film-poster.jpg">
+        <source src="media/opening-film.mp4" type="video/mp4">
       </video>
-      <div class="opening__grain" aria-hidden="true"></div>
-      <div class="opening__shade" aria-hidden="true"></div>
-
-      <!-- Retro camera viewfinder details -->
-      <div class="viewfinder" aria-hidden="true">
-        <p class="viewfinder__rec"><span class="rec-dot"></span> REC</p>
-        <p class="viewfinder__channel">◂ CH. 03 ▸</p>
-        <p class="viewfinder__date">NOV 2026 · 00:00:07</p>
-        <span class="viewfinder__corner viewfinder__corner--tl"></span>
-        <span class="viewfinder__corner viewfinder__corner--tr"></span>
-        <span class="viewfinder__corner viewfinder__corner--bl"></span>
-        <span class="viewfinder__corner viewfinder__corner--br"></span>
-      </div>
-
-      <!-- Scene 1: the greeting -->
-      <div class="opening__title-block">
-        <h1 class="opening__title">Hi, I'm Tanvee.</h1>
-        <p class="opening__subtitle">Digital Business &amp; Entrepreneurship · IIM Bangalore · Batch 03</p>
-      </div>
-
-      <a class="opening__cue" href="#about">
-        <span class="opening__cue-text">scroll to begin</span>
-        <span class="opening__cue-arrow" aria-hidden="true">↓</span>
-      </a>
-
-      <!-- Scene 2: the ID card rising in on its lanyard (decorative copy;
-           the readable copy lives in the About section below) -->
-      <div class="opening__card-wrap" aria-hidden="true">
-        <span class="lanyard"></span>
-        <div class="id-card">
-          <span class="id-card__slot"></span>
-          <div class="id-card__header">
-            <p class="id-card__title"><span class="id-card__title-script">I</span>DENTITY CARD <span class="id-card__star">★</span></p>
-          </div>
-          <div class="id-card__body">
-            <dl class="id-card__fields">
-              <div class="id-card__row"><dt>Name:</dt><dd>Tanvee</dd></div>
-              <div class="id-card__row"><dt>Department:</dt><dd>Digital Business &amp; Entrepreneurship</dd></div>
-              <div class="id-card__row"><dt>Institution:</dt><dd>IIM Bangalore</dd></div>
-              <div class="id-card__row"><dt>Batch:</dt><dd>03</dd></div>
-              <div class="id-card__row id-card__row--sign"><dt>Signature:</dt><dd class="id-card__signature">Tanvee</dd></div>
-            </dl>
-            <div class="id-card__photo-frame">
-              <img class="id-card__photo" src="media/tanvee.jpg" alt="" width="900" height="822">
-            </div>
-          </div>
-          <span class="id-card__sticker id-card__sticker--heart">♡</span>
-          <span class="id-card__sticker id-card__sticker--star">✦</span>
-        </div>
-      </div>
     </div>
-  </header>
+    <!-- colour wash: blends the footage into the sunset palette -->
+    <div class="film-wash"></div>
+  </div>
+  <div class="intro__grain" aria-hidden="true"></div>
+  <div class="intro__sky" aria-hidden="true"></div>
+
+  <!-- Twinkling doodle stars -->
+  <svg class="tw tw--1" aria-hidden="true"><use href="#d-sparkle"/></svg>
+  <svg class="tw tw--2" aria-hidden="true"><use href="#d-star"/></svg>
+  <svg class="tw tw--3" aria-hidden="true"><use href="#d-sparkle"/></svg>
+  <svg class="tw tw--4" aria-hidden="true"><use href="#d-sparkle"/></svg>
+  <svg class="tw tw--5" aria-hidden="true"><use href="#d-star"/></svg>
+
+  <!-- Viewfinder (appears with the montage) -->
+  <div class="vf" aria-hidden="true">
+    <p class="vf__rec"><span class="rec-dot"></span> REC</p>
+    <p class="vf__ch">◂ CH. 03 ▸</p>
+    <p class="vf__date">NOV 2026 · 00:00:07</p>
+  </div>
+
+  <!-- SCENE 1: Begin -->
+  <div class="scene-begin">
+    <p class="scene-begin__kicker" aria-hidden="true">● REC · TANVEE · CH. 00</p>
+    <label class="begin" for="begin">Begin <span aria-hidden="true">✦</span></label>
+    <a class="skip" href="#story">skip the intro</a>
+  </div>
+
+  <!-- SCENE 2: typed letter by letter -->
+  <h1 class="typed" aria-label="Hi, I'm Tanvee.">
+    <span aria-hidden="true">H</span><span aria-hidden="true">i</span><span aria-hidden="true">,</span><span aria-hidden="true">&nbsp;</span><span aria-hidden="true">I</span><span aria-hidden="true">’</span><span aria-hidden="true">m</span> <span aria-hidden="true">T</span><span aria-hidden="true">a</span><span aria-hidden="true">n</span><span aria-hidden="true">v</span><span aria-hidden="true">e</span><span aria-hidden="true">e</span><span aria-hidden="true">.</span>
+    <svg class="typed__cursor" aria-hidden="true"><use href="#d-sparkle"/></svg>
+  </h1>
+
+  <!-- SCENE 4: the next scene -->
+  <div class="scene-next">
+    <div class="mini-card" aria-hidden="true">
+      <p class="mini-card__head">IDENTITY CARD ★</p>
+      <img src="media/tanvee.jpg" alt="" width="900" height="822">
+    </div>
+    <a class="continue" href="#story">continue the story ↓</a>
+  </div>
+</header>
+
+<!-- =================================================================
+     CHAPTER MENU: appears after the opening and stays at the top.
+     On phones it is a row you swipe sideways.
+     ================================================================= -->
+<nav class="menu" aria-label="Chapters">
+  <a class="menu__logo" href="#play" aria-label="Tanvee, back to the opening">Tanvee<span aria-hidden="true">.</span></a>
+  <ul class="menu__list">
+    <li><a href="#about"><span>01</span> First Look</a></li>
+    <li><a href="#classroom"><span>02</span> Chapters</a></li>
+    <li><a href="#leadership"><span>03</span> The Table</a></li>
+    <li><a href="#committee"><span>04</span> Rooms &amp; Blueprints</a></li>
+    <li><a href="#milestones"><span>05</span> Milestones</a></li>
+    <li><a href="#skills"><span>06</span> Skills</a></li>
+    <li><a href="#desire"><span>07</span> Desire</a></li>
+    <li><a href="#long-view"><span>08</span> Long View</a></li>
+    <li><a class="menu__cta" href="#contact"><span>09</span> Invitation</a></li>
+  </ul>
+</nav>
 
 
-  <!-- =================================================================
-       NAVIGATION: appears after the opening and stays at the top.
-       On phones it is a sideways-swipe row of chapters.
-       ================================================================= -->
-  <nav class="chapter-nav" aria-label="Chapters">
-    <a class="chapter-nav__logo" href="#top" aria-label="Tanvee, back to the opening">Tanvee<span aria-hidden="true">.</span></a>
-    <ul class="chapter-nav__list">
-      <li><a href="#about"><span class="chapter-nav__num">01</span> First Look</a></li>
-      <li><a href="#classroom"><span class="chapter-nav__num">02</span> Chapters</a></li>
-      <li><a href="#leadership"><span class="chapter-nav__num">03</span> The Table</a></li>
-      <li><a href="#committee"><span class="chapter-nav__num">04</span> Rooms &amp; Blueprints</a></li>
-      <li><a href="#milestones"><span class="chapter-nav__num">05</span> Milestones</a></li>
-      <li><a href="#skills"><span class="chapter-nav__num">06</span> Skills</a></li>
-      <li><a href="#desire"><span class="chapter-nav__num">07</span> Desire</a></li>
-      <li><a href="#long-view"><span class="chapter-nav__num">08</span> Long View</a></li>
-      <li><a class="chapter-nav__cta" href="#contact"><span class="chapter-nav__num">09</span> Invitation</a></li>
-    </ul>
-  </nav>
+<!-- Everything after the opening: the story ("continue the story" links here) -->
+<main id="story">
 
+  <!-- ===============================================================
+       (01) BEYOND THE FIRST LOOK
+       Layout from the About Me reference: (01) + swash capital + heavy
+       word on a highlight, star sticker and pill sticker, then the text.
+       Torn paper page; the Identity Card is clipped beside the text.
+       =============================================================== -->
+  <section class="chapter about" id="about" aria-labelledby="about-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 01 · THE PERSON</span><span>a first impression, and then some</span></div>
 
-  <main id="main">
-
-    <!-- ===============================================================
-         (01) BEYOND THE FIRST LOOK: notebook About
-         Left page: the ID card, taped in. Right page: the introduction.
-         =============================================================== -->
-    <section class="section about" id="about" aria-labelledby="about-title">
-
-      <!--
-        HEADING PATTERN used for every chapter:
-        "(01)" + one swirly script capital + the rest of the title,
-        on a blush highlight with pink pin dots. aria-label = the plain title.
-      -->
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 01</p>
-        <h2 class="section-title" id="about-title" aria-label="Beyond the First Look">
-          <span class="section-title__number" aria-hidden="true">(01)</span>
-          <span class="section-title__script" aria-hidden="true">B</span><span class="section-title__rest" aria-hidden="true">eyond the First Look</span>
+    <div class="torn-sheet about__sheet">
+      <div class="ref-heading">
+        <span class="ref-heading__no" aria-hidden="true">(01)</span>
+        <h2 class="ref-heading__title" id="about-title" aria-label="Beyond the First Look">
+          <span class="ref-heading__script" aria-hidden="true">B</span><span class="ref-heading__word" aria-hidden="true">eyond the First Look!</span>
         </h2>
-        <span class="heading-sticker heading-sticker--star" aria-hidden="true">★</span>
+        <span class="star-sticker" aria-hidden="true"><svg><use href="#d-star"/></svg></span>
+        <span class="pill-sticker" aria-hidden="true">curious</span>
       </div>
 
-      <div class="notebook">
-        <!-- LEFT PAGE: the readable ID card -->
-        <div class="notebook__page notebook__page--left">
-          <div class="id-card id-card--taped">
-            <span class="tape tape--id" aria-hidden="true"></span>
-            <div class="id-card__header">
-              <p class="id-card__title" aria-hidden="true"><span class="id-card__title-script">I</span>DENTITY CARD <span class="id-card__star">★</span></p>
-            </div>
-            <div class="id-card__body">
-              <dl class="id-card__fields">
-                <div class="id-card__row"><dt>Name:</dt><dd>Tanvee</dd></div>
-                <div class="id-card__row"><dt>Department:</dt><dd>Digital Business &amp; Entrepreneurship</dd></div>
-                <div class="id-card__row"><dt>Institution:</dt><dd>IIM Bangalore</dd></div>
-                <div class="id-card__row"><dt>Batch:</dt><dd>03</dd></div>
-                <div class="id-card__row id-card__row--sign"><dt>Signature:</dt><dd class="id-card__signature">Tanvee</dd></div>
-              </dl>
-              <div class="id-card__photo-frame">
-                <img class="id-card__photo" src="media/tanvee.jpg" alt="Portrait of Tanvee in a black blazer, smiling" width="900" height="822">
+      <div class="about__grid">
+        <!-- DRAFT COPY: awaiting Tanvee's approval -->
+        <div class="about__text">
+          <p>I'm <b>Tanvee</b>, a student of <i>Digital Business and Entrepreneurship</i> at <b>IIM Bangalore</b>, Batch 03.</p>
+          <p>I'm drawn to the <b>why behind a business</b>: how an idea becomes a company, how a company becomes a <b>brand</b>, and how that brand earns a place in someone's life.</p>
+          <p>What fascinates me most is where <b>business meets creativity</b>: the identities brands build, and the <b class="u">experiences that shape how people connect with them</b>.</p>
+          <p>I'm at the beginning of that story, and I intend to learn it properly: asking better questions, <b>exploring widely</b>, and growing into the work I want to do.</p>
+          <p class="margin-note" aria-hidden="true">chapter one ✦<br>(of many)</p>
+        </div>
+
+        <!-- IDENTITY CARD in a clear badge sleeve (from the reference) -->
+        <div class="badge-wrap">
+          <span class="badge-ring" aria-hidden="true"></span>
+          <div class="sleeve">
+            <span class="sleeve__slot" aria-hidden="true"></span>
+            <span class="sleeve__hole sleeve__hole--l" aria-hidden="true"></span>
+            <span class="sleeve__hole sleeve__hole--r" aria-hidden="true"></span>
+            <div class="id">
+              <div class="id__head">
+                <p class="id__title"><span class="id__script" aria-hidden="true">I</span><span class="visually-hidden">I</span>DENTITY CARD <span class="id__star" aria-hidden="true">★</span></p>
+              </div>
+              <div class="id__body">
+                <dl class="id__fields">
+                  <div><dt>Name:</dt><dd>Tanvee</dd></div>
+                  <div><dt>Department:</dt><dd>Digital Business &amp; Entrepreneurship</dd></div>
+                  <div><dt>Institution:</dt><dd>IIM Bangalore</dd></div>
+                  <div><dt>Batch:</dt><dd>03</dd></div>
+                  <div><dt>Signature:</dt><dd class="id__sign">Tanvee</dd></div>
+                </dl>
+                <div class="id__photo-col">
+                  <img class="id__photo" src="media/tanvee.jpg" alt="Portrait of Tanvee in a black blazer, smiling" width="900" height="822">
+                  <span class="id__smudge" aria-hidden="true"></span>
+                </div>
               </div>
             </div>
           </div>
-          <p class="annotation annotation--card" aria-hidden="true">that's me ↑</p>
-          <span class="sticker sticker--bow" aria-hidden="true">❀</span>
-        </div>
-
-        <div class="notebook__spiral" aria-hidden="true"></div>
-
-        <!-- RIGHT PAGE: the introduction (DRAFT COPY, awaiting approval) -->
-        <div class="notebook__page notebook__page--right lined-paper">
-          <p class="notebook__hello" aria-hidden="true">hi!</p>
-          <p>
-            I'm <strong>Tanvee</strong>, a <strong>Digital Business and Entrepreneurship</strong>
-            student at <strong>IIM Bangalore</strong>, Batch 03.
-          </p>
-          <p>
-            What draws me to business is <strong>curiosity about how it actually works</strong>:
-            how an idea becomes a company, how a company becomes a brand, and how a brand earns
-            a place in someone's life.
-          </p>
-          <p>
-            I'm most interested in the space where <strong>business meets creativity</strong>:
-            the identities brands build, and the experiences that shape how people connect with them.
-          </p>
-          <p>
-            I'm at the beginning, and that's exactly where I want to be: asking questions,
-            <strong>learning quickly</strong>, and finding out how far curiosity can take me.
-          </p>
-          <svg class="doodle doodle--sparkle" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
-            <path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2Z"></path>
-          </svg>
+          <p class="hand hand--me" aria-hidden="true">that's me!</p>
+          <svg class="doodle doodle--arrow-me" aria-hidden="true"><use href="#d-arrow"/></svg>
         </div>
       </div>
-    </section>
+
+      <svg class="doodle fill c-crimson about__sp1" aria-hidden="true"><use href="#d-sparkle"/></svg>
+      <svg class="doodle fill c-fuchsia about__sp2" aria-hidden="true"><use href="#d-sparkle"/></svg>
+      <svg class="doodle c-plum about__star" aria-hidden="true"><use href="#d-star"/></svg>
+      <svg class="doodle c-crimson about__fw" aria-hidden="true"><use href="#d-burst"/></svg>
+    </div>
+  </section>
 
 
-    <!-- ===============================================================
-         PHILOSOPHY: the identity statement (exact approved wording)
-         + the Estée Lauder quote as a smaller taped note.
-         =============================================================== -->
-    <section class="philosophy" aria-labelledby="philosophy-title">
-      <h2 class="visually-hidden" id="philosophy-title">My philosophy</h2>
-      <p class="philosophy__label" aria-hidden="true">my philosophy</p>
-
-      <p class="philosophy__statement">
-        <span class="philosophy__line">A life of <em class="philosophy__word">intention.</em></span>
-        <span class="philosophy__line">A mind of <em class="philosophy__word">curiosity.</em></span>
-        <span class="philosophy__line">And a heart full of <em class="philosophy__word">ambition.</em></span>
-      </p>
-
-      <figure class="quote-note">
-        <span class="tape tape--quote" aria-hidden="true"></span>
-        <blockquote class="quote-note__text">
-          <p>“I never dreamed about success. I worked for it.”</p>
-        </blockquote>
-        <figcaption class="quote-note__by">— Estée Lauder</figcaption>
-      </figure>
-
-      <svg class="firework firework--1" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-        <g>
-          <line x1="50" y1="50" x2="50" y2="8"></line><line x1="50" y1="50" x2="50" y2="92"></line>
-          <line x1="50" y1="50" x2="8" y2="50"></line><line x1="50" y1="50" x2="92" y2="50"></line>
-          <line x1="50" y1="50" x2="20" y2="20"></line><line x1="50" y1="50" x2="80" y2="80"></line>
-          <line x1="50" y1="50" x2="80" y2="20"></line><line x1="50" y1="50" x2="20" y2="80"></line>
-        </g>
-      </svg>
-      <svg class="firework firework--2" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-        <g>
-          <line x1="50" y1="50" x2="50" y2="8"></line><line x1="50" y1="50" x2="50" y2="92"></line>
-          <line x1="50" y1="50" x2="8" y2="50"></line><line x1="50" y1="50" x2="92" y2="50"></line>
-          <line x1="50" y1="50" x2="20" y2="20"></line><line x1="50" y1="50" x2="80" y2="80"></line>
-          <line x1="50" y1="50" x2="80" y2="20"></line><line x1="50" y1="50" x2="20" y2="80"></line>
-        </g>
-      </svg>
-    </section>
+  <!-- ===============================================================
+       PERSONAL PHILOSOPHY: a standalone moment (exact approved wording)
+       =============================================================== -->
+  <section class="philosophy" aria-labelledby="ph-title">
+    <h2 class="visually-hidden" id="ph-title">My philosophy</h2>
+    <p class="ph-kicker" aria-hidden="true">my philosophy</p>
+    <p class="ph">
+      <span class="ph__line">A life of <span class="ph__word">intention.<svg class="ring" aria-hidden="true"><use href="#d-circle"/></svg></span></span>
+      <span class="ph__line">A mind of <span class="ph__word">curiosity.<svg class="ring ring--under" aria-hidden="true"><use href="#d-under"/></svg></span></span>
+      <span class="ph__line">And a heart full of <span class="ph__word">ambition.<svg class="ring" aria-hidden="true"><use href="#d-circle"/></svg></span></span>
+    </p>
+    <svg class="doodle c-paper ph__fw1" aria-hidden="true"><use href="#d-burst"/></svg>
+    <svg class="doodle c-crimson ph__fw2" aria-hidden="true"><use href="#d-burst"/></svg>
+    <svg class="doodle fill c-paper ph__sp1" aria-hidden="true"><use href="#d-sparkle"/></svg>
+    <svg class="doodle fill c-paper ph__sp2" aria-hidden="true"><use href="#d-sparkle"/></svg>
+    <svg class="doodle c-paper ph__star" aria-hidden="true"><use href="#d-star"/></svg>
+  </section>
 
 
-    <!-- ===============================================================
-         (02) THE CLASSROOM CHAPTERS: education as three book chapters,
-         in date order, on a dotted scrapbook sheet.
-         =============================================================== -->
-    <section class="section classroom" id="classroom" aria-labelledby="classroom-title">
+  <!-- ===============================================================
+       (02) THE CLASSROOM CHAPTERS: a book's contents page
+       =============================================================== -->
+  <section class="chapter classroom" id="classroom" aria-labelledby="classroom-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 02 · THE FOUNDATION</span><span>education</span></div>
 
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 02</p>
-        <h2 class="section-title" id="classroom-title" aria-label="The Classroom Chapters">
-          <span class="section-title__number" aria-hidden="true">(02)</span>
-          <span class="section-title__script" aria-hidden="true">T</span><span class="section-title__rest" aria-hidden="true">he Classroom Chapters</span>
-        </h2>
-        <!-- DRAFT COPY -->
-        <p class="section-intro">Every chapter so far has been the foundation for the next.</p>
-      </div>
-
-      <div class="scrapbook-sheet">
-        <ol class="chapters">
-          <li class="chapter-card chapter-card--1">
-            <p class="chapter-card__kicker">Chapter I · <time datetime="2023">2023</time></p>
-            <h3 class="chapter-card__school">Shikara International</h3>
-            <p class="chapter-card__place">Bachupally, Hyderabad</p>
-            <p class="chapter-card__detail">Class X</p>
-            <p class="chapter-card__score">88.7<span>%</span></p>
-          </li>
-          <li class="chapter-card chapter-card--2">
-            <p class="chapter-card__kicker">Chapter II · <time datetime="2025">2025</time></p>
-            <h3 class="chapter-card__school">Suchitra Academy</h3>
-            <p class="chapter-card__place">Kompally, Hyderabad</p>
-            <p class="chapter-card__detail">Class XII</p>
-            <p class="chapter-card__score">90.4<span>%</span></p>
-          </li>
-          <li class="chapter-card chapter-card--3">
-            <p class="chapter-card__kicker">Chapter III · <time datetime="2026">2026</time> — Present</p>
-            <h3 class="chapter-card__school">Indian Institute of Management Bangalore</h3>
-            <p class="chapter-card__place">Digital Business and Entrepreneurship</p>
-            <p class="chapter-card__detail">Batch 03</p>
-            <p class="chapter-card__now" aria-hidden="true">still being written…</p>
-          </li>
-        </ol>
-
-        <!-- Original text-only stamp (no real logo), drawn with SVG -->
-        <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
-          <defs>
-            <path id="stamp-circle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"></path>
-          </defs>
-          <circle class="stamp__ring" cx="100" cy="100" r="92"></circle>
-          <circle class="stamp__ring stamp__ring--inner" cx="100" cy="100" r="56"></circle>
-          <text class="stamp__circle-text"><textPath href="#stamp-circle">IIM BANGALORE · DBE · BATCH 03 · 2026 ·</textPath></text>
-          <text class="stamp__centre" x="100" y="98" text-anchor="middle">DBE</text>
-          <text class="stamp__centre stamp__centre--small" x="100" y="122" text-anchor="middle">★ 2026 ★</text>
-        </svg>
-        <span class="pin-dot pin-dot--1" aria-hidden="true"></span>
-        <span class="pin-dot pin-dot--2" aria-hidden="true"></span>
-      </div>
-    </section>
-
-
-    <!-- ===============================================================
-         (03) A SEAT AT THE TABLE: leadership
-         =============================================================== -->
-    <section class="section leadership" id="leadership" aria-labelledby="leadership-title">
-
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 03</p>
-        <h2 class="section-title" id="leadership-title" aria-label="A Seat at the Table">
-          <span class="section-title__number" aria-hidden="true">(03)</span>
-          <span class="section-title__script" aria-hidden="true">A</span><span class="section-title__rest" aria-hidden="true">&nbsp;Seat at the Table</span>
+    <div class="contents-page">
+      <div class="ref-heading">
+        <span class="ref-heading__no" aria-hidden="true">(02)</span>
+        <h2 class="ref-heading__title" id="classroom-title" aria-label="The Classroom Chapters">
+          <span class="ref-heading__script" aria-hidden="true">T</span><span class="ref-heading__word" aria-hidden="true">he Classroom Chapters</span>
         </h2>
       </div>
+      <p class="contents-page__label" aria-hidden="true">Contents</p>
 
-      <div class="leadership__layout">
-        <article class="index-card">
-          <span class="tape tape--corner" aria-hidden="true"></span>
-          <p class="label-tag">Shikara International · Class X</p>
-          <h3 class="index-card__title">Blue House Leader</h3>
-          <!-- DRAFT COPY -->
-          <p class="index-card__lead">
-            In Class X, I was Blue House Leader. It was a seat at the table that came with
-            responsibility: not only for my own work, but for how a whole house showed up.
-          </p>
-          <ul class="index-card__list">
-            <li>Represented Blue House, and took responsibility for <mark class="highlight">student coordination and participation</mark>.</li>
-            <li>Coordinated between students and teachers to keep house activities running smoothly.</li>
-            <li>Helped organise school events and managed competitions.</li>
-          </ul>
-        </article>
+      <ol class="toc">
+        <li>
+          <span class="toc__ch">Chapter I</span>
+          <span class="toc__name">Shikara International <small>Bachupally, Hyderabad · Class X · 88.7%</small></span>
+          <span class="toc__dots" aria-hidden="true"></span>
+          <span class="toc__year"><time datetime="2023">2023</time></span>
+        </li>
+        <li>
+          <span class="toc__ch">Chapter II</span>
+          <span class="toc__name">Suchitra Academy <small>Kompally, Hyderabad · Class XII · 90.4%</small></span>
+          <span class="toc__dots" aria-hidden="true"></span>
+          <span class="toc__year"><time datetime="2025">2025</time></span>
+        </li>
+        <li class="toc__now">
+          <span class="toc__ch">Chapter III</span>
+          <span class="toc__name">Indian Institute of Management Bangalore <small>Digital Business and Entrepreneurship · Batch 03</small></span>
+          <span class="toc__dots" aria-hidden="true"></span>
+          <span class="toc__year"><time datetime="2026">2026</time> — Present</span>
+          <svg class="doodle c-crimson toc__ring" aria-hidden="true"><use href="#d-circle"/></svg>
+        </li>
+      </ol>
 
+      <p class="hand hand--toc" aria-hidden="true">still being written…</p>
+      <svg class="doodle c-fuchsia toc__arrow" aria-hidden="true"><use href="#d-arrow2"/></svg>
+
+      <!-- original text-only stamp (no real logo) -->
+      <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <defs><path id="stamp-circle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"></path></defs>
+        <circle class="stamp__ring" cx="100" cy="100" r="92"></circle>
+        <circle class="stamp__ring stamp__ring--inner" cx="100" cy="100" r="56"></circle>
+        <text class="stamp__circle-text"><textPath href="#stamp-circle">IIM BANGALORE · DBE · BATCH 03 · 2026 ·</textPath></text>
+        <text class="stamp__centre" x="100" y="98" text-anchor="middle">DBE</text>
+        <text class="stamp__centre stamp__centre--small" x="100" y="122" text-anchor="middle">✦ 2026 ✦</text>
+      </svg>
+      <svg class="doodle fill c-crimson classroom__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
+    </div>
+  </section>
+
+
+  <!-- ===============================================================
+       (03) A SEAT AT THE TABLE: a newspaper-style clipping
+       =============================================================== -->
+  <section class="chapter leadership" id="leadership" aria-labelledby="leadership-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 03 · RESPONSIBILITY</span><span>leadership</span></div>
+
+    <div class="ref-heading ref-heading--on-sky">
+      <span class="ref-heading__no" aria-hidden="true">(03)</span>
+      <h2 class="ref-heading__title" id="leadership-title" aria-label="A Seat at the Table">
+        <span class="ref-heading__script" aria-hidden="true">A</span><span class="ref-heading__word" aria-hidden="true">&nbsp;Seat at the Table</span>
+      </h2>
+    </div>
+
+    <article class="newsprint">
+      <p class="newsprint__strap" aria-hidden="true">From the school years · Shikara International · Class X</p>
+      <h3 class="newsprint__headline">Blue House Leader</h3>
+      <!-- DRAFT COPY -->
+      <p class="newsprint__standfirst">In Class X, I was Blue House Leader. It was a seat at the table that came with responsibility: not only for my own work, but for how a whole house showed up.</p>
+      <div class="newsprint__cols">
+        <ul class="newsprint__list">
+          <li>Represented Blue House and took responsibility for <mark class="hl">student coordination and participation</mark>.</li>
+          <li>Coordinated between students and teachers to keep house activities running smoothly.</li>
+          <li>Helped organise school events and managed competitions.</li>
+        </ul>
         <!-- The award belonged to the HOUSE, not to Tanvee personally -->
-        <aside class="house-note" aria-label="House achievement">
-          <p class="house-note__kicker">That year</p>
-          <p class="house-note__award">Best House Award</p>
-          <p class="house-note__text">Received by the <strong>Blue House of Shikara International</strong> during my year as House Leader: a house achievement, earned together.</p>
-          <span class="sticker sticker--star house-note__sticker" aria-hidden="true">★</span>
+        <aside class="newsprint__box" aria-label="House achievement">
+          <p class="newsprint__box-kicker">That year</p>
+          <p class="newsprint__award">Best House Award</p>
+          <p class="newsprint__box-text">Received by the Blue House of Shikara International during my year as House Leader: a house achievement, earned together.</p>
+          <svg class="doodle c-crimson newsprint__ring" aria-hidden="true"><use href="#d-circle"/></svg>
         </aside>
       </div>
-    </section>
+      <p class="hand hand--news" aria-hidden="true">a whole house ♡</p>
+      <svg class="doodle c-crimson newsprint__fw" aria-hidden="true"><use href="#d-burst"/></svg>
+      <svg class="doodle c-plum newsprint__star" aria-hidden="true"><use href="#d-star"/></svg>
+    </article>
+  </section>
 
 
-    <div class="film-strip" aria-hidden="true"></div>
+  <!-- ===============================================================
+       (04) COMMITTEE ROOMS & BUSINESS BLUEPRINTS
+       Left: a delegate's placard + notes. Right: a blueprint sheet.
+       =============================================================== -->
+  <section class="chapter committee" id="committee" aria-labelledby="committee-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 04 · IDEAS IN PRACTICE</span><span>debate &amp; entrepreneurship</span></div>
 
+    <div class="ref-heading ref-heading--on-sky">
+      <span class="ref-heading__no" aria-hidden="true">(04)</span>
+      <h2 class="ref-heading__title" id="committee-title" aria-label="Committee Rooms and Business Blueprints">
+        <span class="ref-heading__script" aria-hidden="true">C</span><span class="ref-heading__word" aria-hidden="true">ommittee Rooms &amp; Business Blueprints</span>
+      </h2>
+    </div>
 
-    <!-- ===============================================================
-         (04) COMMITTEE ROOMS & BUSINESS BLUEPRINTS
-         Two clearly separate experiences: MUN (a "dossier") and the
-         Young Entrepreneurs Bootcamp (a "blueprint" sheet).
-         =============================================================== -->
-    <section class="section committee" id="committee" aria-labelledby="committee-title">
+    <div class="committee__grid">
 
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 04</p>
-        <h2 class="section-title" id="committee-title" aria-label="Committee Rooms and Business Blueprints">
-          <span class="section-title__number" aria-hidden="true">(04)</span>
-          <span class="section-title__script" aria-hidden="true">C</span><span class="section-title__rest" aria-hidden="true">ommittee Rooms &amp; Business Blueprints</span>
-        </h2>
-      </div>
-
-      <div class="committee__grid">
-
-        <!-- A. MODEL UNITED NATIONS (DRAFT COPY) -->
-        <article class="dossier">
-          <p class="dossier__tab" aria-hidden="true">Dossier · A</p>
-          <p class="label-tag">The committee room</p>
-          <h3 class="dossier__title">Model United Nations</h3>
-
-          <p class="big-number">
-            <span class="big-number__value">4</span>
-            <span class="big-number__label">conferences</span>
-          </p>
-
-          <p>
-            Across four Model United Nations conferences, I learned to step into perspectives
-            that weren't my own. Each one meant <mark class="highlight">representing an assigned country</mark>,
-            researching the topics on the agenda, and understanding where other delegations stood
-            before I spoke.
-          </p>
-          <p>
-            In committee, I learned to build an argument, defend it in formal debate, and listen
-            closely enough to respond well. It sharpened my <mark class="highlight">research, public speaking and
-            critical thinking</mark>, and the habit of looking at an issue from more than one side.
-          </p>
-
-          <ul class="badge-list" aria-label="MUN recognitions">
-            <li class="badge">★ Best Delegate · <time datetime="2025">2025</time></li>
-            <li class="badge badge--alt">✎ Best Reporter · <time datetime="2026">2026</time></li>
+      <!-- A. MODEL UNITED NATIONS (DRAFT COPY) -->
+      <article class="mun">
+        <div class="placard" aria-hidden="true">
+          <p class="placard__label">Delegate</p>
+          <p class="placard__sub">Model United Nations</p>
+        </div>
+        <div class="notes">
+          <h3 class="notes__title">Model United Nations</h3>
+          <p class="notes__count"><span class="notes__big">4</span> conferences</p>
+          <p>Across four Model United Nations conferences, I learned to step into perspectives that weren't my own. Each one meant <mark class="hl">representing an assigned country</mark>, researching the topics on the agenda, and understanding where other delegations stood before I spoke.</p>
+          <p>In committee, I learned to build an argument, defend it in formal debate, and listen closely enough to respond well. It sharpened my <mark class="hl">research, public speaking and critical thinking</mark>, and the habit of looking at an issue from more than one side.</p>
+          <ul class="awards" aria-label="MUN recognitions">
+            <li>Best Delegate · <time datetime="2025">2025</time></li>
+            <li>Best Reporter · <time datetime="2026">2026</time></li>
           </ul>
-        </article>
+          <svg class="doodle c-crimson notes__star" aria-hidden="true"><use href="#d-star"/></svg>
+        </div>
+      </article>
 
-        <!-- B. YOUNG ENTREPRENEURS BOOTCAMP (DRAFT COPY) -->
-        <article class="blueprint">
-          <p class="blueprint__tab" aria-hidden="true">Blueprint · B</p>
-          <p class="label-tag label-tag--light">Young Entrepreneurs Bootcamp (YEB) · <time datetime="2025">2025</time></p>
-          <h3 class="blueprint__title">BITS Pilani, Hyderabad Campus</h3>
-
-          <p>
-            The Young Entrepreneurs Bootcamp showed me a more <mark class="highlight highlight--light">practical, hands-on side
-            of entrepreneurship</mark>. We were introduced to the Rakesh Kapoor Innovation Center (RKIC),
-            with its CNC machines, 3D printers and robotics sandboxes: spaces built for hardware
-            experimentation, where ideas get made, tested and taken apart again.
-          </p>
-          <p>
-            The programme also explored AI prompt engineering, and how a physical concept can be
-            translated into code and, eventually, into an investor-ready pitch.
-          </p>
-          <p>
-            What stayed with me was the contrast: <mark class="highlight highlight--light">physical innovation on one side,
-            digital thinking on the other</mark>, and entrepreneurship as the bridge connecting technology,
-            creativity, experimentation and communication.
-          </p>
-
-          <ul class="tag-list tag-list--light" aria-label="What the programme explored">
-            <li class="tag">Innovation spaces</li>
-            <li class="tag">Hardware experimentation</li>
-            <li class="tag">AI prompt engineering</li>
-            <li class="tag">Pitch thinking</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+      <!-- B. YOUNG ENTREPRENEURS BOOTCAMP (DRAFT COPY) -->
+      <article class="blueprint">
+        <p class="blueprint__tag" aria-hidden="true">Blueprint · YEB-2025</p>
+        <h3 class="blueprint__title">Young Entrepreneurs Bootcamp</h3>
+        <p class="blueprint__meta">BITS Pilani, Hyderabad Campus · <time datetime="2025">2025</time></p>
+        <p>The Young Entrepreneurs Bootcamp showed me a more <b>practical, hands-on side of entrepreneurship</b>. We were introduced to the Rakesh Kapoor Innovation Center (RKIC), with its CNC machines, 3D printers and robotics sandboxes: spaces built for hardware experimentation, where ideas get made, tested and taken apart again.</p>
+        <p>The programme also explored AI prompt engineering, and how a physical concept can be translated into code and, eventually, into an investor-ready pitch.</p>
+        <p>What stayed with me was the contrast: <b>physical innovation on one side, digital thinking on the other</b>, and entrepreneurship as the bridge connecting technology, creativity, experimentation and communication.</p>
+        <!-- a simple line sketch: idea → prototype → code → pitch -->
+        <svg class="blueprint__sketch" viewBox="0 0 360 70" aria-hidden="true" focusable="false">
+          <rect x="4" y="18" width="70" height="34" rx="4"></rect><text x="39" y="40" text-anchor="middle">idea</text>
+          <path d="M78 35 H 100"></path>
+          <rect x="102" y="18" width="70" height="34" rx="4"></rect><text x="137" y="40" text-anchor="middle">make</text>
+          <path d="M176 35 H 198"></path>
+          <rect x="200" y="18" width="70" height="34" rx="4"></rect><text x="235" y="40" text-anchor="middle">code</text>
+          <path d="M274 35 H 296"></path>
+          <rect x="298" y="18" width="58" height="34" rx="4"></rect><text x="327" y="40" text-anchor="middle">pitch</text>
+        </svg>
+        <p class="hand hand--bp" aria-hidden="true">physical ↔ digital</p>
+      </article>
+    </div>
+  </section>
 
 
-    <!-- ===============================================================
-         (05) THE MILESTONE EDIT: recognition + Ritual of Becoming
-         No certificates are shown (by choice).
-         =============================================================== -->
-    <section class="section milestones" id="milestones" aria-labelledby="milestones-title">
+  <!-- ===============================================================
+       (05) THE MILESTONE EDIT: outlined numerals, the Estée Lauder
+       clipping, and Ritual of Becoming
+       =============================================================== -->
+  <section class="chapter milestones" id="milestones" aria-labelledby="milestones-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 05 · RECOGNITION</span><span>moments worth keeping</span></div>
 
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 05</p>
-        <h2 class="section-title" id="milestones-title" aria-label="The Milestone Edit">
-          <span class="section-title__number" aria-hidden="true">(05)</span>
-          <span class="section-title__script" aria-hidden="true">T</span><span class="section-title__rest" aria-hidden="true">he Milestone Edit</span>
-        </h2>
-      </div>
+    <div class="ref-heading ref-heading--on-sky">
+      <span class="ref-heading__no" aria-hidden="true">(05)</span>
+      <h2 class="ref-heading__title" id="milestones-title" aria-label="The Milestone Edit">
+        <span class="ref-heading__script" aria-hidden="true">T</span><span class="ref-heading__word" aria-hidden="true">he Milestone Edit</span>
+      </h2>
+    </div>
 
-      <div class="milestones__layout">
-        <ul class="milestone-list">
-          <li class="milestone">
-            <p class="milestone__no" aria-hidden="true">No. 01</p>
-            <p class="milestone__title">Best Delegate</p>
-            <p class="milestone__meta">Model United Nations · <time datetime="2025">2025</time></p>
-          </li>
-          <li class="milestone">
-            <p class="milestone__no" aria-hidden="true">No. 02</p>
-            <p class="milestone__title">Best Reporter</p>
-            <p class="milestone__meta">Model United Nations · <time datetime="2026">2026</time></p>
-          </li>
-          <li class="milestone">
-            <p class="milestone__no" aria-hidden="true">No. 03</p>
-            <p class="milestone__title">Silver Medal</p>
-            <p class="milestone__meta">SOF English Olympiad</p>
-          </li>
-        </ul>
+    <div class="ms-layout">
+      <ol class="ms-list">
+        <li><span class="ms-num" aria-hidden="true">01</span><span class="ms-title">Best Delegate</span><span class="ms-meta">Model United Nations · <time datetime="2025">2025</time></span>
+          <svg class="doodle c-crimson ms-star" aria-hidden="true"><use href="#d-star"/></svg></li>
+        <li><span class="ms-num" aria-hidden="true">02</span><span class="ms-title">Best Reporter</span><span class="ms-meta">Model United Nations · <time datetime="2026">2026</time></span>
+          <svg class="doodle fill c-paper ms-sp" aria-hidden="true"><use href="#d-sparkle"/></svg></li>
+        <li><span class="ms-num" aria-hidden="true">03</span><span class="ms-title">Silver Medal</span><span class="ms-meta">SOF English Olympiad</span>
+          <svg class="doodle c-crimson ms-fw" aria-hidden="true"><use href="#d-burst"/></svg></li>
+      </ol>
+
+      <div class="ms-side">
+        <!-- the Estée Lauder quote, as a pinned clipping -->
+        <figure class="clipping">
+          <span class="clipping__pin" aria-hidden="true"></span>
+          <p class="clipping__label" aria-hidden="true">Clipped &amp; kept</p>
+          <blockquote><p>“I never dreamed about success. I worked for it.”</p></blockquote>
+          <figcaption>— Estée Lauder</figcaption>
+          <p class="clipping__note" aria-hidden="true">noted. ✎</p>
+        </figure>
 
         <!-- RITUAL OF BECOMING (DRAFT COPY; kept general on purpose) -->
         <aside class="ritual" aria-labelledby="ritual-title">
-          <span class="tape tape--ritual" aria-hidden="true"></span>
           <h3 class="ritual__title" id="ritual-title">Ritual of Becoming</h3>
-          <p class="ritual__text">
-            Milestones are moments. What I care about more is the practice behind them:
-            showing up, learning something new, and becoming a little more of who I want to be.
-          </p>
-          <svg class="doodle doodle--arrow" viewBox="0 0 120 60" aria-hidden="true" focusable="false">
-            <path d="M5 45 C 35 10, 70 10, 105 30"></path>
-            <path d="M92 18 L106 31 L88 36"></path>
-          </svg>
+          <p>Milestones are moments. What I care about more is the practice behind them: showing up, learning something new, and becoming a little more of who I want to be.</p>
+          <svg class="doodle fill c-crimson ritual__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
         </aside>
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <!-- ===============================================================
-         (06) SKILLS IN MY CORNER
-         Existing skills = solid cards. Currently exploring = dashed card.
-         Languages appear once, in the strip at the end.
-         =============================================================== -->
-    <section class="section skills" id="skills" aria-labelledby="skills-title">
+  <!-- ===============================================================
+       (06) SKILLS IN MY CORNER: a hand-drawn mind map
+       =============================================================== -->
+  <section class="chapter skills" id="skills" aria-labelledby="skills-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 06 · THE TOOLKIT</span><span>what I bring &amp; what I'm learning</span></div>
 
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 06</p>
-        <h2 class="section-title" id="skills-title" aria-label="Skills in My Corner">
-          <span class="section-title__number" aria-hidden="true">(06)</span>
-          <span class="section-title__script" aria-hidden="true">S</span><span class="section-title__rest" aria-hidden="true">kills in My Corner</span>
+    <div class="mindmap-page">
+      <div class="ref-heading">
+        <span class="ref-heading__no" aria-hidden="true">(06)</span>
+        <h2 class="ref-heading__title" id="skills-title" aria-label="Skills in My Corner">
+          <span class="ref-heading__script" aria-hidden="true">S</span><span class="ref-heading__word" aria-hidden="true">kills in My Corner</span>
         </h2>
       </div>
 
-      <div class="skill-grid">
-        <div class="skill-card skill-card--raspberry">
-          <p class="skill-card__icon" aria-hidden="true">❝</p>
-          <h3 class="skill-card__title">Communication</h3>
-          <ul class="tag-list">
-            <li class="tag">Public speaking</li>
-            <li class="tag">Communication</li>
-            <li class="tag">Presentation</li>
-          </ul>
-        </div>
+      <div class="mindmap">
+        <!-- connector lines (wide screens only) -->
+        <svg class="mindmap__lines" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M500 260 C 420 230, 320 170, 230 110"></path>
+          <path d="M500 260 C 600 220, 700 160, 780 110"></path>
+          <path d="M500 260 C 420 300, 320 370, 230 420"></path>
+          <path class="dashed" d="M500 260 C 600 300, 700 370, 780 420"></path>
+        </svg>
 
-        <div class="skill-card skill-card--coral">
-          <p class="skill-card__icon" aria-hidden="true">✦</p>
-          <h3 class="skill-card__title">Leadership &amp; Coordination</h3>
-          <ul class="tag-list">
-            <li class="tag">Leadership</li>
-            <li class="tag">Student coordination</li>
-            <li class="tag">Event organising</li>
-            <li class="tag">Problem-solving</li>
-          </ul>
-        </div>
+        <p class="mindmap__centre" aria-hidden="true">my<br>corner</p>
 
-        <div class="skill-card skill-card--pink">
-          <p class="skill-card__icon" aria-hidden="true">✿</p>
-          <h3 class="skill-card__title">Creative &amp; Digital</h3>
-          <ul class="tag-list">
-            <li class="tag">Canva</li>
-            <li class="tag">Social media management</li>
-          </ul>
+        <div class="branch branch--1">
+          <h3 class="branch__title">Communication</h3>
+          <ul class="branch__list"><li>Public speaking</li><li>Communication</li><li>Presentation</li></ul>
         </div>
-
-        <div class="skill-card skill-card--learning">
-          <p class="skill-card__icon" aria-hidden="true">✎</p>
-          <h3 class="skill-card__title">Currently Exploring</h3>
-          <p class="skill-card__note">in progress, still learning</p>
-          <ul class="tag-list">
-            <li class="tag tag--learning">Data Analytics &amp; Business Intelligence</li>
-            <li class="tag tag--learning">No-Code Product Prototyping</li>
-            <li class="tag tag--learning">UI/UX</li>
-          </ul>
+        <div class="branch branch--2">
+          <h3 class="branch__title">Leadership &amp; Coordination</h3>
+          <ul class="branch__list"><li>Leadership</li><li>Student coordination</li><li>Event organising</li><li>Problem-solving</li></ul>
+        </div>
+        <div class="branch branch--3">
+          <h3 class="branch__title">Creative &amp; Digital</h3>
+          <ul class="branch__list"><li>Canva</li><li>Social media management</li></ul>
+        </div>
+        <div class="branch branch--4 branch--learning">
+          <h3 class="branch__title">Currently Exploring</h3>
+          <p class="hand hand--learning" aria-hidden="true">in pencil, still learning</p>
+          <ul class="branch__list"><li>Data Analytics &amp; Business Intelligence</li><li>No-Code Product Prototyping</li><li>UI/UX</li></ul>
         </div>
       </div>
 
       <div class="languages">
         <h3 class="languages__title">Languages</h3>
-        <ul class="languages__list">
-          <li>English</li>
-          <li>Hindi</li>
-          <li>Telugu</li>
-          <li>Basic French</li>
-          <li>Basic Malayalam</li>
-        </ul>
+        <ul class="languages__list"><li>English</li><li>Hindi</li><li>Telugu</li><li>Basic French</li><li>Basic Malayalam</li></ul>
       </div>
-    </section>
+      <svg class="doodle fill c-crimson skills__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
+      <svg class="doodle c-fuchsia skills__star" aria-hidden="true"><use href="#d-star"/></svg>
+    </div>
+  </section>
 
 
-    <!-- ===============================================================
-         (07) THE DETAILS BEHIND DESIRE: signature editorial feature
-         A dark magazine spread. Cover story: Schiaparelli's surrealist
-         identity (original illustrations only; no brand imagery).
-         Photos: stills from Pexels videos (free licence).
-         All copy here is DRAFT COPY.
-         =============================================================== -->
-    <section class="section desire" id="desire" aria-labelledby="desire-title">
+  <!-- ===============================================================
+       (07) THE DETAILS BEHIND DESIRE: magazine cover-story spread
+       Original illustration only; photos are stills from Pexels videos.
+       All copy here is DRAFT COPY.
+       =============================================================== -->
+  <section class="chapter desire" id="desire" aria-labelledby="desire-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 07 · THE FEATURE</span><span>luxury, craft &amp; the stories behind objects</span></div>
 
-      <div class="section-heading desire__masthead">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 07 · FEATURE</p>
-        <h2 class="section-title" id="desire-title" aria-label="The Details Behind Desire">
-          <span class="section-title__number" aria-hidden="true">(07)</span>
-          <span class="section-title__script" aria-hidden="true">T</span><span class="section-title__rest" aria-hidden="true">he Details Behind Desire</span>
-        </h2>
-        <p class="desire__dek">
-          Why does a piece of jewellery become a conversation? Why can an unexpected shape become
-          iconic? And how does a fashion house turn imagination into an identity people recognise?
-        </p>
+    <div class="ref-heading ref-heading--on-sky ref-heading--centre">
+      <span class="ref-heading__no" aria-hidden="true">(07)</span>
+      <h2 class="ref-heading__title" id="desire-title" aria-label="The Details Behind Desire">
+        <span class="ref-heading__script" aria-hidden="true">T</span><span class="ref-heading__word" aria-hidden="true">he Details Behind Desire</span>
+      </h2>
+    </div>
+
+    <p class="desire__dek">Why does a piece of jewellery become a conversation? Why can an unexpected shape become iconic? And how does a fashion house turn imagination into an identity people recognise?</p>
+
+    <article class="magazine">
+      <div class="magazine__art">
+        <!-- ORIGINAL ILLUSTRATION: a surrealist study (not any brand's design) -->
+        <svg class="surreal" viewBox="0 0 300 380" role="img" aria-labelledby="art-title">
+          <title id="art-title">Original illustration: a surrealist eye with radiating rays and a hanging pearl</title>
+          <defs>
+            <radialGradient id="iris-grad" cx="40%" cy="35%" r="70%">
+              <stop offset="0%" stop-color="#f8efea"></stop>
+              <stop offset="40%" stop-color="#ea003a"></stop>
+              <stop offset="100%" stop-color="#600061"></stop>
+            </radialGradient>
+          </defs>
+          <g class="surreal__rays">
+            <path d="M150 40 L150 85"></path><path d="M95 55 L118 95"></path><path d="M205 55 L182 95"></path>
+            <path d="M52 95 L92 120"></path><path d="M248 95 L208 120"></path>
+            <path d="M30 150 L78 152"></path><path d="M270 150 L222 152"></path>
+          </g>
+          <path class="surreal__eye" d="M60 160 C 100 95, 200 95, 240 160 C 200 225, 100 225, 60 160 Z"></path>
+          <circle class="surreal__iris" cx="150" cy="160" r="36"></circle>
+          <circle class="surreal__pupil" cx="150" cy="160" r="14"></circle>
+          <circle class="surreal__glint" cx="160" cy="150" r="5"></circle>
+          <path class="surreal__tear" d="M150 230 C 150 230, 132 262, 150 276 C 168 262, 150 230, 150 230 Z"></path>
+          <line class="surreal__chain" x1="150" y1="276" x2="150" y2="318"></line>
+          <circle class="surreal__pearl" cx="150" cy="335" r="17"></circle>
+        </svg>
+        <p class="fig">Fig. 01 · A surrealist study. Original illustration.</p>
       </div>
 
-      <!-- COVER STORY -->
-      <article class="cover-story">
-        <figure class="cover-story__art">
-          <!-- ORIGINAL ILLUSTRATION (drawn here in SVG): a surrealist study in gold.
-               Not a reproduction of any brand's design. -->
-          <svg class="surreal-art" viewBox="0 0 300 380" role="img" aria-labelledby="art-title">
-            <title id="art-title">Original illustration: a golden surrealist eye with radiating rays and a hanging pearl</title>
-            <defs>
-              <radialGradient id="gold" cx="40%" cy="35%" r="70%">
-                <stop offset="0%" stop-color="#ffe7a8"></stop>
-                <stop offset="45%" stop-color="#e2a74a"></stop>
-                <stop offset="100%" stop-color="#9c6a1e"></stop>
-              </radialGradient>
-            </defs>
-            <g class="surreal-art__rays">
-              <path d="M150 40 L150 85"></path><path d="M95 55 L118 95"></path><path d="M205 55 L182 95"></path>
-              <path d="M52 95 L92 120"></path><path d="M248 95 L208 120"></path>
-              <path d="M30 150 L78 152"></path><path d="M270 150 L222 152"></path>
-            </g>
-            <path class="surreal-art__eye" d="M60 160 C 100 95, 200 95, 240 160 C 200 225, 100 225, 60 160 Z"></path>
-            <circle class="surreal-art__iris" cx="150" cy="160" r="36"></circle>
-            <circle class="surreal-art__pupil" cx="150" cy="160" r="14"></circle>
-            <circle class="surreal-art__glint" cx="160" cy="150" r="5"></circle>
-            <path class="surreal-art__tear" d="M150 230 C 150 230, 132 262, 150 276 C 168 262, 150 230, 150 230 Z"></path>
-            <line class="surreal-art__chain" x1="150" y1="276" x2="150" y2="318"></line>
-            <circle class="surreal-art__pearl" cx="150" cy="335" r="17"></circle>
-          </svg>
-          <figcaption class="fig-caption">Fig. 01: A surrealist study in gold. Original illustration.</figcaption>
-        </figure>
+      <div class="magazine__text">
+        <p class="magazine__kicker">Cover story</p>
+        <h3 class="magazine__title">The Surreal Signature: <em>Schiaparelli</em></h3>
+        <p class="dropcap">Schiaparelli is the house I keep returning to. Its surrealist jewellery treats an earring or a brooch less like an accessory and more like an idea: <b>symbolism, art and imagination</b>, given a shape and finished with craftsmanship.</p>
+        <p>What fascinates me isn't only how striking the pieces are, but how consistently they say the same thing. A surreal detail becomes a signature, and a signature becomes an identity people recognise instantly. I want to understand how that happens: how a house protects something so imaginative, <b>presents it, and keeps it desirable over time</b>.</p>
+        <svg class="doodle c-crimson magazine__fw" aria-hidden="true"><use href="#d-burst"/></svg>
+      </div>
+    </article>
 
-        <div class="cover-story__text">
-          <p class="cover-story__kicker">Cover story</p>
-          <h3 class="cover-story__title">The Surreal Signature: <em>Schiaparelli</em></h3>
-          <p>
-            Schiaparelli is the house I keep returning to. Its surrealist jewellery treats an earring
-            or a brooch less like an accessory and more like an idea: <mark class="highlight highlight--dark">symbolism, art and
-            imagination</mark>, given a shape and finished with craftsmanship.
-          </p>
-          <p>
-            What fascinates me isn't only how striking the pieces are, but how consistently they say
-            the same thing. A surreal detail becomes a signature, and a signature becomes an identity
-            people recognise instantly. I want to understand how that happens: how a house protects
-            something so imaginative, <mark class="highlight highlight--dark">presents it, and keeps it desirable over time</mark>.
-          </p>
+    <ol class="questions" aria-label="Questions I keep asking">
+      <li>Why do some objects become iconic?</li>
+      <li>How do heritage and innovation coexist?</li>
+      <li>How does craftsmanship shape perceived value?</li>
+      <li>How do premium brands stay desirable over time?</li>
+    </ol>
+
+    <div class="houses">
+      <div class="houses__split" aria-label="Roughly 65 percent Western luxury, 35 percent Indian craftsmanship">
+        <span class="houses__bar houses__bar--west" aria-hidden="true">65% Western</span>
+        <span class="houses__bar houses__bar--india" aria-hidden="true">35% Indian</span>
+      </div>
+      <div class="houses__cols">
+        <div>
+          <h3 class="houses__heading">Western luxury</h3>
+          <p class="houses__note">The history and identity of Western and Italian luxury houses.</p>
+          <ul class="houses__names"><li>Schiaparelli</li><li>Cartier</li><li>Hermès</li></ul>
         </div>
-      </article>
-
-      <!-- THE QUESTIONS -->
-      <ul class="questions" aria-label="Questions I keep asking">
-        <li>Why do some objects become iconic?</li>
-        <li>How do heritage and innovation coexist?</li>
-        <li>How does craftsmanship shape perceived value?</li>
-        <li>How do premium brands stay desirable over time?</li>
-      </ul>
-
-      <!-- THE CURIOSITY SPLIT + THE HOUSES -->
-      <div class="houses">
-        <div class="houses__split" aria-label="Roughly 65 percent Western luxury, 35 percent Indian craftsmanship">
-          <span class="houses__bar houses__bar--west" aria-hidden="true">65%</span>
-          <span class="houses__bar houses__bar--india" aria-hidden="true">35%</span>
-        </div>
-
-        <div class="houses__columns">
-          <div class="houses__col">
-            <h3 class="houses__heading">Western luxury</h3>
-            <p class="houses__note">The history and identity of Western and Italian luxury houses.</p>
-            <ul class="houses__names">
-              <li>Schiaparelli</li>
-              <li>Cartier</li>
-              <li>Hermès</li>
-            </ul>
-          </div>
-          <div class="houses__col">
-            <h3 class="houses__heading">Indian design &amp; craftsmanship</h3>
-            <p class="houses__note">Where heritage and craft meet a contemporary eye.</p>
-            <ul class="houses__names">
-              <li>Tarun Tahiliani</li>
-              <li>CASAPARADOX</li>
-              <li>Sunita Shekhawat</li>
-            </ul>
-          </div>
+        <div>
+          <h3 class="houses__heading">Indian design &amp; craftsmanship</h3>
+          <p class="houses__note">Where heritage and craft meet a contemporary eye.</p>
+          <ul class="houses__names"><li>Tarun Tahiliani</li><li>CASAPARADOX</li><li>Sunita Shekhawat</li></ul>
         </div>
       </div>
+    </div>
 
-      <!-- PHOTO PAIR: stills from Pexels videos (free licence) -->
-      <div class="photo-pair">
-        <figure class="photo-print photo-print--left">
-          <img src="media/desire-window.jpg" alt="A softly lit jewellery boutique window with crystal chandeliers" width="720" height="900">
-          <figcaption class="fig-caption">Fig. 02: The window as a stage.</figcaption>
-        </figure>
-        <figure class="photo-print photo-print--right">
-          <img src="media/desire-craft.jpg" alt="Close-up of an artisan's hands carving a delicate shell piece" width="720" height="900">
-          <figcaption class="fig-caption">Fig. 03: The hands behind the object.</figcaption>
-        </figure>
-      </div>
+    <div class="prints">
+      <figure class="print print--l">
+        <img src="media/desire-window.jpg" alt="A softly lit jewellery boutique window with crystal chandeliers" width="720" height="900">
+        <figcaption>Fig. 02 · The window as a stage.</figcaption>
+      </figure>
+      <figure class="print print--r">
+        <img src="media/desire-craft.jpg" alt="Close-up of an artisan's hands carving a delicate shell piece" width="720" height="900">
+        <figcaption>Fig. 03 · The hands behind the object.</figcaption>
+      </figure>
+      <svg class="doodle fill c-paper prints__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
+    </div>
 
-      <p class="desire__disclaimer">An independent student's curiosity. Not affiliated with any brand mentioned.</p>
-    </section>
+    <p class="desire__disclaimer">An independent student's curiosity. Not affiliated with any brand mentioned.</p>
+  </section>
 
 
-    <!-- ===============================================================
-         (08) THE LONG VIEW: direction (an aspiration, not a claim)
-         =============================================================== -->
-    <section class="section long-view" id="long-view" aria-labelledby="long-view-title">
+  <!-- ===============================================================
+       (08) THE LONG VIEW: a sun setting on a hand-drawn horizon
+       =============================================================== -->
+  <section class="chapter long-view" id="long-view" aria-labelledby="long-view-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 08 · DIRECTION</span><span>still learning, on purpose</span></div>
 
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 08</p>
-        <h2 class="section-title" id="long-view-title" aria-label="The Long View">
-          <span class="section-title__number" aria-hidden="true">(08)</span>
-          <span class="section-title__script" aria-hidden="true">T</span><span class="section-title__rest" aria-hidden="true">he Long View</span>
-        </h2>
-      </div>
+    <div class="ref-heading ref-heading--on-sky">
+      <span class="ref-heading__no" aria-hidden="true">(08)</span>
+      <h2 class="ref-heading__title" id="long-view-title" aria-label="The Long View">
+        <span class="ref-heading__script" aria-hidden="true">T</span><span class="ref-heading__word" aria-hidden="true">he Long View</span>
+      </h2>
+    </div>
 
-      <p class="long-view__line">I want to understand what makes a luxury brand endure.</p>
+    <p class="long-view__line">I want to understand what makes a luxury brand <span class="lv-word">endure.<svg class="ring ring--under" aria-hidden="true"><use href="#d-under"/></svg></span></p>
 
-      <!-- DRAFT COPY -->
-      <p class="long-view__text">
-        My interests sit where business, entrepreneurship, luxury management, retail, branding,
-        consumer behaviour and craftsmanship meet. I want to learn how businesses grow, how brands
-        establish identities, how products become meaningful to the people who choose them, and how
-        organisations stay relevant over time. I'm not there yet. I'm learning, exploring and
-        building my understanding, and that's part of the story.
-      </p>
+    <!-- DRAFT COPY -->
+    <p class="long-view__text">My interests sit where business, entrepreneurship, luxury management, retail, branding, consumer behaviour and craftsmanship meet. I want to learn how businesses grow, how brands establish identities, how products become meaningful to the people who choose them, and how organisations stay relevant over time. I'm not there yet. I'm learning, exploring and building my understanding, and that's part of the story.</p>
 
-      <ol class="horizon">
-        <li class="horizon__stop">
-          <p class="horizon__label" aria-hidden="true">Learning</p>
-          <h3 class="horizon__title">How businesses grow</h3>
-        </li>
-        <li class="horizon__stop">
-          <p class="horizon__label" aria-hidden="true">Exploring</p>
-          <h3 class="horizon__title">How brands become identities</h3>
-        </li>
-        <li class="horizon__stop">
-          <p class="horizon__label" aria-hidden="true">Understanding</p>
-          <h3 class="horizon__title">How relevance endures</h3>
-        </li>
+    <div class="horizon">
+      <div class="horizon__sun" aria-hidden="true"></div>
+      <svg class="horizon__line" viewBox="0 0 1000 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 16 C 120 8, 260 22, 400 14 C 560 6, 700 22, 840 12 C 920 8, 970 16, 1000 14"></path></svg>
+      <ol class="horizon__stops">
+        <li><p class="hand" aria-hidden="true">learning</p><h3>How businesses grow</h3></li>
+        <li><p class="hand" aria-hidden="true">exploring</p><h3>How brands become identities</h3></li>
+        <li><p class="hand" aria-hidden="true">understanding</p><h3>How relevance endures</h3></li>
       </ol>
-    </section>
+      <svg class="doodle fill c-paper hz-sp1" aria-hidden="true"><use href="#d-sparkle"/></svg>
+      <svg class="doodle c-paper hz-star" aria-hidden="true"><use href="#d-star"/></svg>
+    </div>
+  </section>
 
 
-    <!-- ===============================================================
-         (09) AN OPEN INVITATION: contact (email only)
-         =============================================================== -->
-    <section class="section invitation" id="contact" aria-labelledby="contact-title">
+  <!-- ===============================================================
+       (09) AN OPEN INVITATION: a letter with a wax seal (email only)
+       =============================================================== -->
+  <section class="chapter invitation" id="contact" aria-labelledby="contact-title">
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 09 · THE NEXT CONVERSATION</span><span>contact</span></div>
 
-      <div class="section-heading">
-        <p class="reel-label" aria-hidden="true"><span class="rec-dot"></span> CH. 09</p>
-        <h2 class="section-title" id="contact-title" aria-label="An Open Invitation">
-          <span class="section-title__number" aria-hidden="true">(09)</span>
-          <span class="section-title__script" aria-hidden="true">A</span><span class="section-title__rest" aria-hidden="true">n Open Invitation</span>
+    <div class="letter">
+      <span class="letter__seal" aria-hidden="true">T</span>
+      <div class="ref-heading">
+        <span class="ref-heading__no" aria-hidden="true">(09)</span>
+        <h2 class="ref-heading__title" id="contact-title" aria-label="An Open Invitation">
+          <span class="ref-heading__script" aria-hidden="true">A</span><span class="ref-heading__word" aria-hidden="true">n Open Invitation</span>
         </h2>
       </div>
-
-      <div class="invitation__card">
-        <p class="invitation__line">Very good conversations begin here.</p>
-        <!-- DRAFT COPY -->
-        <p class="invitation__text">
-          Whether it's about business, brands, an idea worth exploring or a collaboration that
-          makes sense, I'd love to hear from you.
-        </p>
-        <a class="button" href="mailto:tanveereddy06@gmail.com">
-          <span class="button__label">Write to me <span aria-hidden="true">↗</span></span>
-          <span class="button__address">tanveereddy06@gmail.com</span>
-        </a>
-        <span class="sticker sticker--heart invitation__sticker-1" aria-hidden="true">♡</span>
-        <span class="sticker sticker--star invitation__sticker-2" aria-hidden="true">★</span>
-        <p class="invitation__small">© <time datetime="2026">2026</time> Tanvee · Built with HTML &amp; CSS</p>
-      </div>
-    </section>
-  </main>
+      <p class="letter__line">Very good conversations begin here.</p>
+      <!-- DRAFT COPY -->
+      <p class="letter__text">Whether it's about business, brands, an idea worth exploring or a collaboration that makes sense, I'd love to hear from you.</p>
+      <a class="letter__button" href="mailto:tanveereddy06@gmail.com">
+        <span class="letter__button-label">Write to me <span aria-hidden="true">↗</span></span>
+        <span class="letter__address">tanveereddy06@gmail.com</span>
+      </a>
+      <p class="letter__sign" aria-hidden="true">— Tanvee</p>
+      <p class="letter__small">© <time datetime="2026">2026</time> Tanvee · Built with HTML &amp; CSS · <a href="#play">back to the opening ↑</a></p>
+      <svg class="doodle c-crimson letter__star" aria-hidden="true"><use href="#d-star"/></svg>
+      <svg class="doodle fill c-fuchsia letter__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
+    </div>
+  </section>
+</main>
 
 
-  <!-- =================================================================
-       FINAL FRAME: the closing line, with room to breathe.
-       Nothing comes after it.
-       ================================================================= -->
-  <footer class="final-frame">
-    <p class="final-frame__line">We all have tomorrows for a reason.</p>
-  </footer>
+<!-- =================================================================
+     FINAL FRAME: the closing line under a night sky. Nothing after it.
+     ================================================================= -->
+<footer class="final-frame">
+  <svg class="doodle fill c-paper ff-sp1" aria-hidden="true"><use href="#d-sparkle"/></svg>
+  <svg class="doodle fill c-paper ff-sp2" aria-hidden="true"><use href="#d-sparkle"/></svg>
+  <svg class="doodle c-paper ff-star" aria-hidden="true"><use href="#d-star"/></svg>
+  <svg class="doodle c-paper ff-fw" aria-hidden="true"><use href="#d-burst"/></svg>
+  <p class="final-frame__line">We all have tomorrows for a reason.</p>
+</footer>
 
 </body>
 </html>
