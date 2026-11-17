@@ -225,7 +225,7 @@ svg use { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: rou
 .scene-next { position: absolute; z-index: 5; display: grid; justify-items: center; gap: 1.5rem; opacity: 0; pointer-events: none; }
 .mini-card { width: 230px; background: var(--paper); border-radius: 12px; overflow: hidden; rotate: -5deg;
              box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.7); }
-.mini-card__head { background: var(--crimson); color: var(--paper); font-family: var(--display); padding: 0.6rem 0.9rem; }
+.mini-card__head { background: linear-gradient(100deg, var(--fuchsia), var(--plum)); color: var(--paper); font-family: var(--display); padding: 0.6rem 0.9rem; }
 .mini-card img { width: 46%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; margin: 0.8rem 0.8rem 0.8rem auto; rotate: 2deg; }
 .continue { font-family: var(--hand); font-weight: 700; font-size: 2rem; color: var(--paper); text-decoration: none;
             border-bottom: 2px solid rgba(248, 239, 234, 0.5); }
@@ -338,7 +338,7 @@ h3 { margin: 0; font-weight: 400; }
 /* Doodles draw themselves in as you scroll to them */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    main .doodle use, main .ring use, .final-frame .doodle use, .toc__ring use {
+    main .doodle use, main .ring use, .final-frame .doodle use, main .toc__now-tag {
       stroke-dasharray: 700; stroke-dashoffset: 700;
       animation: draw linear both; animation-timeline: view(); animation-range: entry 5% cover 35%;
     }
@@ -454,7 +454,7 @@ h3 { margin: 0; font-weight: 400; }
   background:
     linear-gradient(rgba(130, 0, 101, 0.1) 1px, transparent 1px) 0 0 / 12px 12px,
     linear-gradient(90deg, rgba(130, 0, 101, 0.1) 1px, transparent 1px) 0 0 / 12px 12px,
-    linear-gradient(100deg, rgba(234, 0, 58, 0.28), rgba(130, 0, 101, 0.3)), #fff; }
+    linear-gradient(100deg, rgba(130, 0, 101, 0.3), rgba(96, 0, 97, 0.34)), #fff; }
 .id__title { font-weight: 800; font-size: clamp(1.45rem, 5.6vw, 2.15rem); letter-spacing: -0.03em; line-height: 1; color: var(--mardi); }
 .id__script { font-family: var(--script); font-weight: 400; font-size: 1.6em; line-height: 0.5; color: var(--fuchsia); margin-right: -0.04em; letter-spacing: 0; }
 .id__star { color: var(--mardi); font-size: 0.85em; }
@@ -467,7 +467,7 @@ h3 { margin: 0; font-weight: 400; }
 .id__photo-col { position: relative; }
 .id__photo { width: 100%; height: auto; aspect-ratio: 3.4 / 4; object-fit: cover; object-position: 50% 22%; padding: 4px; background: #fff; border: 1px solid rgba(65, 0, 42, 0.18); }
 .id__smudge { position: absolute; left: -22px; bottom: -14px; width: 54px; height: 54px; border-radius: 48% 52% 44% 56%; rotate: 18deg;
-              background: repeating-radial-gradient(circle at 50% 55%, rgba(234, 0, 58, 0.22) 0 2px, transparent 2px 5px); }
+              background: repeating-radial-gradient(circle at 50% 55%, rgba(130, 0, 101, 0.22) 0 2px, transparent 2px 5px); }
 .hand--me { position: absolute; left: -4.5rem; bottom: 2.5rem; font-size: 1.9rem; color: var(--crimson); rotate: -10deg; }
 .doodle--arrow-me { width: 90px; height: 54px; left: -4rem; bottom: 4.6rem; color: var(--crimson); rotate: -20deg; scale: -1 1; }
 
@@ -482,8 +482,26 @@ h3 { margin: 0; font-weight: 400; }
 .ring { position: absolute; left: -12%; top: -6%; width: 124%; height: 112%; color: var(--crimson); pointer-events: none; }
 .ring use { stroke-width: 2.5; }
 .ring--under { top: 74%; height: 40%; }
-.ph__fw1 { width: 110px; height: 110px; top: 4rem; right: 8%; }
-.ph__fw2 { width: 62px; height: 62px; bottom: 5rem; right: 30%; }
+/* CSS FIREWORKS: each .fw is one tiny dot. Its box-shadows are the sparks:
+   they start together at the centre, fly outwards in a circle and fade.
+   Six of them burst at different places and times, on a loop. */
+.fireworks { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.fw { position: absolute; width: 5px; height: 5px; border-radius: 50%; color: var(--paper);
+      animation: fw-burst 2.8s cubic-bezier(0.15, 0.7, 0.3, 1) infinite both; }
+.fw--1 { top: 16%; left: 72%; animation-delay: 0s; }
+.fw--2 { top: 30%; left: 88%; animation-delay: 0.9s; color: var(--crimson-pale); scale: 0.7; }
+.fw--3 { top: 70%; left: 62%; animation-delay: 1.6s; color: var(--crimson-light); scale: 0.85; }
+.fw--4 { top: 12%; left: 22%; animation-delay: 2.1s; scale: 0.6; }
+.fw--5 { top: 78%; left: 12%; animation-delay: 0.5s; color: var(--crimson-pale); scale: 0.75; }
+.fw--6 { top: 48%; left: 94%; animation-delay: 1.3s; color: var(--crimson-light); scale: 0.55; }
+@keyframes fw-burst {
+  0%   { opacity: 0; box-shadow: 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor, 0 0 currentColor; }
+  6%   { opacity: 1; }
+  55%  { opacity: 1; }
+  80%, 100% { opacity: 0;
+    box-shadow: 0 -90px currentColor, 34px -83px currentColor, 64px -64px currentColor, 83px -34px currentColor, 90px 0 currentColor, 83px 34px currentColor, 64px 64px currentColor, 34px 83px currentColor,
+                0 90px currentColor, -34px 83px currentColor, -64px 64px currentColor, -83px 34px currentColor, -90px 0 currentColor, -83px -34px currentColor, -64px -64px currentColor, -34px -83px currentColor; }
+}
 .ph__sp1 { width: 24px; height: 24px; bottom: 7rem; left: 8%; }
 .ph__sp2 { width: 14px; height: 14px; top: 6rem; left: 40%; }
 .ph__star { width: 40px; height: 40px; top: 9rem; right: 22%; rotate: 16deg; }
@@ -492,16 +510,20 @@ h3 { margin: 0; font-weight: 400; }
 /* ===== (02) THE CLASSROOM CHAPTERS: contents page ===== */
 .contents-page { position: relative; color: var(--violet); background: var(--paper); rotate: 0.5deg;
   padding: clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 5vw, 4rem); box-shadow: 0 40px 70px -30px rgba(20, 0, 20, 0.85);
-  background-image: linear-gradient(90deg, transparent 2.4rem, rgba(234, 0, 58, 0.35) 2.4rem, rgba(234, 0, 58, 0.35) calc(2.4rem + 1px), transparent calc(2.4rem + 1px)); }
+  background-image: linear-gradient(90deg, transparent 2.4rem, rgba(96, 0, 97, 0.22) 2.4rem, rgba(96, 0, 97, 0.22) calc(2.4rem + 1px), transparent calc(2.4rem + 1px)); }
 .contents-page__label { font-family: var(--display); font-size: 1.4rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 1.2rem; color: var(--plum); }
 .toc li { position: relative; display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid rgba(65, 0, 42, 0.12); }
-.toc__ch { font-family: var(--hand); font-weight: 700; font-size: 1.45rem; color: var(--crimson); }
+.toc__ch { font-family: var(--display); font-size: 0.95rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fuchsia); }
 .toc__name { font-family: var(--display); font-size: clamp(1.4rem, 3.6vw, 2rem); line-height: 1.15; }
 .toc__name small { display: block; margin-top: 0.2rem; font-family: var(--body); font-size: 0.92rem; color: rgba(47, 0, 47, 0.72); }
 .toc__dots { display: none; }
 .toc__year { grid-column: 2; font-family: var(--display); font-size: 1.3rem; color: var(--fuchsia); }
-.toc__ring { width: 300px; height: 90px; left: 5.5rem; top: 0.3rem; }
-.hand--toc { position: absolute; right: 2rem; bottom: 1.4rem; font-size: 1.8rem; color: var(--fuchsia); rotate: -5deg; }
+/* "now": a small, quiet editorial tag instead of a hand-drawn circle */
+.toc__now-tag { position: absolute; right: 0; top: -0.6rem; padding: 0.1rem 0.6rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
+                color: var(--paper); background: var(--plum); }
+.toc__now .toc__name { font-style: normal; }
+.toc__now { border-bottom-color: var(--plum) !important; border-bottom-width: 2px !important; }
+.hand--toc { position: absolute; right: 2rem; bottom: 1.4rem; font-size: 1.6rem; color: var(--plum); rotate: -3deg; }
 .toc__arrow { width: 110px; height: 46px; right: 13rem; bottom: 1.6rem; scale: -1 1; }
 .classroom__sp { width: 22px; height: 22px; top: 2.5rem; right: 3rem; }
 .stamp { width: 130px; margin: 2rem 0 0; rotate: 12deg; opacity: 0.85; }
@@ -524,6 +546,11 @@ h3 { margin: 0; font-weight: 400; }
 .newsprint__standfirst { font-family: var(--display); font-size: clamp(1.15rem, 2.4vw, 1.45rem); line-height: 1.45; color: var(--plum); max-width: 46ch;
                          padding-bottom: 1.4rem; border-bottom: 1px solid rgba(65, 0, 42, 0.2); }
 .newsprint__cols { display: grid; gap: 2rem; margin-top: 1.6rem; }
+.newsprint__story p + p { margin-top: 1rem; }
+.newsprint__story .dropcap::first-letter { float: left; font-family: var(--display); font-size: 4rem; line-height: 0.82; padding: 0.3rem 0.55rem 0 0; color: var(--fuchsia); }
+.newsprint__standfirst { font-style: italic; }
+.newsprint__pull { margin: 2rem 0 0; padding-top: 1.2rem; border-top: 3px double rgba(65, 0, 42, 0.35); font-family: var(--display); font-size: clamp(1.3rem, 3vw, 1.8rem); line-height: 1.3; color: var(--fuchsia); text-align: center; }
+.newsprint__sp { width: 24px; height: 24px; right: 2.2rem; top: 2.2rem; }
 .newsprint__list li { position: relative; padding-left: 1.5rem; }
 .newsprint__list li + li { margin-top: 0.7rem; }
 .newsprint__list li::before { content: "✦"; position: absolute; left: 0; color: var(--crimson); }
@@ -534,32 +561,46 @@ h3 { margin: 0; font-weight: 400; }
 .newsprint__ring { width: 240px; height: 80px; left: 0.4rem; top: 1.3rem; }
 .hand--news { position: absolute; right: 2.2rem; top: 3.6rem; font-size: 1.8rem; color: var(--crimson); rotate: 6deg; }
 .newsprint__fw { width: 70px; height: 70px; right: 3rem; bottom: 1.5rem; }
-.newsprint__star { width: 34px; height: 34px; left: 1.2rem; bottom: 1.2rem; rotate: -12deg; }
+.newsprint__star { width: 34px; height: 34px; left: 1.4rem; bottom: 1.4rem; rotate: -12deg; }
 
 
 /* ===== (04) COMMITTEE ROOMS & BUSINESS BLUEPRINTS ===== */
-.committee__grid { display: grid; gap: 3.5rem 2.5rem; align-items: start; }
 
-/* A folded delegate placard sitting on top of the notes */
-.mun { position: relative; }
-.placard { position: relative; z-index: 2; width: min(80%, 340px); margin: 0 auto -1.4rem; padding: 1.1rem 1rem 1.2rem; text-align: center; rotate: -3deg;
-           background: linear-gradient(180deg, #fff 0%, var(--paper) 100%); color: var(--violet); border-radius: 4px;
-           box-shadow: 0 -10px 0 -4px rgba(130, 0, 101, 0.35), 0 18px 30px -14px rgba(20, 0, 20, 0.8); }
-.placard__label { font-family: var(--display); font-size: clamp(2rem, 6vw, 2.6rem); letter-spacing: 0.12em; text-transform: uppercase; line-height: 1; }
-.placard__sub { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fuchsia); margin-top: 0.4rem; }
-.notes { position: relative; color: var(--violet); padding: 2.6rem clamp(1.25rem, 4vw, 2.4rem) 2rem; rotate: 0.8deg;
-  background-color: var(--paper);
-  background-image: linear-gradient(90deg, transparent 1.6rem, rgba(234, 0, 58, 0.3) 1.6rem, rgba(234, 0, 58, 0.3) calc(1.6rem + 1px), transparent calc(1.6rem + 1px)),
-                    repeating-linear-gradient(to bottom, transparent 0 31px, rgba(96, 0, 97, 0.1) 31px 32px);
-  box-shadow: 0 40px 70px -30px rgba(20, 0, 20, 0.85); }
-.notes p + p { margin-top: 1rem; }
-.notes__title { font-family: var(--display); font-size: clamp(1.8rem, 4.4vw, 2.4rem); line-height: 1.1; }
-.notes__count { margin: 0.4rem 0 1rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fuchsia); }
-.notes__big { font-family: var(--display); font-size: 3.4rem; letter-spacing: 0; line-height: 1; color: var(--crimson); margin-right: 0.3rem; vertical-align: -0.35rem; }
-.awards { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
-.awards li { padding: 0.4rem 1rem; border-radius: 999px; background: var(--fuchsia); color: var(--paper); font-weight: 700; font-size: 0.9rem; }
-.awards li:first-child { background: var(--crimson); }
-.notes__star { width: 44px; height: 44px; right: 1.4rem; top: 1.6rem; rotate: 14deg; }
+/* A: THE COMMITTEE ROOM — a dark, quiet panel with a count that rises
+   to 04 as you scroll, and three "movements" that slide in one by one. */
+@property --n { syntax: "<integer>"; inherits: false; initial-value: 4; }
+.room { position: relative; display: grid; gap: 2.5rem; margin-bottom: 4rem; padding: clamp(2rem, 5vw, 3.5rem);
+        color: var(--paper); border: 1px solid rgba(248, 239, 234, 0.18);
+        background: radial-gradient(70% 60% at 0% 0%, rgba(130, 0, 101, 0.55), transparent 70%), radial-gradient(60% 60% at 100% 100%, rgba(234, 0, 58, 0.18), transparent 70%), rgba(47, 0, 47, 0.75);
+        box-shadow: 0 40px 70px -30px rgba(10, 0, 10, 0.9); }
+.room__count { display: flex; align-items: baseline; gap: 0.8rem; }
+.room__num { counter-reset: n var(--n); font-family: var(--display); font-size: clamp(5rem, 16vw, 9rem); line-height: 0.85; color: transparent; -webkit-text-stroke: 1.5px var(--paper); }
+.room__num::after { content: "0" counter(n); }
+.room__count-label { font-family: var(--hand); font-size: 1.8rem; color: var(--crimson-pale); }
+.room__kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--crimson-pale); }
+.room__title { margin: 0.6rem 0 1rem; font-family: var(--display); font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.12; }
+.room__title em { font-family: var(--script); font-style: normal; font-size: 1.15em; color: var(--crimson-pale); }
+.room__lead { max-width: 52ch; font-size: 1.12rem; opacity: 0.92; }
+.movements { display: grid; gap: 1.5rem; counter-reset: none; }
+.movement { position: relative; padding-top: 1.1rem; border-top: 1px solid rgba(248, 239, 234, 0.28); }
+.movement__no { font-family: var(--script); font-size: 2.2rem; line-height: 1; color: var(--crimson-light); }
+.movement__title { margin: 0.2rem 0 0.4rem; font-family: var(--display); font-weight: 400; font-size: 1.6rem; }
+.movement p:last-child { opacity: 0.88; }
+.room__close { font-family: var(--display); font-size: clamp(1.25rem, 2.8vw, 1.6rem); line-height: 1.35; padding-top: 1.4rem; border-top: 3px double rgba(248, 239, 234, 0.3); }
+.room__star { width: 40px; height: 40px; right: 1.6rem; top: 1.6rem; rotate: 14deg; }
+.room__sp { width: 20px; height: 20px; right: 4.6rem; top: 4.4rem; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .room__num { animation: count-up linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+    .movement { animation: slide-in linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+    .movement:nth-child(2) { animation-range: entry 10% cover 38%; }
+    .movement:nth-child(3) { animation-range: entry 20% cover 46%; }
+  }
+}
+@keyframes count-up { from { --n: 0; } to { --n: 4; } }
+@keyframes slide-in { from { opacity: 0; translate: -40px 0; } to { opacity: 1; translate: 0 0; } }
+
+.blueprint__lead { font-family: var(--display); font-size: clamp(1.25rem, 3vw, 1.6rem); line-height: 1.3; margin-bottom: 1rem; }
 
 /* The blueprint: plum grid paper with paper-coloured lines */
 .blueprint { position: relative; color: var(--paper); padding: clamp(2rem, 5vw, 2.8rem) clamp(1.25rem, 4vw, 2.4rem) 2.4rem; rotate: -0.6deg;
@@ -610,32 +651,50 @@ h3 { margin: 0; font-weight: 400; }
 .ritual__sp { width: 22px; height: 22px; right: 1rem; top: 1rem; }
 
 
-/* ===== (06) SKILLS IN MY CORNER: mind map ===== */
-.mindmap-page { position: relative; color: var(--violet); background: var(--paper); rotate: -0.4deg;
-  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 5vw, 4rem); box-shadow: 0 40px 70px -30px rgba(20, 0, 20, 0.85);
-  background-image: radial-gradient(rgba(96, 0, 97, 0.12) 1px, transparent 1.4px); background-size: 18px 18px; }
-.mindmap { position: relative; display: grid; gap: 2rem; }
-.mindmap__lines { display: none; }
-.mindmap__centre { justify-self: center; display: grid; place-items: center; width: 8.5rem; height: 6rem; text-align: center;
-  font-family: var(--script); font-size: 2.3rem; line-height: 0.9; color: var(--crimson);
-  border: 2.5px solid var(--crimson); border-radius: 52% 48% 55% 45% / 58% 50% 50% 42%; rotate: -4deg; }
-.branch { position: relative; }
-.branch__title { font-family: var(--display); font-size: 1.6rem; line-height: 1.15; margin-bottom: 0.6rem;
-                 display: inline-block; background: linear-gradient(transparent 62%, rgba(234, 0, 58, 0.2) 62%, rgba(234, 0, 58, 0.2) 92%, transparent 92%); }
-.branch__list { display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem; }
-.branch__list li { padding: 0.15rem 0.8rem 0.2rem; border: 1.5px solid var(--violet); border-radius: 40% 60% 55% 45% / 60% 45% 55% 40%; font-size: 0.95rem;
-                   transition: background-color 0.2s ease, rotate 0.2s ease; }
-.branch__list li:hover { background: rgba(234, 0, 58, 0.15); rotate: -2deg; }
-.branch--learning .branch__list li { border-style: dashed; border-color: var(--fuchsia); color: var(--fuchsia); font-style: italic; }
-.hand--learning { font-size: 1.4rem; color: var(--fuchsia); margin: -0.4rem 0 0.5rem; rotate: -2deg; }
+/* ===== (06) SKILLS IN MY CORNER: retro photo-booth pegboard =====
+   A plum pegboard (rows of holes), with photo-booth strips clipped on.
+   Each strip is a column of "frames"; the last one is still developing. */
+.pegboard { position: relative; display: grid; gap: 2.5rem 1.6rem; justify-items: center; padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 4vw, 3rem) clamp(2.5rem, 5vw, 3.5rem);
+  border-radius: 10px; border: 10px solid var(--mardi);
+  background-color: var(--plum);
+  background-image: radial-gradient(circle, rgba(47, 0, 47, 0.95) 3px, rgba(248, 239, 234, 0.08) 3.5px, transparent 4.5px);
+  background-size: 28px 28px;
+  box-shadow: inset 0 0 40px rgba(20, 0, 20, 0.6), 0 40px 70px -30px rgba(10, 0, 10, 0.9); }
+.pegboard__sign { justify-self: center; padding: 0.4rem 1.2rem; border-radius: 6px; background: var(--crimson); color: var(--paper);
+  font-family: var(--display); font-size: clamp(0.95rem, 2.4vw, 1.2rem); letter-spacing: 0.18em; text-transform: uppercase;
+  box-shadow: 0 0 0 3px var(--paper), 0 0 24px rgba(234, 0, 58, 0.6); grid-column: 1 / -1; }
 
-.languages { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.2rem; margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1.5px dashed rgba(65, 0, 42, 0.3); }
-.languages__title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fuchsia); }
-.languages__list { display: flex; flex-wrap: wrap; font-family: var(--hand); font-weight: 700; font-size: 1.6rem; color: var(--violet); }
-.languages__list li + li::before { content: "✦"; margin: 0 0.6rem; font-size: 0.6em; color: var(--crimson); vertical-align: 0.3em; }
-.skills__sp { width: 24px; height: 24px; top: 2.4rem; right: 3rem; }
-.skills__star { width: 40px; height: 40px; bottom: 1.6rem; right: 2rem; rotate: -14deg; }
+.strip { position: relative; width: min(100%, 230px); padding: 14px 14px 10px; background: var(--paper); color: var(--violet);
+         box-shadow: 0 18px 30px -12px rgba(10, 0, 10, 0.85); transition: rotate 0.3s ease, translate 0.3s ease; }
+.strip--1 { rotate: -3deg; } .strip--2 { rotate: 2deg; } .strip--3 { rotate: -1.5deg; } .strip--4 { rotate: 3deg; }
+.strip:hover { rotate: 0deg; translate: 0 -6px; }
+.strip__clip { position: absolute; top: -16px; left: 50%; translate: -50% 0; width: 46px; height: 26px; border-radius: 6px 6px 3px 3px;
+               background: linear-gradient(180deg, var(--paper), color-mix(in srgb, #600061 18%, #f8efea)); box-shadow: 0 3px 5px rgba(10, 0, 10, 0.5), inset 0 -3px 0 rgba(65, 0, 42, 0.25); }
+.strip__title { font-family: var(--display); font-size: 1.15rem; line-height: 1.2; text-align: center; margin: 0.2rem 0 0.7rem; }
+.strip__frames { display: grid; gap: 8px; }
+/* each frame looks like a little photo: dark, vignetted, with the skill as the "pose" */
+.strip__frames li { display: grid; place-items: center; min-height: 82px; padding: 0.6rem; text-align: center;
+  font-family: var(--display); font-size: 1.05rem; line-height: 1.2; color: var(--paper);
+  background: radial-gradient(circle at 50% 40%, var(--fuchsia), var(--plum) 60%, var(--violet));
+  box-shadow: inset 0 0 18px rgba(10, 0, 10, 0.6); filter: sepia(0.15); transition: filter 0.3s ease; }
+.strip__frames li:hover { filter: sepia(0) brightness(1.15); }
+.strip__stamp { margin-top: 0.6rem; text-align: center; font-family: var(--type); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fuchsia); }
+/* "still developing": paler frames, like film that hasn't come through yet */
+.strip--developing .strip__frames li { background: repeating-linear-gradient(45deg, rgba(96, 0, 97, 0.12) 0 6px, rgba(96, 0, 97, 0.05) 6px 12px), var(--paper);
+  color: var(--plum); font-style: italic; box-shadow: inset 0 0 0 1.5px rgba(96, 0, 97, 0.35); filter: none; }
+.strip--developing .strip__stamp { color: var(--crimson); }
 
+/* Languages as a luggage-style tag hanging on a peg */
+.tag-card { position: relative; grid-column: 1 / -1; justify-self: center; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem;
+  padding: 0.9rem 1.6rem 0.9rem 2.6rem; background: var(--paper); color: var(--violet); rotate: -1deg;
+  clip-path: polygon(16px 0, 100% 0, 100% 100%, 16px 100%, 0 50%); box-shadow: 0 12px 20px -10px rgba(10, 0, 10, 0.8); }
+.tag-card__hole { position: absolute; left: 18px; top: 50%; translate: 0 -50%; width: 10px; height: 10px; border-radius: 50%; background: var(--plum); }
+.tag-card__title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fuchsia); }
+.tag-card__list { display: flex; flex-wrap: wrap; font-family: var(--display); font-size: 1.15rem; }
+.tag-card__list li + li::before { content: "·"; margin: 0 0.6rem; color: var(--crimson); }
+.tag-card__list small { font-family: var(--body); font-size: 0.75rem; opacity: 0.8; }
+.pegboard__sp { width: 24px; height: 24px; top: 1.6rem; right: 2rem; }
+.pegboard__star { width: 40px; height: 40px; bottom: 1.4rem; left: 1.6rem; rotate: -14deg; }
 
 /* ===== (07) THE DETAILS BEHIND DESIRE: magazine spread ===== */
 .desire { color: var(--paper); }
@@ -670,10 +729,7 @@ h3 { margin: 0; font-weight: 400; }
                 font-family: var(--display); font-size: clamp(1.25rem, 3vw, 1.6rem); line-height: 1.3; }
 .questions li::before { content: counter(q, lower-roman) "."; position: absolute; left: 0; top: 0.85rem; font-family: var(--script); font-size: 2.1rem; color: var(--crimson-light); }
 
-.houses__split { display: flex; height: 2.6rem; border-radius: 999px; overflow: hidden; margin-bottom: 2rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-.houses__bar { display: flex; align-items: center; padding: 0 1rem; white-space: nowrap; overflow: hidden; }
-.houses__bar--west { width: 65%; background: var(--crimson); }
-.houses__bar--india { width: 35%; background: var(--fuchsia); justify-content: flex-end; }
+.houses__intro { max-width: 30ch; margin: 0 auto 2.5rem; text-align: center; font-family: var(--display); font-size: clamp(1.5rem, 3.8vw, 2.2rem); line-height: 1.25; }
 .houses__cols { display: grid; gap: 2rem; }
 .houses__heading { font-family: var(--display); font-size: 1.6rem; }
 .houses__note { margin: 0.2rem 0 0.8rem; font-style: italic; opacity: 0.85; }
@@ -681,14 +737,14 @@ h3 { margin: 0; font-weight: 400; }
                     transition: padding-left 0.25s ease, color 0.25s ease; }
 .houses__names li:hover { padding-left: 0.6rem; color: var(--crimson-pale); }
 
-.prints { position: relative; display: grid; gap: 2.5rem; justify-items: center; margin-top: clamp(3.5rem, 8vw, 5rem); }
-.print { width: min(100%, 340px); margin: 0; padding: 10px 10px 0; background: var(--paper); color: var(--violet); box-shadow: 0 24px 44px -18px rgba(0, 0, 0, 0.75); transition: transform 0.3s ease; }
-.print img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
-.print figcaption { padding: 0.7rem 0.25rem 0.9rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-.print--l { rotate: -3deg; }
-.print--r { rotate: 2.5deg; }
-.print:hover { transform: scale(1.03); }
-.prints__sp { width: 30px; height: 30px; left: 48%; top: 1rem; }
+.reels { position: relative; display: grid; gap: 2.5rem; justify-items: center; margin-top: clamp(3.5rem, 8vw, 5rem); }
+.reel { width: min(100%, 300px); margin: 0; padding: 10px 10px 0; background: var(--paper); color: var(--violet); box-shadow: 0 24px 44px -18px rgba(0, 0, 0, 0.75); transition: transform 0.3s ease; }
+.reel video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.reel figcaption { padding: 0.7rem 0.25rem 0.9rem; font-family: var(--hand); font-weight: 700; font-size: 1.35rem; text-align: center; }
+.reel--1 { rotate: -3deg; } .reel--2 { rotate: 2deg; } .reel--3 { rotate: -1.5deg; }
+.reel:hover { transform: scale(1.03); }
+.reels__sp { width: 30px; height: 30px; left: 48%; top: -0.5rem; }
+.desire__disclaimer { font-style: italic; }
 .desire__disclaimer { margin-top: 3rem; text-align: center; font-size: 0.82rem; opacity: 0.75; }
 
 
@@ -696,7 +752,9 @@ h3 { margin: 0; font-weight: 400; }
 .long-view { color: var(--paper); }
 .long-view__line { max-width: 19ch; font-family: var(--display); font-size: clamp(2.3rem, 6.5vw, 4.6rem); line-height: 1.1; }
 .lv-word { position: relative; display: inline-block; font-family: var(--script); font-size: 1.25em; line-height: 0.9; }
-.long-view__text { max-width: 62ch; margin: 2rem 0 3.5rem; font-size: 1.1rem; opacity: 0.92; }
+.long-view__text { max-width: 62ch; margin: 2rem 0 3.5rem; font-size: 1.12rem; opacity: 0.94; }
+.long-view__text p + p { margin-top: 1.1rem; }
+.long-view__text p:first-child::first-line { font-weight: 700; }
 .horizon { position: relative; padding-top: 7rem; }
 .horizon__sun { position: absolute; top: 1.2rem; left: 50%; translate: -50% 0; width: 180px; height: 90px; border-radius: 180px 180px 0 0;
                 background: radial-gradient(circle at 50% 100%, var(--paper) 0%, var(--crimson) 45%, var(--fuchsia) 100%); opacity: 0.9;
@@ -746,10 +804,11 @@ h3 { margin: 0; font-weight: 400; }
 /* ===== Wider screens ===== */
 @media (min-width: 700px) {
   .questions { grid-template-columns: 1fr 1fr; column-gap: 3rem; }
-  .houses__cols { grid-template-columns: 1fr 1fr; gap: 3rem; }
-  .prints { grid-template-columns: 1fr 1fr; }
-  .print--l { justify-self: end; }
-  .print--r { justify-self: start; margin-top: 3rem; }
+  .houses__intro { max-width: 30ch; margin: 0 auto 2.5rem; text-align: center; font-family: var(--display); font-size: clamp(1.5rem, 3.8vw, 2.2rem); line-height: 1.25; }
+.houses__cols { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .reels { grid-template-columns: repeat(3, 1fr); align-items: start; }
+  .reel--2 { margin-top: 3rem; }
+  .pegboard { grid-template-columns: repeat(2, 1fr); }
   .horizon__stops { grid-template-columns: repeat(3, 1fr); }
   .newsprint__cols { grid-template-columns: 1.3fr 1fr; gap: 2.5rem; }
 }
@@ -765,21 +824,14 @@ h3 { margin: 0; font-weight: 400; }
   .toc__dots { display: block; min-width: 4rem; border-bottom: 2px dotted rgba(65, 0, 42, 0.35); translate: 0 -0.3rem; }
   .toc__year { grid-column: auto; }
   .stamp { position: absolute; right: 3rem; top: 2.4rem; margin: 0; width: 140px; }
-  .committee__grid { grid-template-columns: 1fr 1fr; }
-  .blueprint { margin-top: 4rem; }
+  .room { grid-template-columns: auto 1fr; column-gap: 3.5rem; }
+  .room__count { flex-direction: column; gap: 0; }
+  .movements, .room__close { grid-column: 1 / -1; }
+  .movements { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+  .blueprint { max-width: 760px; margin-left: auto; }
   .ms-layout { grid-template-columns: 1.4fr 1fr; gap: 4rem; }
 
-  /* mind map: centre in the middle, four branches in the corners */
-  .mindmap { grid-template-columns: 1fr auto 1fr; grid-template-rows: auto auto; column-gap: 3rem; row-gap: 4.5rem; align-items: center; }
-  .mindmap__lines { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
-  .mindmap__lines path { fill: none; stroke: var(--crimson); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-  .mindmap__lines .dashed { stroke: var(--fuchsia); stroke-dasharray: 6 6; }
-  .mindmap__centre { grid-column: 2; grid-row: 1 / span 2; position: relative; z-index: 1; background: var(--paper); }
-  .branch { background: var(--paper); padding: 0.4rem; z-index: 1; }
-  .branch--1 { grid-column: 1; grid-row: 1; }
-  .branch--2 { grid-column: 3; grid-row: 1; }
-  .branch--3 { grid-column: 1; grid-row: 2; }
-  .branch--4 { grid-column: 3; grid-row: 2; }
+  .pegboard { grid-template-columns: repeat(4, 1fr); align-items: start; }
 
   .magazine { grid-template-columns: 0.8fr 1.2fr; gap: 3.5rem; }
 }
@@ -788,7 +840,6 @@ h3 { margin: 0; font-weight: 400; }
   .hand--me { left: 0.5rem; top: -2.6rem; bottom: auto; rotate: -6deg; }
   .doodle--arrow-me { left: 7.5rem; top: -2.9rem; bottom: auto; width: 70px; rotate: 30deg; scale: 1 1; }
   .pill-sticker { margin-left: 0; }
-  .toc__ring { left: 5.2rem; top: 0.8rem; width: 230px; height: 80px; }
   .toc__arrow { display: none; }
   .hand--toc { position: static; display: block; text-align: right; margin-top: 0.8rem; }
   .hand--news { top: auto; bottom: 1rem; right: 1.2rem; }

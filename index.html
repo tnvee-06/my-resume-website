@@ -218,15 +218,19 @@
        PERSONAL PHILOSOPHY: a standalone moment (exact approved wording)
        =============================================================== -->
   <section class="philosophy" aria-labelledby="ph-title">
-    <h2 class="visually-hidden" id="ph-title">My philosophy</h2>
-    <p class="ph-kicker" aria-hidden="true">my philosophy</p>
+    <h2 class="visually-hidden" id="ph-title">The philosophy I live by</h2>
+    <p class="ph-kicker" aria-hidden="true">the philosophy I live by</p>
     <p class="ph">
       <span class="ph__line">A life of <span class="ph__word">intention.<svg class="ring" aria-hidden="true"><use href="#d-circle"/></svg></span></span>
       <span class="ph__line">A mind of <span class="ph__word">curiosity.<svg class="ring ring--under" aria-hidden="true"><use href="#d-under"/></svg></span></span>
       <span class="ph__line">And a heart full of <span class="ph__word">ambition.<svg class="ring" aria-hidden="true"><use href="#d-circle"/></svg></span></span>
     </p>
-    <svg class="doodle c-paper ph__fw1" aria-hidden="true"><use href="#d-burst"/></svg>
-    <svg class="doodle c-crimson ph__fw2" aria-hidden="true"><use href="#d-burst"/></svg>
+    <!-- Real fireworks, made only with CSS: each one is a single dot whose
+         "shadows" fly outwards and fade, on a loop, at different times. -->
+    <div class="fireworks" aria-hidden="true">
+      <span class="fw fw--1"></span><span class="fw fw--2"></span><span class="fw fw--3"></span>
+      <span class="fw fw--4"></span><span class="fw fw--5"></span><span class="fw fw--6"></span>
+    </div>
     <svg class="doodle fill c-paper ph__sp1" aria-hidden="true"><use href="#d-sparkle"/></svg>
     <svg class="doodle fill c-paper ph__sp2" aria-hidden="true"><use href="#d-sparkle"/></svg>
     <svg class="doodle c-paper ph__star" aria-hidden="true"><use href="#d-star"/></svg>
@@ -266,7 +270,7 @@
           <span class="toc__name">Indian Institute of Management Bangalore <small>Digital Business and Entrepreneurship · Batch 03</small></span>
           <span class="toc__dots" aria-hidden="true"></span>
           <span class="toc__year"><time datetime="2026">2026</time> — Present</span>
-          <svg class="doodle c-crimson toc__ring" aria-hidden="true"><use href="#d-circle"/></svg>
+          <span class="toc__now-tag" aria-hidden="true">now</span>
         </li>
       </ol>
 
@@ -301,26 +305,24 @@
     </div>
 
     <article class="newsprint">
-      <p class="newsprint__strap" aria-hidden="true">From the school years · Shikara International · Class X</p>
-      <h3 class="newsprint__headline">Blue House Leader</h3>
+      <p class="newsprint__strap" aria-hidden="true">Shikara International · Class X</p>
+      <h3 class="newsprint__headline">Sapphire House Leader</h3>
       <!-- DRAFT COPY -->
-      <p class="newsprint__standfirst">In Class X, I was Blue House Leader. It was a seat at the table that came with responsibility: not only for my own work, but for how a whole house showed up.</p>
+      <p class="newsprint__standfirst">The title sounded ceremonial. The work was anything but.</p>
       <div class="newsprint__cols">
-        <ul class="newsprint__list">
-          <li>Represented Blue House and took responsibility for <mark class="hl">student coordination and participation</mark>.</li>
-          <li>Coordinated between students and teachers to keep house activities running smoothly.</li>
-          <li>Helped organise school events and managed competitions.</li>
-        </ul>
+        <div class="newsprint__story">
+          <p class="dropcap">In Class X, I was trusted to lead Sapphire House at Shikara International. It meant representing the house, coordinating between students and teachers, and taking responsibility for something deceptively simple: getting people to show up, and to care when they did.</p>
+          <p>Much of the work happened behind the scenes. I helped organise school events, managed competitions, and kept participation steady across a house of students with very different strengths. It showed me that leadership is less about standing at the front and more about making sure everyone else can step forward.</p>
+        </div>
         <!-- The award belonged to the HOUSE, not to Tanvee personally -->
         <aside class="newsprint__box" aria-label="House achievement">
           <p class="newsprint__box-kicker">That year</p>
           <p class="newsprint__award">Best House Award</p>
-          <p class="newsprint__box-text">Received by the Blue House of Shikara International during my year as House Leader: a house achievement, earned together.</p>
-          <svg class="doodle c-crimson newsprint__ring" aria-hidden="true"><use href="#d-circle"/></svg>
+          <p class="newsprint__box-text">Awarded to Sapphire House during my year as House Leader: a result that belonged to every student in it.</p>
         </aside>
       </div>
-      <p class="hand hand--news" aria-hidden="true">a whole house ♡</p>
-      <svg class="doodle c-crimson newsprint__fw" aria-hidden="true"><use href="#d-burst"/></svg>
+      <blockquote class="newsprint__pull" aria-hidden="true">“Leadership is making sure everyone else can step forward.”</blockquote>
+      <svg class="doodle fill c-fuchsia newsprint__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
       <svg class="doodle c-plum newsprint__star" aria-hidden="true"><use href="#d-star"/></svg>
     </article>
   </section>
@@ -328,10 +330,10 @@
 
   <!-- ===============================================================
        (04) COMMITTEE ROOMS & BUSINESS BLUEPRINTS
-       Left: a delegate's placard + notes. Right: a blueprint sheet.
+       A: the committee room (MUN). B: a blueprint sheet (YEB).
        =============================================================== -->
   <section class="chapter committee" id="committee" aria-labelledby="committee-title">
-    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 04 · IDEAS IN PRACTICE</span><span>debate &amp; entrepreneurship</span></div>
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 04 · IDEAS IN PRACTICE</span><span>words, then making</span></div>
 
     <div class="ref-heading ref-heading--on-sky">
       <span class="ref-heading__no" aria-hidden="true">(04)</span>
@@ -340,48 +342,56 @@
       </h2>
     </div>
 
-    <div class="committee__grid">
+    <!-- A. MODEL UNITED NATIONS (DRAFT COPY) -->
+    <article class="room">
+      <div class="room__count" aria-hidden="true"><span class="room__num"></span><span class="room__count-label">conferences</span></div>
+      <div class="room__intro">
+        <p class="room__kicker">The committee room · Model United Nations</p>
+        <h3 class="room__title">Speaking for a country that wasn't mine, <em>and meaning it.</em></h3>
+        <p class="room__lead">Across four Model United Nations conferences, I learned what it takes to hold a position in a room full of people who disagree with it.</p>
+      </div>
+      <ol class="movements">
+        <li class="movement">
+          <p class="movement__no" aria-hidden="true">I.</p>
+          <h4 class="movement__title">Research</h4>
+          <p>Every committee began long before the first speech: a country's history, its alliances, and what it stood to gain or lose on the agenda.</p>
+        </li>
+        <li class="movement">
+          <p class="movement__no" aria-hidden="true">II.</p>
+          <h4 class="movement__title">Representation</h4>
+          <p>In the room, the task was to represent that position faithfully, even where it differed from my own view.</p>
+        </li>
+        <li class="movement">
+          <p class="movement__no" aria-hidden="true">III.</p>
+          <h4 class="movement__title">Debate</h4>
+          <p>Formal debate rewarded clarity: building an argument, anticipating the reply, and listening closely enough to answer well.</p>
+        </li>
+      </ol>
+      <p class="room__close">The lasting lesson was perspective: most issues look different depending on where you stand.</p>
+      <svg class="doodle c-paper room__star" aria-hidden="true"><use href="#d-star"/></svg>
+      <svg class="doodle fill c-paper room__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
+    </article>
 
-      <!-- A. MODEL UNITED NATIONS (DRAFT COPY) -->
-      <article class="mun">
-        <div class="placard" aria-hidden="true">
-          <p class="placard__label">Delegate</p>
-          <p class="placard__sub">Model United Nations</p>
-        </div>
-        <div class="notes">
-          <h3 class="notes__title">Model United Nations</h3>
-          <p class="notes__count"><span class="notes__big">4</span> conferences</p>
-          <p>Across four Model United Nations conferences, I learned to step into perspectives that weren't my own. Each one meant <mark class="hl">representing an assigned country</mark>, researching the topics on the agenda, and understanding where other delegations stood before I spoke.</p>
-          <p>In committee, I learned to build an argument, defend it in formal debate, and listen closely enough to respond well. It sharpened my <mark class="hl">research, public speaking and critical thinking</mark>, and the habit of looking at an issue from more than one side.</p>
-          <ul class="awards" aria-label="MUN recognitions">
-            <li>Best Delegate · <time datetime="2025">2025</time></li>
-            <li>Best Reporter · <time datetime="2026">2026</time></li>
-          </ul>
-          <svg class="doodle c-crimson notes__star" aria-hidden="true"><use href="#d-star"/></svg>
-        </div>
-      </article>
-
-      <!-- B. YOUNG ENTREPRENEURS BOOTCAMP (DRAFT COPY) -->
-      <article class="blueprint">
-        <p class="blueprint__tag" aria-hidden="true">Blueprint · YEB-2025</p>
-        <h3 class="blueprint__title">Young Entrepreneurs Bootcamp</h3>
-        <p class="blueprint__meta">BITS Pilani, Hyderabad Campus · <time datetime="2025">2025</time></p>
-        <p>The Young Entrepreneurs Bootcamp showed me a more <b>practical, hands-on side of entrepreneurship</b>. We were introduced to the Rakesh Kapoor Innovation Center (RKIC), with its CNC machines, 3D printers and robotics sandboxes: spaces built for hardware experimentation, where ideas get made, tested and taken apart again.</p>
-        <p>The programme also explored AI prompt engineering, and how a physical concept can be translated into code and, eventually, into an investor-ready pitch.</p>
-        <p>What stayed with me was the contrast: <b>physical innovation on one side, digital thinking on the other</b>, and entrepreneurship as the bridge connecting technology, creativity, experimentation and communication.</p>
-        <!-- a simple line sketch: idea → prototype → code → pitch -->
-        <svg class="blueprint__sketch" viewBox="0 0 360 70" aria-hidden="true" focusable="false">
-          <rect x="4" y="18" width="70" height="34" rx="4"></rect><text x="39" y="40" text-anchor="middle">idea</text>
-          <path d="M78 35 H 100"></path>
-          <rect x="102" y="18" width="70" height="34" rx="4"></rect><text x="137" y="40" text-anchor="middle">make</text>
-          <path d="M176 35 H 198"></path>
-          <rect x="200" y="18" width="70" height="34" rx="4"></rect><text x="235" y="40" text-anchor="middle">code</text>
-          <path d="M274 35 H 296"></path>
-          <rect x="298" y="18" width="58" height="34" rx="4"></rect><text x="327" y="40" text-anchor="middle">pitch</text>
-        </svg>
-        <p class="hand hand--bp" aria-hidden="true">physical ↔ digital</p>
-      </article>
-    </div>
+    <!-- B. YOUNG ENTREPRENEURS BOOTCAMP (DRAFT COPY) -->
+    <article class="blueprint">
+      <p class="blueprint__tag" aria-hidden="true">Blueprint · YEB-2025</p>
+      <h3 class="blueprint__title">Young Entrepreneurs Bootcamp</h3>
+      <p class="blueprint__meta">BITS Pilani, Hyderabad Campus · <time datetime="2025">2025</time></p>
+      <p class="blueprint__lead">If the committee room was about words, the bootcamp was about making.</p>
+      <p>At the Rakesh Kapoor Innovation Center (RKIC), we were introduced to the quiet machinery behind an idea becoming an object: CNC machines, 3D printers and robotics sandboxes built for experimentation.</p>
+      <p>Alongside the workshop floor, the programme turned to AI prompt engineering, and to the path an idea travels: from a physical concept, into code, and finally into an investor-ready pitch.</p>
+      <p>What stayed with me was the meeting point. Hardware and software, prototype and presentation: entrepreneurship, I realised, is the discipline of connecting them.</p>
+      <svg class="blueprint__sketch" viewBox="0 0 360 70" aria-hidden="true" focusable="false">
+        <rect x="4" y="18" width="70" height="34" rx="4"></rect><text x="39" y="40" text-anchor="middle">idea</text>
+        <path d="M78 35 H 100"></path>
+        <rect x="102" y="18" width="70" height="34" rx="4"></rect><text x="137" y="40" text-anchor="middle">make</text>
+        <path d="M176 35 H 198"></path>
+        <rect x="200" y="18" width="70" height="34" rx="4"></rect><text x="235" y="40" text-anchor="middle">code</text>
+        <path d="M274 35 H 296"></path>
+        <rect x="298" y="18" width="58" height="34" rx="4"></rect><text x="327" y="40" text-anchor="middle">pitch</text>
+      </svg>
+      <p class="hand hand--bp" aria-hidden="true">physical ↔ digital</p>
+    </article>
   </section>
 
 
@@ -434,52 +444,73 @@
        (06) SKILLS IN MY CORNER: a hand-drawn mind map
        =============================================================== -->
   <section class="chapter skills" id="skills" aria-labelledby="skills-title">
-    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 06 · THE TOOLKIT</span><span>what I bring &amp; what I'm learning</span></div>
+    <div class="label-row" aria-hidden="true"><span><span class="rec-dot"></span> CH. 06 · THE TOOLKIT</span><span>pinned up, still collecting</span></div>
 
-    <div class="mindmap-page">
-      <div class="ref-heading">
-        <span class="ref-heading__no" aria-hidden="true">(06)</span>
-        <h2 class="ref-heading__title" id="skills-title" aria-label="Skills in My Corner">
-          <span class="ref-heading__script" aria-hidden="true">S</span><span class="ref-heading__word" aria-hidden="true">kills in My Corner</span>
-        </h2>
+    <div class="ref-heading ref-heading--on-sky">
+      <span class="ref-heading__no" aria-hidden="true">(06)</span>
+      <h2 class="ref-heading__title" id="skills-title" aria-label="Skills in My Corner">
+        <span class="ref-heading__script" aria-hidden="true">S</span><span class="ref-heading__word" aria-hidden="true">kills in My Corner</span>
+      </h2>
+    </div>
+
+    <!-- A pegboard with photo-booth strips clipped onto it.
+         Each strip = one group of skills; each "frame" = one skill. -->
+    <div class="pegboard">
+      <p class="pegboard__sign" aria-hidden="true">✦ Photo Booth ✦ 4 poses ✦</p>
+
+      <div class="strip strip--1">
+        <span class="strip__clip" aria-hidden="true"></span>
+        <h3 class="strip__title">Voice &amp; Presence</h3>
+        <ul class="strip__frames">
+          <li>Public Speaking</li>
+          <li>Persuasive Communication</li>
+          <li>Presentation</li>
+        </ul>
+        <p class="strip__stamp" aria-hidden="true">No. 01</p>
       </div>
 
-      <div class="mindmap">
-        <!-- connector lines (wide screens only) -->
-        <svg class="mindmap__lines" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <path d="M500 260 C 420 230, 320 170, 230 110"></path>
-          <path d="M500 260 C 600 220, 700 160, 780 110"></path>
-          <path d="M500 260 C 420 300, 320 370, 230 420"></path>
-          <path class="dashed" d="M500 260 C 600 300, 700 370, 780 420"></path>
-        </svg>
-
-        <p class="mindmap__centre" aria-hidden="true">my<br>corner</p>
-
-        <div class="branch branch--1">
-          <h3 class="branch__title">Communication</h3>
-          <ul class="branch__list"><li>Public speaking</li><li>Communication</li><li>Presentation</li></ul>
-        </div>
-        <div class="branch branch--2">
-          <h3 class="branch__title">Leadership &amp; Coordination</h3>
-          <ul class="branch__list"><li>Leadership</li><li>Student coordination</li><li>Event organising</li><li>Problem-solving</li></ul>
-        </div>
-        <div class="branch branch--3">
-          <h3 class="branch__title">Creative &amp; Digital</h3>
-          <ul class="branch__list"><li>Canva</li><li>Social media management</li></ul>
-        </div>
-        <div class="branch branch--4 branch--learning">
-          <h3 class="branch__title">Currently Exploring</h3>
-          <p class="hand hand--learning" aria-hidden="true">in pencil, still learning</p>
-          <ul class="branch__list"><li>Data Analytics &amp; Business Intelligence</li><li>No-Code Product Prototyping</li><li>UI/UX</li></ul>
-        </div>
+      <div class="strip strip--2">
+        <span class="strip__clip" aria-hidden="true"></span>
+        <h3 class="strip__title">Leadership &amp; Orchestration</h3>
+        <ul class="strip__frames">
+          <li>Leadership</li>
+          <li>Student Coordination</li>
+          <li>Event Planning &amp; Execution</li>
+          <li>Structured Problem-Solving</li>
+        </ul>
+        <p class="strip__stamp" aria-hidden="true">No. 02</p>
       </div>
 
-      <div class="languages">
-        <h3 class="languages__title">Languages</h3>
-        <ul class="languages__list"><li>English</li><li>Hindi</li><li>Telugu</li><li>Basic French</li><li>Basic Malayalam</li></ul>
+      <div class="strip strip--3">
+        <span class="strip__clip" aria-hidden="true"></span>
+        <h3 class="strip__title">Creative Direction</h3>
+        <ul class="strip__frames">
+          <li>Visual Design · Canva</li>
+          <li>Social Media Management</li>
+        </ul>
+        <p class="strip__stamp" aria-hidden="true">No. 03</p>
       </div>
-      <svg class="doodle fill c-crimson skills__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
-      <svg class="doodle c-fuchsia skills__star" aria-hidden="true"><use href="#d-star"/></svg>
+
+      <!-- still "developing", like film that hasn't come out yet -->
+      <div class="strip strip--4 strip--developing">
+        <span class="strip__clip" aria-hidden="true"></span>
+        <h3 class="strip__title">Still Developing</h3>
+        <ul class="strip__frames">
+          <li>Data Analytics &amp; Business Intelligence</li>
+          <li>No-Code Product Prototyping</li>
+          <li>UI/UX Design</li>
+        </ul>
+        <p class="strip__stamp" aria-hidden="true">in progress</p>
+      </div>
+
+      <div class="tag-card">
+        <span class="tag-card__hole" aria-hidden="true"></span>
+        <h3 class="tag-card__title">Languages</h3>
+        <ul class="tag-card__list"><li>English</li><li>Hindi</li><li>Telugu</li><li>French <small>(basic)</small></li><li>Malayalam <small>(basic)</small></li></ul>
+      </div>
+
+      <svg class="doodle fill c-crimson pegboard__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
+      <svg class="doodle c-fuchsia pegboard__star" aria-hidden="true"><use href="#d-star"/></svg>
     </div>
   </section>
 
@@ -546,37 +577,47 @@
     </ol>
 
     <div class="houses">
-      <div class="houses__split" aria-label="Roughly 65 percent Western luxury, 35 percent Indian craftsmanship">
-        <span class="houses__bar houses__bar--west" aria-hidden="true">65% Western</span>
-        <span class="houses__bar houses__bar--india" aria-hidden="true">35% Indian</span>
-      </div>
+      <!-- DRAFT COPY -->
+      <p class="houses__intro">My curiosity leans West, towards the great European houses. But it keeps finding its way home.</p>
       <div class="houses__cols">
-        <div>
-          <h3 class="houses__heading">Western luxury</h3>
-          <p class="houses__note">The history and identity of Western and Italian luxury houses.</p>
+        <div class="houses__col">
+          <h3 class="houses__heading">The European houses</h3>
+          <p class="houses__note">Where I look to understand how heritage becomes strategy, and how desirability is kept alive across generations.</p>
           <ul class="houses__names"><li>Schiaparelli</li><li>Cartier</li><li>Hermès</li></ul>
         </div>
-        <div>
-          <h3 class="houses__heading">Indian design &amp; craftsmanship</h3>
-          <p class="houses__note">Where heritage and craft meet a contemporary eye.</p>
+        <div class="houses__col">
+          <h3 class="houses__heading">The Indian ateliers</h3>
+          <p class="houses__note">Where Indian craft holds its own as luxury, carrying the memory of the hands that made it.</p>
           <ul class="houses__names"><li>Tarun Tahiliani</li><li>CASAPARADOX</li><li>Sunita Shekhawat</li></ul>
         </div>
       </div>
     </div>
 
-    <div class="prints">
-      <figure class="print print--l">
-        <img src="media/desire-window.jpg" alt="A softly lit jewellery boutique window with crystal chandeliers" width="720" height="900">
-        <figcaption>Fig. 02 · The window as a stage.</figcaption>
+    <!-- Three short silent clips that loop while they are on screen
+         (licensed Pexels footage). Browsers pause them when off screen. -->
+    <div class="reels">
+      <figure class="reel reel--1">
+        <video autoplay muted loop playsinline preload="metadata" poster="media/clip-street.jpg" aria-label="Looping clip: festive lights over a London shopping street at night">
+          <source src="media/clip-street.mp4" type="video/mp4">
+        </video>
+        <figcaption>The street as a promise.</figcaption>
       </figure>
-      <figure class="print print--r">
-        <img src="media/desire-craft.jpg" alt="Close-up of an artisan's hands carving a delicate shell piece" width="720" height="900">
-        <figcaption>Fig. 03 · The hands behind the object.</figcaption>
+      <figure class="reel reel--2">
+        <video autoplay muted loop playsinline preload="metadata" poster="media/clip-window.jpg" aria-label="Looping clip: a softly lit jewellery boutique window with crystal chandeliers">
+          <source src="media/clip-window.mp4" type="video/mp4">
+        </video>
+        <figcaption>The window as a stage.</figcaption>
       </figure>
-      <svg class="doodle fill c-paper prints__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
+      <figure class="reel reel--3">
+        <video autoplay muted loop playsinline preload="metadata" poster="media/clip-craft.jpg" aria-label="Looping clip: an artisan's hands carving a delicate shell piece">
+          <source src="media/clip-craft.mp4" type="video/mp4">
+        </video>
+        <figcaption>The hands behind the object.</figcaption>
+      </figure>
+      <svg class="doodle fill c-paper reels__sp" aria-hidden="true"><use href="#d-sparkle"/></svg>
     </div>
 
-    <p class="desire__disclaimer">An independent student's curiosity. Not affiliated with any brand mentioned.</p>
+    <p class="desire__disclaimer">Notes from the outside, looking in: an admirer's observations, not an insider's. No brand affiliation implied.</p>
   </section>
 
 
@@ -596,15 +637,18 @@
     <p class="long-view__line">I want to understand what makes a luxury brand <span class="lv-word">endure.<svg class="ring ring--under" aria-hidden="true"><use href="#d-under"/></svg></span></p>
 
     <!-- DRAFT COPY -->
-    <p class="long-view__text">My interests sit where business, entrepreneurship, luxury management, retail, branding, consumer behaviour and craftsmanship meet. I want to learn how businesses grow, how brands establish identities, how products become meaningful to the people who choose them, and how organisations stay relevant over time. I'm not there yet. I'm learning, exploring and building my understanding, and that's part of the story.</p>
+    <div class="long-view__text">
+      <p>Luxury endures for reasons that are rarely visible: a house's discipline about what it will not do, the patience of its craftsmanship, the consistency of the story it tells. I want to understand those decisions from the inside, across business, retail, branding and the psychology of the people who choose them.</p>
+      <p>I'm early in that pursuit, and deliberately so. The aim isn't a title. It's fluency: knowing why a house grows, how an identity holds, and what keeps a name meaningful long after it was first desired.</p>
+    </div>
 
     <div class="horizon">
       <div class="horizon__sun" aria-hidden="true"></div>
       <svg class="horizon__line" viewBox="0 0 1000 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 16 C 120 8, 260 22, 400 14 C 560 6, 700 22, 840 12 C 920 8, 970 16, 1000 14"></path></svg>
       <ol class="horizon__stops">
-        <li><p class="hand" aria-hidden="true">learning</p><h3>How businesses grow</h3></li>
-        <li><p class="hand" aria-hidden="true">exploring</p><h3>How brands become identities</h3></li>
-        <li><p class="hand" aria-hidden="true">understanding</p><h3>How relevance endures</h3></li>
+        <li><p class="hand" aria-hidden="true">first</p><h3>Why a house grows</h3></li>
+        <li><p class="hand" aria-hidden="true">then</p><h3>How an identity holds</h3></li>
+        <li><p class="hand" aria-hidden="true">always</p><h3>What keeps a name meaningful</h3></li>
       </ol>
       <svg class="doodle fill c-paper hz-sp1" aria-hidden="true"><use href="#d-sparkle"/></svg>
       <svg class="doodle c-paper hz-star" aria-hidden="true"><use href="#d-star"/></svg>
