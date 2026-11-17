@@ -1,0 +1,4 @@
+# Asks search engines not to crawl or list this website.
+# This is a polite request, not a lock: the site stays public to anyone with the link.
+User-agent: *
+Disallow: /
